@@ -10,13 +10,18 @@
   margin-bottom: 40px;
 }
 
-.logoPlaceholder {
-  height: 80px;
+.logoImage {
+  max-width: 100%;
+  height: auto;
   background-color: #e9ecef;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6c757d;
-  font-weight: bold;
+  padding: 10px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.logoImage:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }

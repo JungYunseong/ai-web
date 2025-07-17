@@ -19,10 +19,9 @@ const Footer = () => {
             </p>
           </Col>
           <Col md={6} className="d-flex justify-content-md-end align-items-center">
-            {/* Placeholder for logos */}
             <div className={styles.logos}>
-              <span className={styles.logoPlaceholder}>Logo 1</span>
-              <span className={styles.logoPlaceholder}>Logo 2</span>
+              <img src="https://via.placeholder.com/120x50.png?text=Logo+1" alt="Partner Logo 1" />
+              <img src="https://via.placeholder.com/120x50.png?text=Logo+2" alt="Partner Logo 2" />
             </div>
           </Col>
         </Row>
