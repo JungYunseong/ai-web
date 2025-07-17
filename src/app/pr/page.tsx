@@ -1,10 +1,9 @@
-import { Container } from "react-bootstrap";
+import SubPageLayout from "@/components/SubPageLayout";
 
 export default function PRPage() {
   return (
-    <Container className="py-5">
-      <h1>PR</h1>
+    <SubPageLayout title="PR">
       <p>페이지 콘텐츠가 여기에 표시됩니다.</p>
-    </Container>
+    </SubPageLayout>
   );
 }
