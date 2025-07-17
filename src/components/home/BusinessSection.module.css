@@ -1,0 +1,129 @@
+.business {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+}
+
+.businessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.businessCard {
+  background: #fff;
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.businessCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+.businessCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.businessTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.businessDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .business {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .businessGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .businessCard {
+    padding: 40px 30px;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+  }
+  
+  .icon {
+    font-size: 2rem;
+  }
+  
+  .businessTitle {
+    font-size: 1.6rem;
+  }
+  
+  .businessDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .businessCard {
+    padding: 30px 20px;
+  }
+  
+  .businessTitle {
+    font-size: 1.4rem;
+  }
+} 

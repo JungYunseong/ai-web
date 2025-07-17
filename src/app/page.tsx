@@ -1,17 +1,17 @@
 import HeroSection from "@/components/home/HeroSection";
-import WhatWeDoSection from "@/components/home/WhatWeDoSection";
-import TickerSection from "@/components/home/TickerSection";
-import MediaSection from "@/components/home/MediaSection";
+import AboutSection from "@/components/home/AboutSection";
+import BusinessSection from "@/components/home/BusinessSection";
 import CustomersSection from "@/components/home/CustomersSection";
+import NewsSection from "@/components/home/NewsSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <WhatWeDoSection />
-      <TickerSection />
-      <MediaSection />
+      <AboutSection />
+      <BusinessSection />
       <CustomersSection />
+      <NewsSection />
     </>
   );
-}
+} 

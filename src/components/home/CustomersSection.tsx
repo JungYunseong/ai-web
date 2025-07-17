@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import styles from './CustomersSection.module.css';
 
@@ -41,20 +40,28 @@ const customers = [
 
 const CustomersSection = () => {
   return (
-    <section className={styles.section}>
-      <h2 className={styles.title}>주요 고객사</h2>
-      <div className={styles.grid}>
-        {customers.map((customer, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.logoWrapper}>
-              <Image src={customer.logo} alt={customer.name} width={120} height={50} className={styles.logoImage} />
+    <section className={styles.customers}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>
+          바이브는 다양한 산업군의<br />
+          700여 고객사와 함께합니다
+        </h2>
+        <div className={styles.logoGrid}>
+          {customers.map((customer, index) => (
+            <div key={index} className={styles.logoCard}>
+              <Image 
+                src={customer.logo} 
+                alt={customer.name} 
+                width={120} 
+                height={50} 
+                className={styles.logo}
+              />
             </div>
-            <div className={styles.customerName}>{customer.name}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default CustomersSection;
+export default CustomersSection; 

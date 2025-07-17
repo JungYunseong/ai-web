@@ -1,25 +1,32 @@
 'use client';
 
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
   return (
-    <div className={styles.hero}>
-      <video autoPlay loop muted className={styles.videoBackground}>
-        <source src="/videos/placeholder.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <Container className={styles.content}>
-        <h1>The Future of AI,</h1>
-        <h1>VAIV</h1>
-        <p>
-          세상의 모든 정보를 지식으로, 일상을 보다 편리하게 만드는 AI 기술을 경험해보세요.
-        </p>
-      </Container>
-    </div>
+    <section className={styles.hero}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.textContent}>
+            <h1 className={styles.subtitle}>생성형 AI 파운데이션 모델</h1>
+            <h2 className={styles.title}>VAIVGeM 2</h2>
+            <p className={styles.description}>
+              국내 최고 수준의 한국어 특화<br />
+              초거대언어모델 VAIVGeM으로<br />
+              다양한 산업군에서의 AX를 지원합니다.
+            </p>
+            <button className={styles.ctaButton}>자세히보기</button>
+          </div>
+          <div className={styles.graphicContainer}>
+            <div className={styles.graphic}>
+              <div className={styles.graphicText}>VAIVGeM 2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default HeroSection;
+export default HeroSection; 
