@@ -16,8 +16,6 @@
   background-color: #e9ecef;
   border-radius: 5px;
   padding: 10px;
-  filter: grayscale(100%);
-  opacity: 0.6;
   transition: all 0.3s ease;
 }
 
