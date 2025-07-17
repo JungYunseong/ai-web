@@ -29,6 +29,8 @@ const Header = () => {
                <NavDropdown.Item as={Link} href="/about/company">회사개요</NavDropdown.Item>
                <NavDropdown.Item as={Link} href="/about/history">연혁</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} href="/research" className={styles.navLink}>연구소</Nav.Link>
+            <Nav.Link as={Link} href="/partners" className={styles.navLink}>파트너</Nav.Link>
             <Nav.Link as={Link} href="/pr" className={styles.navLink}>PR</Nav.Link>
             <Nav.Link as={Link} href="/ir" className={styles.navLink}>IR</Nav.Link>
             <Nav.Link as={Link} href="/careers" className={styles.navLink}>채용</Nav.Link>

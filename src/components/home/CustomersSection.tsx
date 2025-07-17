@@ -2,17 +2,18 @@
 
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image'; // Added for Next.js Image component
 import styles from './CustomersSection.module.css';
 
 const customers = [
-  { name: 'Customer 1', logo: 'https://via.placeholder.com/200x80.png?text=Customer+1' },
-  { name: 'Customer 2', logo: 'https://via.placeholder.com/200x80.png?text=Customer+2' },
-  { name: 'Customer 3', logo: 'https://via.placeholder.com/200x80.png?text=Customer+3' },
-  { name: 'Customer 4', logo: 'https://via.placeholder.com/200x80.png?text=Customer+4' },
-  { name: 'Customer 5', logo: 'https://via.placeholder.com/200x80.png?text=Customer+5' },
-  { name: 'Customer 6', logo: 'https://via.placeholder.com/200x80.png?text=Customer+6' },
-  { name: 'Customer 7', logo: 'https://via.placeholder.com/200x80.png?text=Customer+7' },
-  { name: 'Customer 8', logo: 'https://via.placeholder.com/200x80.png?text=Customer+8' },
+  { name: '글로벌 IT 기업', logo: 'https://via.placeholder.com/200x80.png?text=Global+IT' },
+  { name: '국내 주요 금융기관', logo: 'https://via.placeholder.com/200x80.png?text=Financial+Inst' },
+  { name: '정부 및 공공기관', logo: 'https://via.placeholder.com/200x80.png?text=Gov+Agency' },
+  { name: '대형 미디어 그룹', logo: 'https://via.placeholder.com/200x80.png?text=Media+Group' },
+  { name: '선도적인 제조 기업', logo: 'https://via.placeholder.com/200x80.png?text=Manufacturing' },
+  { name: '유통 및 소비재 기업', logo: 'https://via.placeholder.com/200x80.png?text=Retail+Co' },
+  { name: '헬스케어 솔루션 기업', logo: 'https://via.placeholder.com/200x80.png?text=Healthcare' },
+  { name: '교육 및 연구기관', logo: 'https://via.placeholder.com/200x80.png?text=Education' },
 ];
 
 const CustomersSection = () => {
@@ -22,7 +23,7 @@ const CustomersSection = () => {
       <Row>
         {customers.map((customer, index) => (
           <Col key={index} xs={6} md={3} className="text-center mb-4">
-            <img src={customer.logo} alt={customer.name} className={styles.logoImage} />
+            <Image src={customer.logo} alt={customer.name} className={styles.logoImage} width={200} height={80} />
           </Col>
         ))}
       </Row>

@@ -1,26 +1,27 @@
 'use client';
 
 import React from 'react';
-import { Container, Carousel, Card } from 'react-bootstrap';
+import { Container, Carousel } from 'react-bootstrap';
+import Image from 'next/image'; // Added for Next.js Image component
 import styles from './MediaSection.module.css';
 
 const mediaItems = [
   {
-    title: 'VAIV, AI 컨퍼런스에서 혁신상 수상',
-    description: 'VAIV의 최신 AI 기술이 글로벌 컨퍼런스에서 큰 주목을 받았습니다.',
-    imgSrc: 'https://via.placeholder.com/800x400.png?text=Media+Image+1',
+    title: '바이브컴퍼니, AI 기반 신사업 확장 발표',
+    description: 'AI 기술을 활용한 새로운 비즈니스 모델을 공개하며 시장의 기대를 모으고 있습니다.',
+    imgSrc: 'https://via.placeholder.com/800x400.png?text=VAIV+News+1',
     date: '2024.07.15'
   },
   {
-    title: 'VAIV, 공공기관과 AI 기반 데이터 분석 플랫폼 구축',
-    description: '정부의 디지털 전환 사업에 VAIV의 기술이 핵심적인 역할을 합니다.',
-    imgSrc: 'https://via.placeholder.com/800x400.png?text=Media+Image+2',
+    title: 'Sometrend, 데이터 분석 시장 점유율 1위 달성',
+    description: '소셜 빅데이터 분석 플랫폼 썸트렌드가 ��내 시장에서 독보적인 위치를 확보했습니다.',
+    imgSrc: 'https://via.placeholder.com/800x400.png?text=Sometrend+News',
     date: '2024.07.10'
   },
   {
-    title: 'Sometrend, 사용자 100만 돌파',
-    description: '소셜 빅데이터 분석 플랫폼 Sometrend가 새로운 마일스톤을 달성했습니다.',
-    imgSrc: 'https://via.placeholder.com/800x400.png?text=Media+Image+3',
+    title: 'VAIVGeM, 차세대 LLM 모델 공개',
+    description: '바이브컴퍼니의 자체 LLM 모델 VAIVGeM이 뛰어난 성능으로 주목받고 있습니다.',
+    imgSrc: 'https://via.placeholder.com/800x400.png?text=VAIVGeM+News',
     date: '2024.07.01'
   },
 ];
@@ -32,10 +33,12 @@ const MediaSection = () => {
       <Carousel>
         {mediaItems.map((item, index) => (
           <Carousel.Item key={index}>
-            <img
+            <Image
               className="d-block w-100"
               src={item.imgSrc}
               alt={item.title}
+              width={800} // Specify width
+              height={400} // Specify height
             />
             <Carousel.Caption className={styles.caption}>
               <h3>{item.title}</h3>

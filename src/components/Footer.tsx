@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'next/image'; // Added for Next.js Image component
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -20,8 +21,8 @@ const Footer = () => {
           </Col>
           <Col md={6} className="d-flex justify-content-md-end align-items-center">
             <div className={styles.logos}>
-              <img src="https://via.placeholder.com/120x50.png?text=Logo+1" alt="Partner Logo 1" />
-              <img src="https://via.placeholder.com/120x50.png?text=Logo+2" alt="Partner Logo 2" />
+              <Image src="https://via.placeholder.com/120x50.png?text=Logo+1" alt="Partner Logo 1" width={120} height={50} />
+              <Image src="https://via.placeholder.com/120x50.png?text=Logo+2" alt="Partner Logo 2" width={120} height={50} />
             </div>
           </Col>
         </Row>

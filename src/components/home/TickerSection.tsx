@@ -5,7 +5,7 @@ import styles from './TickerSection.module.css';
 
 const TickerSection = () => {
   const tickerItems = [
-    "innovator", "expert", "pioneer", "leader", "creator"
+    "AI", "Big Data", "Innovation", "Solution", "Platform", "Future"
   ];
 
   return (
