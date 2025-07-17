@@ -9,31 +9,29 @@ const Header = () => {
   return (
     <Navbar expand="lg" className={styles.navbar} sticky="top">
       <Container>
-        <Link href="/" passHref>
-          <Navbar.Brand className={styles.brand}>
-            {/* Placeholder for Logo */}
-            VAIV
-          </Navbar.Brand>
-        </Link>
+        <Navbar.Brand as={Link} href="/" className={styles.brand}>
+          {/* Placeholder for Logo */}
+          VAIV
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="mx-auto">
             <NavDropdown title="AI 솔루션" id="ai-solutions-dropdown" className={styles.navLink}>
-              <Link href="/solutions/finance" passHref><NavDropdown.Item>금융</NavDropdown.Item></Link>
-              <Link href="/solutions/public" passHref><NavDropdown.Item>공공</NavDropdown.Item></Link>
-              <Link href="/solutions/media" passHref><NavDropdown.Item>미디어</NavDropdown.Item></Link>
+              <NavDropdown.Item as={Link} href="/solutions/finance">금융</NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/solutions/public">공공</NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/solutions/media">미디어</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="AI 구독" id="ai-subscription-dropdown" className={styles.navLink}>
-              <Link href="/subscription/sometrend" passHref><NavDropdown.Item>Sometrend</NavDropdown.Item></Link>
-              <Link href="/subscription/vaiv-search" passHref><NavDropdown.Item>VAIV Search</NavDropdown.Item></Link>
+              <NavDropdown.Item as={Link} href="/subscription/sometrend">Sometrend</NavDropdown.Item>
+              <NavDropdown.Item as={Link} href="/subscription/vaiv-search">VAIV Search</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="회사소개" id="about-us-dropdown" className={styles.navLink}>
-               <Link href="/about/company" passHref><NavDropdown.Item>회사개요</NavDropdown.Item></Link>
-               <Link href="/about/history" passHref><NavDropdown.Item>연혁</NavDropdown.Item></Link>
+               <NavDropdown.Item as={Link} href="/about/company">회사개요</NavDropdown.Item>
+               <NavDropdown.Item as={Link} href="/about/history">연혁</NavDropdown.Item>
             </NavDropdown>
-            <Link href="/pr" passHref><Nav.Link className={styles.navLink}>PR</Nav.Link></Link>
-            <Link href="/ir" passHref><Nav.Link className={styles.navLink}>IR</Nav.Link></Link>
-            <Link href="/careers" passHref><Nav.Link className={styles.navLink}>채용</Nav.Link></Link>
+            <Nav.Link as={Link} href="/pr" className={styles.navLink}>PR</Nav.Link>
+            <Nav.Link as={Link} href="/ir" className={styles.navLink}>IR</Nav.Link>
+            <Nav.Link as={Link} href="/careers" className={styles.navLink}>채용</Nav.Link>
           </Nav>
           <Nav>
             <NavDropdown title="KOR" id="lang-dropdown" className={styles.langSelector}>
