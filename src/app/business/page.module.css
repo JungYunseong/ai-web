@@ -1,0 +1,324 @@
+/* 메인 컨테이너 */
+.main {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contentsInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 페이지 타이틀 섹션 */
+.pageTitleSection {
+  padding: 80px 0 60px;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.pageText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+}
+
+/* 탭 섹션 */
+.tabSection {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tabList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.tabItem {
+  margin: 0;
+  flex: 1;
+}
+
+.tabItem button {
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.tabItem.active button {
+  color: #333;
+  font-weight: 600;
+}
+
+.tabItem.active button::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px 2px 0 0;
+}
+
+.tabItem button:hover {
+  color: #333;
+}
+
+.tabItem.active button:hover {
+  color: #333;
+}
+
+/* 탭 컨텐츠 */
+.tabContent {
+  min-height: 600px;
+  padding: 60px 0;
+}
+
+/* 비즈니스 정보 섹션 */
+.businessInfo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.businessInfoTitle h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.businessInfoText p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.businessInfoText em {
+  color: #667eea;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 비즈니스 리스트 */
+.businessList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.listBox {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.listBox:hover {
+  border-color: #667eea;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+  transform: translateY(-5px);
+}
+
+.listIcon {
+  margin-bottom: 20px;
+}
+
+.listIcon i {
+  font-size: 2.5rem;
+  color: #667eea;
+  display: block;
+}
+
+.listCon h5 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.listCon p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.listArrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.listArrow:hover {
+  transform: translate(3px, -3px);
+  color: #764ba2;
+}
+
+/* 솔루션 섹션 */
+.solutionSection {
+  background: #fff;
+}
+
+/* 서비스 섹션 */
+.serviceSection {
+  background: #f8f9fa;
+}
+
+/* 유틸리티 클래스 */
+.notMobile {
+  display: inline;
+}
+
+.mobileBreak {
+  display: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .contentsInner {
+    padding: 0 15px;
+  }
+  
+  .pageTitleSection {
+    padding: 60px 0 40px;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageText {
+    font-size: 1rem;
+  }
+  
+  .tabList {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .tabItem button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+  
+  .businessInfoTitle h3 {
+    font-size: 2rem;
+  }
+  
+  .businessInfoText p {
+    font-size: 1.1rem;
+  }
+  
+  .businessList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .listBox {
+    padding: 25px;
+  }
+  
+  .notMobile {
+    display: none;
+  }
+  
+  .mobileBreak {
+    display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .businessInfoTitle h3 {
+    font-size: 1.8rem;
+  }
+  
+  .businessInfoText p {
+    font-size: 1rem;
+  }
+  
+  .listBox {
+    padding: 20px;
+  }
+  
+  .listIcon i {
+    font-size: 2rem;
+  }
+  
+  .listCon h5 {
+    font-size: 1.2rem;
+  }
+} 
