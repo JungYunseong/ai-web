@@ -170,10 +170,11 @@
   margin: 0;
   background: #fff;
   border: none;
-  z-index: 66667;
+  z-index: 99999;
   box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 1.4rem;
   overflow: visible;
   visibility: visible;
+  opacity: 1;
 }
 
 .gnbDepth2List .listItem {
@@ -182,6 +183,8 @@
   visibility: visible !important;
   opacity: 1 !important;
   display: block !important;
+  position: relative;
+  z-index: 99999;
 }
 
 .gnbDepth2List .listItem:last-child {
