@@ -171,7 +171,6 @@
   background: #fff;
   border: none;
   z-index: 99999;
-  box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 1.4rem;
   overflow: visible;
   visibility: visible;
   opacity: 1;
@@ -202,12 +201,14 @@
   font-weight: 500;
   visibility: visible !important;
   opacity: 1 !important;
-  padding: 8px 15px;
+  padding: 8px 20px;
+  position: relative;
+  z-index: 99999;
 }
 
 .gnbDepth2List .listItem a:hover {
   color: #1ea0ff;
-  background: #f8f9fa;
+  background: transparent;
 }
 
 .gnbBg {
