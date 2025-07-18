@@ -199,14 +199,16 @@
   font-weight: 500;
   visibility: visible !important;
   opacity: 1 !important;
+  padding: 8px 15px;
 }
 
 .gnbDepth2List .listItem a:hover {
   color: #1ea0ff;
+  background: #f8f9fa;
 }
 
 .gnbBg {
-  z-index: 66665;
+  z-index: 0;
   display: none;
   position: fixed;
   top: 65px;
@@ -218,7 +220,7 @@
 }
 
 .gnbDepthList > .listItem:hover .gnbDepth2List {
-  display: block;
+  display: block !important;
 }
 
 .gnbDepthList > .listItem:hover ~ .gnbBg,
