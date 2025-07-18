@@ -1,67 +1,67 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import styles from './CustomersSection.module.css';
 
-const customers = [
-  { name: '삼성', logo: 'https://via.placeholder.com/120x50?text=삼성' },
-  { name: 'LG전자', logo: 'https://via.placeholder.com/120x50?text=LG전자' },
-  { name: '신세계', logo: 'https://via.placeholder.com/120x50?text=신세계' },
-  { name: '롯데카드', logo: 'https://via.placeholder.com/120x50?text=롯데카드' },
-  { name: 'SK', logo: 'https://via.placeholder.com/120x50?text=SK' },
-  { name: 'CJ', logo: 'https://via.placeholder.com/120x50?text=CJ' },
-  { name: '카카오', logo: 'https://via.placeholder.com/120x50?text=카카오' },
-  { name: '현대', logo: 'https://via.placeholder.com/120x50?text=현대' },
-  { name: '신한은행', logo: 'https://via.placeholder.com/120x50?text=신한은행' },
-  { name: '기아', logo: 'https://via.placeholder.com/120x50?text=기아' },
-  { name: 'NC', logo: 'https://via.placeholder.com/120x50?text=NC' },
-  { name: 'KT', logo: 'https://via.placeholder.com/120x50?text=KT' },
-  { name: '대한항공', logo: 'https://via.placeholder.com/120x50?text=대한항공' },
-  { name: '한국투자증권', logo: 'https://via.placeholder.com/120x50?text=한국투자증권' },
-  { name: '코웨이', logo: 'https://via.placeholder.com/120x50?text=코웨이' },
-  { name: '키움증권', logo: 'https://via.placeholder.com/120x50?text=키움증권' },
-  { name: '한화손해보험', logo: 'https://via.placeholder.com/120x50?text=한화손해보험' },
-  { name: '농협캐피탈', logo: 'https://via.placeholder.com/120x50?text=농협캐피탈' },
-  { name: '하나카드', logo: 'https://via.placeholder.com/120x50?text=하나카드' },
-  { name: '미래에셋증권', logo: 'https://via.placeholder.com/120x50?text=미래에셋증권' },
-  { name: 'BC카드', logo: 'https://via.placeholder.com/120x50?text=BC카드' },
-  { name: 'KB국민카드', logo: 'https://via.placeholder.com/120x50?text=KB국민카드' },
-  { name: '맥킨지', logo: 'https://via.placeholder.com/120x50?text=맥킨지' },
-  { name: '메리츠화재', logo: 'https://via.placeholder.com/120x50?text=메리츠화재' },
-  { name: 'MBC', logo: 'https://via.placeholder.com/120x50?text=MBC' },
-  { name: '제주MBC', logo: 'https://via.placeholder.com/120x50?text=제주MBC' },
-  { name: 'SBS', logo: 'https://via.placeholder.com/120x50?text=SBS' },
-  { name: 'JTBC', logo: 'https://via.placeholder.com/120x50?text=JTBC' },
-  { name: 'KBS', logo: 'https://via.placeholder.com/120x50?text=KBS' },
-  { name: '연합뉴스', logo: 'https://via.placeholder.com/120x50?text=연합뉴스' },
-  { name: '청와대', logo: 'https://via.placeholder.com/120x50?text=청와대' },
-];
+export default function CustomersSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const CustomersSection = () => {
+  const customers = [
+    { id: 1, name: '삼성', logo: '/resources/images/main/logo_samsung.png' },
+    { id: 2, name: 'LG전자', logo: '/resources/images/main/logo_lge.png' },
+    { id: 3, name: '신세계', logo: '/resources/images/main/logo_ssg.png' },
+    { id: 4, name: '롯데카드', logo: '/resources/images/main/logo_lottecard.png' },
+    { id: 5, name: 'SK', logo: '/resources/images/main/logo_sk.png' },
+    { id: 6, name: 'CJ', logo: '/resources/images/main/logo_cj.png' },
+    { id: 7, name: '카카오', logo: '/resources/images/main/logo_kko.png' },
+    { id: 8, name: '현대', logo: '/resources/images/main/logo_hyundai.png' },
+    { id: 9, name: '신한은행', logo: '/resources/images/main/logo_shinhan.png' },
+    { id: 10, name: '기아', logo: '/resources/images/main/logo_kia.png' },
+    { id: 11, name: 'NC', logo: '/resources/images/main/logo_nc.png' },
+    { id: 12, name: 'KT', logo: '/resources/images/main/logo_kt.png' },
+    { id: 13, name: '대한항공', logo: '/resources/images/main/logo_koreanair.png' },
+    { id: 14, name: '한국투자증권', logo: '/resources/images/main/logo_truefriend.png' },
+    { id: 15, name: 'MBC', logo: '/resources/images/main/logo_mbc.png' },
+    { id: 16, name: '제주 MBC', logo: '/resources/images/main/logo_jejumbc.png' },
+    { id: 17, name: 'SBS', logo: '/resources/images/main/logo_sbs.png' },
+    { id: 18, name: 'JTBC', logo: '/resources/images/main/logo_jtbc.png' },
+    { id: 19, name: 'KBS', logo: '/resources/images/main/logo_kbs.png' },
+    { id: 20, name: '연합뉴스', logo: '/resources/images/main/logo_yna.png' },
+    { id: 21, name: '청와대', logo: '/resources/images/main/logo_president.png' }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % customers.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [customers.length]);
+
   return (
-    <section className={styles.customers}>
+    <section className={styles.customersSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>
-          바이브는 다양한 산업군의<br />
-          700여 고객사와 함께합니다
-        </h2>
-        <div className={styles.logoGrid}>
-          {customers.map((customer, index) => (
-            <div key={index} className={styles.logoCard}>
-              <Image 
-                src={customer.logo} 
-                alt={customer.name} 
-                width={120} 
-                height={50} 
-                className={styles.logo}
-              />
-            </div>
-          ))}
+        <div className={styles.title}>
+          <h2>
+            바이브는 다양한 산업군의 <br />
+            <a href="/customer" title="주요 고객사 바로가기">700</a>여 고객사와 함께합니다
+          </h2>
+        </div>
+        <div className={styles.sliderContainer}>
+          <div 
+            className={styles.slider}
+            style={{ transform: `translateX(-${currentIndex * 200}px)` }}
+          >
+            {customers.map((customer) => (
+              <div key={customer.id} className={styles.slideItem}>
+                <a href="/customer" title="주요 고객사 바로가기">
+                  <img src={customer.logo} alt={`${customer.name} 로고`} />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default CustomersSection; 
+} 

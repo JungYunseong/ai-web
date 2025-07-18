@@ -1,6 +1,6 @@
-.business {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+.businessSection {
+  padding: 5rem 0;
+  background: white;
 }
 
 .container {
@@ -11,119 +11,137 @@
 
 .title {
   text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 60px;
+  color: #333;
+  margin: 0;
 }
 
 .businessGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.businessCard {
-  background: #fff;
-  border-radius: 24px;
-  padding: 50px 40px;
-  text-align: center;
+.businessItem {
+  background: #f8f9fa;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
   transition: all 0.3s ease;
-  border: 1px solid #e2e8f0;
-  position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.businessCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--accent-color);
-}
-
-.businessCard:hover {
+.businessItem:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.iconContainer {
+.itemTop {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.itemIcon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color) 100%);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 30px;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
 }
 
-.icon {
-  font-size: 2.5rem;
-  color: white;
+.itemIcon img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
 }
 
-.businessTitle {
-  font-size: 1.8rem;
+.itemBottom {
+  padding: 2rem;
+  text-align: center;
+}
+
+.itemBottom h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 20px;
+  color: #333;
+  margin: 0 0 1rem 0;
 }
 
-.businessDescription {
-  font-size: 1.1rem;
-  color: #666;
+.itemBottom p {
+  font-size: 1rem;
   line-height: 1.6;
-  white-space: pre-line;
+  color: #666;
+  margin: 0;
 }
 
+/* 반응형 디자인 */
 @media (max-width: 768px) {
-  .business {
-    padding: 60px 0;
+  .businessSection {
+    padding: 3rem 0;
   }
   
-  .title {
+  .title h2 {
     font-size: 2rem;
-    margin-bottom: 40px;
   }
   
   .businessGrid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 2rem;
   }
   
-  .businessCard {
-    padding: 40px 30px;
+  .itemTop {
+    padding: 2rem 1.5rem;
   }
   
-  .iconContainer {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 25px;
+  .itemIcon {
+    width: 60px;
+    height: 60px;
   }
   
-  .icon {
-    font-size: 2rem;
+  .itemIcon img {
+    width: 35px;
+    height: 35px;
   }
   
-  .businessTitle {
-    font-size: 1.6rem;
+  .itemBottom {
+    padding: 1.5rem;
   }
   
-  .businessDescription {
-    font-size: 1rem;
+  .itemBottom h3 {
+    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
-  .businessCard {
-    padding: 30px 20px;
+  .businessGrid {
+    gap: 1.5rem;
   }
   
-  .businessTitle {
-    font-size: 1.4rem;
+  .itemTop {
+    padding: 1.5rem 1rem;
+  }
+  
+  .itemBottom {
+    padding: 1.25rem;
+  }
+  
+  .itemBottom h3 {
+    font-size: 1.1rem;
+  }
+  
+  .itemBottom p {
+    font-size: 0.9rem;
   }
 } 

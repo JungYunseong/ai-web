@@ -1,42 +1,49 @@
-'use client';
-
-import React from 'react';
 import styles from './BusinessSection.module.css';
 
-const BusinessSection = () => {
-  const businesses = [
+export default function BusinessSection() {
+  const businessItems = [
     {
-      title: "VAIV Solution",
-      description: "공공과 민간에서 검증된 AI 기술력,\n비즈니스 혁신과 AX를 지원하는 솔루션",
-      icon: "🔧",
-      color: "#2563eb"
+      id: 1,
+      title: 'VAIV Solution',
+      description: '공공과 민간에서 검증된 AI 기술력, 비즈니스 혁신과 AX를 지원하는 솔루션',
+      link: '/business?tab=solution',
+      icon: '/resources/images/main/icon_solution.svg'
     },
     {
-      title: "VAIV Service", 
-      description: "빅데이터로 시장을 읽고,\n기업의 전략적 의사결정을 지원하는 서비스",
-      icon: "📊",
-      color: "#10b981"
+      id: 2,
+      title: 'VAIV Service',
+      description: '빅데이터로 시장을 읽고, 기업의 전략적 의사결정을 지원하는 서비스',
+      link: '/business?tab=service',
+      icon: '/resources/images/main/icon_service.svg'
     }
   ];
 
   return (
-    <section className={styles.business}>
+    <section className={styles.businessSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>주요 비즈니스</h2>
+        <div className={styles.title}>
+          <h2>주요 비즈니스</h2>
+        </div>
         <div className={styles.businessGrid}>
-          {businesses.map((business, index) => (
-            <div key={index} className={styles.businessCard} style={{'--accent-color': business.color} as React.CSSProperties}>
-              <div className={styles.iconContainer}>
-                <span className={styles.icon}>{business.icon}</span>
+          {businessItems.map((item) => (
+            <a 
+              key={item.id} 
+              href={item.link} 
+              className={styles.businessItem}
+            >
+              <div className={styles.itemTop}>
+                <div className={styles.itemIcon}>
+                  <img src={item.icon} alt={item.title} />
+                </div>
               </div>
-              <h3 className={styles.businessTitle}>{business.title}</h3>
-              <p className={styles.businessDescription}>{business.description}</p>
-            </div>
+              <div className={styles.itemBottom}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </a>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default BusinessSection; 
+} 

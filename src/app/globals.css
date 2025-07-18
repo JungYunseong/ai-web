@@ -1,30 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 
 * {
   box-sizing: border-box;
@@ -32,13 +6,82 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Material Design Iconic Font */
+@font-face {
+  font-family: "Material-Design-Iconic-Font";
+  src: url("https://cdn.jsdelivr.net/gh/zavoloklom/material-design-iconic-font@2.2.0/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0") format("woff2"),
+       url("https://cdn.jsdelivr.net/gh/zavoloklom/material-design-iconic-font@2.2.0/fonts/Material-Design-Iconic-Font.woff?v=2.2.0") format("woff"),
+       url("https://cdn.jsdelivr.net/gh/zavoloklom/material-design-iconic-font@2.2.0/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.zmdi {
+  display: inline-block;
+  font: normal normal normal 14px/1 "Material-Design-Iconic-Font";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.zmdi-chevron-right:before {
+  content: "\f2f9";
+}
+
+/* 반응형 유틸리티 클래스 */
+.mo {
+  display: none;
+}
+
+.tablet {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mo {
+    display: block;
+  }
+  
+  .mo-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tablet {
+    display: block;
+  }
+  
+  .br-tab {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .br-tab {
+    display: none;
   }
 }

@@ -1,6 +1,6 @@
-.news {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+.newsSection {
+  padding: 5rem 0;
+  background: white;
 }
 
 .container {
@@ -9,193 +9,192 @@
   padding: 0 20px;
 }
 
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.newsBanner {
+  margin-bottom: 4rem;
+}
+
+.newsBanner a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.newsBanner a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.newsBanner h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.newsBanner h3 b {
+  color: #ffd700;
+}
+
+.newsBanner figure {
+  margin: 0;
+}
+
+.newsBanner img {
+  max-width: 200px;
+  height: auto;
+}
+
 .newsContent {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
   align-items: start;
 }
 
-.newsSection {
-  background: #fff;
-  border-radius: 24px;
-  padding: 50px 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-  font-size: 2.2rem;
+.newsInfo h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 16px;
+  color: #333;
+  margin: 0 0 2rem 0;
+  line-height: 1.4;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 40px;
-  line-height: 1.5;
+.newsInfo h3 em {
+  color: #667eea;
+  font-style: normal;
+}
+
+.arrowButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.arrowButton:hover {
+  background: #5a6fd8;
+  transform: translateX(5px);
 }
 
 .newsList {
-  margin-bottom: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.newsItem {
-  padding: 20px 0;
-  border-bottom: 1px solid #e9ecef;
+.newsList li {
+  border-bottom: 1px solid #eee;
+}
+
+.newsList li:last-child {
+  border-bottom: none;
+}
+
+.newsList a {
+  display: block;
+  padding: 1.5rem 0;
+  text-decoration: none;
+  color: inherit;
   transition: all 0.3s ease;
 }
 
-.newsItem:hover {
+.newsList a:hover {
   background: #f8f9fa;
-  margin: 0 -20px;
-  padding: 20px;
-  border-radius: 8px;
+  padding-left: 1rem;
 }
 
-.newsTitle {
+.listText h5 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 8px;
+  margin: 0 0 0.5rem 0;
   line-height: 1.4;
 }
 
-.newsDate {
+.listText p {
   font-size: 0.9rem;
-  color: #888;
-  font-weight: 500;
-}
-
-.moreNews {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.moreTitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-.moreButton {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.moreButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-}
-
-.newsletterSection {
-  background: #fff;
-  border-radius: 24px;
-  padding: 40px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 20px;
-}
-
-.newsletterTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.newsletterContent {
-  text-align: center;
-}
-
-.newsletterSubtitle {
-  font-size: 1.1rem;
   color: #666;
-  margin-bottom: 30px;
-  line-height: 1.5;
+  margin: 0;
 }
 
-.subscribeForm {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.emailInput {
-  padding: 12px 16px;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.emailInput:focus {
-  outline: none;
-  border-color: #2563eb;
-}
-
-.subscribeButton {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.subscribeButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-}
-
+/* 반응형 디자인 */
 @media (max-width: 768px) {
-  .news {
-    padding: 60px 0;
+  .newsSection {
+    padding: 3rem 0;
+  }
+  
+  .title h2 {
+    font-size: 2rem;
+  }
+  
+  .newsBanner a {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .newsBanner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .newsBanner img {
+    max-width: 150px;
   }
   
   .newsContent {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2rem;
   }
   
-  .newsSection {
-    padding: 40px 30px;
-  }
-  
-  .title {
-    font-size: 1.8rem;
-  }
-  
-  .newsletterSection {
-    position: static;
-    padding: 30px 20px;
+  .newsInfo h3 {
+    font-size: 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
-  .newsSection {
-    padding: 30px 20px;
+  .newsBanner a {
+    padding: 1.5rem;
   }
   
-  .title {
-    font-size: 1.6rem;
+  .newsBanner h3 {
+    font-size: 1.25rem;
   }
   
-  .newsletterSection {
-    padding: 25px 15px;
+  .newsBanner img {
+    max-width: 120px;
+  }
+  
+  .listText h5 {
+    font-size: 1rem;
+  }
+  
+  .arrowButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 } 
