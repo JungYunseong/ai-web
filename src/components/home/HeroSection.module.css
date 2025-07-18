@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 65px);
-  min-height: 600px;
+  min-height: 535px;
   margin-top: 65px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
@@ -139,6 +139,12 @@
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
+  .heroSection {
+    height: calc(100vh - 60px);
+    min-height: 540px;
+    margin-top: 60px;
+  }
+  
   .slideTitle {
     font-size: 2rem;
   }
@@ -157,6 +163,12 @@
 }
 
 @media (max-width: 480px) {
+  .heroSection {
+    height: calc(100vh - 60px);
+    min-height: 540px;
+    margin-top: 60px;
+  }
+  
   .slideTitle {
     font-size: 1.5rem;
   }
