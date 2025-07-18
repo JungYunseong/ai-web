@@ -1,0 +1,789 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-Script-type" content="text/javascript">
+    <meta http-equiv="content-Style-type" content="text/css">
+
+	<title>바이브컴퍼니 - AI·빅데이터 선도기업</title>
+	<meta name="description" content="바이브컴퍼니는 Big Data로 시장을 읽고 AI로 업무 혁신을 만들어 갑니다. AX 시대, 전략적 파트너로서 사람과 기술이 함께 성장하는 미래를 만들어갑니다.">
+	<meta name="keywords" content="AI, Big Data, RAG, LLM, 자연어 처리, 인공지능, 데이터 분석, 데이터 추론, 트렌드, 인사이트, 검색엔진, 챗봇, KMS, 리서치, 리포트">
+	<meta property="og:title" content="바이브(VAIV)" />
+	<meta property="og:image" content="/resources/images/vaiv/share_img_re.png?ver=1748334157969" />
+	<meta property="og:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+	<meta property="og:site_name" content="바이브(VAIV)" />
+	<meta property="twitter:title" content="바이브(VAIV)" />
+	<meta property="twitter:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+
+	<meta name="naver-site-verification" content="bce89190c84b84f0baebf7f19c423543a6dcae0b" />
+	<meta name="google-site-verification" content="k9DlVk0vfCkL3643OGmUekZCpk6Ng-X_V-2gOT-a6Mc" />
+	
+	<link rel="apple-touch-icon-precomposed" href="/resources/images/vaiv/homIcon_114_114.png" />
+	<link rel="shortcut icon" href="/resources/images/vaiv/homIcon_72_72.png" />
+	<link rel="icon" href="/resources/images/vaiv/vaiv_favicon.ico" />
+	<link rel="stylesheet" href="/resources/css/style.css?ver=250512" type="text/css"/>
+
+	<script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/js/jquery-scrolltofixed-min.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+    <script src="/resources/js/common.js?ver=1748334157969"></script>
+    
+    <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NXLDV7B7');</script>
+	<!-- End Google Tag Manager -->	
+
+
+
+<meta name="decorator" content="sub"/>
+<!-- 기본 Google Map용 -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7sSTMO5sgyqu_1l0KuaIK_QAyv0U44c&callback=initMap" async defer></script> -->
+<!-- 기본 Google Map용 -->
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77075bbb08b159f4878384a04af0bda2"></script>
+<!-- //다음 Map -->
+<script type="text/javascript">
+	var map;
+	var map2;
+	
+	function initMap() {
+		drawDaumMap("Seoul_map","바이브컴퍼니","37.535299", "127.010828",1);
+		//drawDaumMap("Sejong_map","산학연클러스터지원센터","36.49932586052773","127.32899134523807",3);
+		drawDaumMap("Sejong_map","바이브컴퍼니 세종","36.49096883172943","127.32692256110721",3);
+// 		drawGoogleMap();
+	}
+
+	function drawDaumMap(target,keyword,x,y,level){
+        /**
+         * //https://developers.kakao.com/
+         * 계정정보
+         * ID : metaverse_pln@kakao.com
+         * PW : DTSvaiv123!@#
+         * 
+         * 로그인 시 브라우저 인증 요청하면 이메일 인증 하시면 되고 해당 이메일 정보
+         * ID : duplanet@vaiv.kr
+         * PW : vaiv08334!!
+         * 
+		**/
+         
+		// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+		var infowindow = new kakao.maps.InfoWindow({zIndex:1});
+
+		var mapContainer = document.getElementById(target), // 지도를 표시할 div 
+		    mapOption = {
+		        center: new kakao.maps.LatLng(x,y), // 지도의 중심좌표
+		        level: level // 지도의 확대 레벨
+		    };  
+
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+		// 마커가 표시될 위치입니다 
+		var markerPosition  = new kakao.maps.LatLng(x,y); 
+
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+		    position: markerPosition
+		});
+
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);
+	}
+	
+	function drawGoogleMap(){
+		//기존 등록시킨 Google MAP
+		var myLatlng = new google.maps.LatLng(37.535299, 127.010828);			//Seoul_map
+		//var myLatlng2 = new google.maps.LatLng(36.4993574,127.3267438);		//Sejong_map
+		var myLatlng2 = new google.maps.LatLng(36.49096883172943,127.32692256110721); //Sejong_map
+		map = new google.maps.Map(document.getElementById('Seoul_map'), {
+			center: myLatlng,
+			zoom: 14
+		});
+		var beachMarker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			icon: {
+				url: "/resources/images/map_icon.svg",
+				scaledSize: new google.maps.Size(30, 30)
+			}
+		});
+	
+	
+		//Sejong_map
+		map2 = new google.maps.Map(document.getElementById('Sejong_map'), {
+			center: myLatlng2,
+			zoom: 14
+		});
+		var beachMarker2 = new google.maps.Marker({
+			position: myLatlng2,
+			map: map2,
+			icon: {
+				url: "/resources/images/map_icon.svg",
+				scaledSize: new google.maps.Size(30, 30)
+			}
+		});	
+	}
+	$(document).ready(function() {
+		initMap();
+	});
+</script>
+   	
+</head>
+<body id=''  class='' >
+<!-- header start -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXLDV7B7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+	var url = location.href;
+	var urlArray = url.split("/");
+	if($.inArray("customer",urlArray) > -1){
+		$(".gnb_list li a").removeClass("on");
+		$("#reference").addClass("on");
+	}else{
+		$(".gnb_list li a").each(function(){
+			var id = $(this).attr("id");
+			if($.inArray(id,urlArray) > -1){
+				$(".gnb_list li a").removeClass("on");
+				$("#"+id).addClass("on");
+			}
+		})
+	}
+	
+    // URL의 쿼리스트링에서 UTM 파라미터 추출
+    function getUTMParams() {
+        const params = new URLSearchParams(window.location.search);
+        const utmParams = {};
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach((key) => {
+            if (params.has(key)) {
+                utmParams[key] = params.get(key);
+            }
+        });
+        return utmParams;
+    }
+
+    // UTM 파라미터를 쿠키에 저장
+    function saveUTMParamsToCookies(utmParams) {
+        const expirationDays = 1; // 쿠키 만료일: 1일
+        Object.keys(utmParams).forEach((key) => {
+            $.cookie(key, utmParams[key], { expires: expirationDays, path: '/' });
+        });
+    }
+    
+    // 쿠키 저장 실행
+    const utmParams = getUTMParams();
+    if (Object.keys(utmParams).length > 0) {
+        saveUTMParamsToCookies(utmParams);
+    }
+    
+}); 
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+
+<div class="responsive-check check-desktop"></div>
+<div class="responsive-check check-tablet"></div>
+<div class="responsive-check check-mobile"></div>
+
+<!-- 회사베너
+<div class="header-banner">
+	<a href="https://vaivcompany.kr/promote/prcenterNotice?posts_id=3741" target="_blank" class="banner-link">
+		<img src="/resources/images/banner_pc.png" class="banner-img banner-img-pc" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+		<img src="/resources/images/banner_mo.png" class="banner-img banner-img-mo" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+	</a>
+	<div class="banner-util">
+		<div class="banner-check">
+			<input type="checkbox" id="banner-not-today" />
+			<label for="banner-not-today">오늘하루 보지 않기</label>
+		</div>
+		<button type="button" class="banner-close-button">
+			<i class="ri-close-circle-fill"></i>
+		</button>
+	</div>
+</div> 
+-->
+<header id="header">
+	<div class="contentsInner">
+		<div class="header-content">
+			<h1 class="header-logo"><a href="/" title="home"><img src="/resources/images/vaiv/company_ci_re.png" alt="VAIV" /></a></h1>
+			<nav id="gnb">
+				<ul class="gnb-depth-list">
+					<li class="list-item">
+						<a href="/company" title="기업정보 바로가기">기업정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/company" title="회사소개 바로가기">회사소개</a>
+							</li>
+							<li class="list-item">
+								<a href="/companyHistory" title="연혁 바로가기">연혁</a>
+							</li>
+							<li class="list-item">
+								<a href="/customer" title="주요 고객사 바로가기">주요 고객사</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterIR" title="투자정보 바로가기">투자정보</a>
+							</li>
+
+
+
+							<li class="list-item">
+								<a href="/companyInquiry" title="문의하기 바로가기">문의하기</a>
+							</li>
+							<li class="list-item">
+								<a href="/company#map" title="오시는 길 바로가기">오시는 길</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/laboratory" title="연구소 바로가기">연구소</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/laboratory?tab=1" title="핵심기술 바로가기">핵심기술</a>
+							</li>
+							<li class="list-item">
+								<a href="/laboratory?tab=2" title="AI·빅데이터연구소 바로가기">AI·빅데이터연구소</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business?tab=solution" title="VAIV Solution 바로가기">VAIV Solution</a>
+							</li>
+							<li class="list-item">
+								<a href="/business?tab=service" title="VAIV Service 바로가기">VAIV Service</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<!-- <li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business/businessSometrend" title="Sometrend 바로가기">Sometrend</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessFintech" title="Fintech 바로가기">Fintech</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIsolver" title="AI Solver 바로가기">AI Solver</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIassistant" title="AI Assistant 바로가기">AI Assistant</a>
+							</li>
+							<li class="list-item">
+								<a href="/reference" title="Reference 바로가기">Reference</a>
+							</li>
+						</ul>
+					</li> -->
+					<li class="list-item">
+						<a href="/promote/prcenterNoticelist" title="홍보센터 바로가기">홍보센터</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/promote/prcenterNoticelist" title="공지사항 바로가기">공지사항</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterPressreleaselist" title="보도자료 바로가기">보도자료</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterVideo" title="홍보영상 바로가기">홍보영상</a>
+							</li>
+
+
+
+
+
+
+							<li class="list-item">
+								<a href="https://blog.naver.com/vaiv_company" title="블로그 바로가기" target="_blank">블로그</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/recruit/recruitmentNoticelist" title="채용정보 바로가기">채용정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/recruit/recruitmentNoticelist" title="채용공고 바로가기">채용공고</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentInformation" title="채용안내 바로가기">채용안내</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentWelfare" title="복지제도 바로가기">복지제도</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/partner" title="파트너 바로가기">파트너</a>
+					</li>
+				</ul>
+				<div class="gnb-bg"></div>
+			</nav>
+			<button type="button" class="header-toggle"><span></span><span></span><span></span></button>
+		</div>
+	</div>
+
+	<div class="header-dim"></div>
+	<div class="desktop-gnb-modal">
+		<button type="button" class="modal-close">
+			<div data-feather="x"></div>
+		</button>
+	</div>
+</header>
+
+<script>
+$(document).ready(function () {
+	initAllGnb();
+	initHeaderBanner();
+
+	$('.gnb-depth2-list .list-item a').on('click', function () {
+		closeMobileGnb();
+		closeDesktopGnbModal();
+	});
+	
+});
+
+$(window).on('resize', function () {
+	initAllGnb();
+});
+
+function initAllGnb() {
+	let mobileGnbTimeout = null;
+
+	if ($('.check-desktop').is(':visible')) { // desktop
+		if (!$('#header').hasClass('desktop')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initDesktopGnb();
+
+			$('#header').addClass('desktop');
+		}
+	} else if ($('.check-tablet').is(':visible')){ // tablet
+		if (!$('#header').hasClass('tablet')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initMobileGnb();
+
+			$('#header').addClass('tablet');
+		}
+	} else if ($('.check-mobile').is(':visible')) { // mobile
+		if (!$('#header').hasClass('mobile')) {
+			clearAllGnb();
+			initMobileGnb();
+			
+			// 모바일일 때 gnb 잠깐 보였다가 들어가는 현상 fix
+			$('#gnb').css({ visibility: 'hidden' });
+			mobileGnbTimeout = setTimeout(function () {
+				$('#gnb').css({ visibility: 'visible' });
+			}, 500);
+
+			$('#header').addClass('mobile');
+		}
+	}
+}
+
+function clearAllGnb() {
+	closeMobileGnb();
+	closeDesktopGnbModal();
+
+	$('.header-toggle').off('click.initDesktopGnb');
+	$('.header-toggle').off('click.initMobileGnb');
+	$('.header-dim').off('click.initDesktopGnb');
+	$('.header-dim').off('click.initMobileGnb');
+	$('#header').removeClass('desktop tablet mobile');
+	$('#gnb').css({ visibility: 'visible' });
+}
+
+function initDesktopGnb() {
+	initDesktopGnbModal();
+
+	$('.header-toggle').on('click.initDesktopGnb', function () {
+		openDesktopGnbModal();
+	});
+
+	$('.header-dim').on('click.initDesktopGnb', function () {
+		closeDesktopGnbModal();
+	});
+
+	$('.desktop-gnb-modal .modal-close').on('click', function () {
+		closeDesktopGnbModal();
+	});
+}
+
+function initMobileGnb() {
+	$('.header-toggle').on('click.initMobileGnb', function () {
+		if (!$(this).hasClass('active')) {
+			openMobileGnb();
+		} else {
+			closeMobileGnb();
+		}
+	});
+
+	$('.header-dim').on('click.initMobileGnb', function () {
+		closeMobileGnb();
+	});
+}
+
+function initDesktopGnbModal() { 
+	if ($('.desktop-gnb-modal').children().length > 1) return;
+
+	const gnbEl = $('#gnb').clone();
+	$('.desktop-gnb-modal').append(gnbEl);
+}
+
+function openDesktopGnbModal() {
+	$('.header-dim').addClass('active');
+	$('.desktop-gnb-modal').stop().fadeIn();
+	$('#container .tab').addClass('inactive');
+}
+
+function closeDesktopGnbModal() {
+	$('.header-dim').removeClass('active');
+	$('.desktop-gnb-modal').hide();
+	$('#container .tab').removeClass('inactive');
+}
+
+function openMobileGnb() {
+	$('body').css({ overflow: 'hidden' });
+	$('#gnb').addClass('active');
+	$('.header-toggle').addClass('active');
+	$('.header-dim').addClass('active');
+	$('#container .tab').addClass('inactive');
+}
+
+function closeMobileGnb() {
+	$('body').css({ overflow: 'visible' });
+	$('#gnb').removeClass('active').scrollTop(0);
+	$('.header-toggle').removeClass('active');
+	$('.header-dim').removeClass('active');
+	$('#container .tab').removeClass('inactive');
+}
+
+function initHeaderBanner() {
+	const cookieName = 'header-banner';
+
+	// 쿠키가 있으면
+	if ($.cookie(cookieName) === '1') {
+		$('.header-banner').hide();
+	}
+
+	// 쿠키가 없으면
+	$('.header-banner .banner-close-button').on('click', function () {
+		if ($('.header-banner .banner-check input').is(':checked')) {
+			$.cookie(cookieName, '1', { expires: 1, path: "/" });
+		}
+
+		$('.header-banner').hide();
+	});
+}
+
+</script>
+<!-- header end -->
+<!-- main content start -->
+
+	<div id="container">       
+            <div class="content companywrap">
+                <div class="pageTitle_wrap pageTitle_wrap2">
+                    <h2 class="page_title title_move">회사소개</h2>
+					<p class="page_desc title_move">
+
+                        <em class="vaiv_color">바이브</em>는 빅데이터로 시장을 읽고 AI로 업무 혁신을 만들어 갑니다.
+                    </p>
+                </div><!-- //pageTitle_wrap -->
+                <div class="conwrap bg_white">
+                    <figure class="company_visual">
+                        <img src="/resources/images/bg/company_3.jpg" alt="" />
+                    </figure>
+                    <!-- <div class="company_visual_wrap"></div> -->
+
+                    <section class="text_section">
+                        <div class="contentsInner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <p class="main_title">
+
+
+                                            25년 이상 축적된 기술력과 노하우를 바탕으로, <br>
+                                            공공과 민간에 특화된 AI 솔루션과 Big Data 서비스를 제공해 왔습니다.
+                                        </p>
+                                        <p class="sub_title">
+
+
+
+                                                바이브는 한국어의 맥락을 이해하고, 일하는 사람들의 경험을 생각합니다. <br>
+                                                인공지능 기술에 데이터라는 지식을 더하여, 비즈니스 감각이 살아 있는 AI를 연구합니다. <br>
+                                                AX 시대, 믿을 수 있는 전략적 파트너로서 사람과 기술이 함께 성장하는 미래를 만들어갑니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>						
+                        </div>
+                    </section><!-- //text_section -->
+
+
+                    <!-- <div class="company_bg">
+                        <div class="contentsInner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="top_text_box">
+                                        <img src="/resources/images/company_service_2.png" alt="AI powered insight service"/>
+                                    </div>
+                                    <div class="bottom_text_box">
+                                        <p>사람과 공간에 대한 이해를 바탕으로 <br class="only_MO">당신의 더 나은 선택을 돕는 바이브의 AI</p>
+                                        <div class="company_service">                                            
+                                            <div>
+                                                <span>AGILE</span>
+                                                <p>인사이트를 사람들에게<br>빠르게 제공하는 AI</p>
+                                            </div>
+                                            <div>
+                                                <span>RELIABLE</span>
+                                                <p>복잡한 업무를 정확하고<br>신뢰도 높게 처리해주는 AI</p>
+                                            </div>
+                                            <div>
+                                                <span>EASY</span>
+                                                <p>최적의 방법으로 사람과<br>쉽게 커뮤니케이션 하는 AI</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --><!-- //visual_wrap -->
+
+                    <section class="text_section center">
+                        <div class="contentsInner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <!-- <p class="section_title">BI 소개</p> -->
+                                        <div class="bi_section">
+                                            <img src="/resources/images/vaiv/company_ci_re.png" alt="AI powered insight service" class="bi_logo"/>
+                                        </div>
+
+                                        <div class="bi_section">
+                                            <p class="bi_text">
+                                                바이브 컴퍼니는 독보적인 AI 기술을 기반으로 <br class="only_MO">미래를 내다보고(Vision AI) 가치를 만들고(Value AI) <br class="only_MO">사회 곳곳에서 발생하는 문제를 해결하고(AI Solve) <br class="only_MO"> <br>용기 있게 앞서며(AI brave) 예상을 뛰어넘는 행보를 선보이겠다(AI above)는 의미가 담겨 있습니다.
+
+                                              <!--   바이브를 상징하는 알파벳 D에 무언가 비추는 <br class="only_MO">서치라이트의 이미지를 결합하여 과거를 살펴보고 <br>
+                                            현재를 판단하고 미래를 예측하는<br class="only_MO"> 바이브의 모습을 담았습니다. --></p>
+
+											<!-- 
+                                            <ul class="download_btn">
+                                                <li>
+                                                    <a href="/resources/files/Daumsoft_BI.ai" target="_blank">AI 파일 다운로드</a>
+                                                    <a href="/resources/files/Daumsoft_BI.png" target="_blank">PNG 파일 다운로드</a>
+                                                </li>
+                                            </ul>
+											-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 vision-area">
+                                    <div id="vision" class="vision-link"></div>
+                                    <div>
+                                        <!-- <p class="section_title">비전</p> -->
+                                        <div class="bi_section">
+                                            <img src="/resources/images/vaiv/company_vision.svg" alt="Visionary AI for Value" class="bi_logo type2"/>
+                                        </div>
+
+                                        <div class="bi_section">
+                                            <p class="bi_text">바이브의 AI 기술로 고객의 소중한 시간을 더 가치있게 만들겠습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>						
+                        </div>
+                    </section><!-- //text_section -->
+                    
+                    
+                    
+                    <section id="map" class="text_section center">
+                        <div class="contentsInner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <p class="section_title">오시는 길</p>
+                                        <div class="road_section">
+                                            <div>
+                                                <p class="title">바이브 본사 (Seoul)</p>
+												<div id="Seoul_map" class="map_area"></div>
+                                                <ul>
+                                                    <li>서울 용산구 독서당로 97</li>
+                                                    <li>TEL  |  02-565-0531   FAX  |  02-565-0532   E-mail  |  Biz@vaiv.kr</li>
+                                                </ul>                                                
+                                            </div> 
+                                            
+                                            <div>
+                                                <p class="title">바이브 세종 (Sejong)</p>
+												<div id="Sejong_map" class="map_area"></div>
+                                                <ul>
+                                                    <li>세종특별자치시 집현동로 67</li>
+                                                    <li>TEL  |  02-565-0531   FAX  |  02-565-0532   E-mail  |  Biz@vaiv.kr</li>
+                                                </ul>                                                
+                                            </div>                                            
+                                            
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>						
+                        </div>
+                    </section><!-- //text_section -->
+
+
+                </div><!--conwrap-->
+            </div><!--content-->            
+    </div><!--//container--> 
+
+<!-- main content end -->
+<!-- footer start -->
+
+<footer id="footer">
+	<div class="contentsInner">
+		<div class="footer-top">
+			<figure class="footer-logo">
+				<img src="/resources/images/vaiv/footer_logo_re.png" alt="VAIV" />
+			</figure>
+			<ul class="footer-sns-list">
+				<li class="list-item list-blog">
+					<a href="https://blog.naver.com/vaiv_company" title="네이버 블로그 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_blog.svg" alt="네이버 블로그"/>
+					</a>
+				</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<li class="list-item list-ytb">
+					<a href="https://www.youtube.com/channel/UCe-PKPEl2nkwrC__8Qy1HUg" title="유튜브 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_ytb.svg" alt="유튜브"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<select class="footer-family" name="familysite_option" title="패밀리사이트 바로가기" onchange="if(this.value) window.open(this.value);">
+				<option value="" selected>패밀리사이트</option>
+				<option value="https://ai.vaiv.kr/">VAIV AI 플랫폼</option>
+				<option value="https://stock.vaiv.kr/">VAIV Stock</option>
+				<option value="https://data.some.co.kr/">Data +</option>
+				<option value="https://some.co.kr/">썸트렌드</option>
+				<option value="https://lifechange.ai/">생활변화관측소</option>
+				<option value="https://whotagged.me/">WHOTAG</option>
+			</select>
+			<div class="footer-content">
+				<ul class="footer-info-list">
+					<li class="list-item">(주)바이브컴퍼니</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">대표자</span>김경서</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">사업자등록번호</span>120-86-08334</li>
+					<li class="list-item">서울특별시 용산구 독서당로 97</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Mail</span><a href="mailto:Biz@vaiv.kr">Biz@vaiv.kr</a></li>
+					<li class="list-item"><span class="list-label">공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
+				</ul>
+				<div class="footer-copy">
+					<h6><a href="/privacy">개인정보 처리방침</a></h6>
+					<p>CopyrightⓒVAIV Company inc. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<a id="top_btn" href="#">Top</a>
+
+
+
+<aside class="chatbot-modal">
+	<div id="chatbot"></div>
+</aside>
+
+<script src="https://chat.vaiv.kr/aiv/assets/js/vaiv-chatbot-frame.js"></script>
+
+<!-- 공통 스크립트 -->
+<script>
+feather.replace();
+</script>
+
+<script>
+$(document).ready(function () {
+	// initChatbot();
+});
+
+function initChatbot() {
+	$('.chatbot-open-button').on('click', function () {
+		$('.chatbot-modal').addClass('active');
+
+		$("#chatbot").vaivChatbot({			
+			key : 'ICe2j-1677139942991',
+			baseUrl : "https://chat.vaiv.kr",
+			isUseGeolocation : true,
+			isScrollStopAtQuestion : true,
+			style : {
+				height: "80vh",		
+				theme : "vaiv"		
+			},
+			ui: {
+				closeBtn: true,
+			},
+			onClose: function () {
+				// console.log('chatbot close');
+				$('.chatbot-modal').removeClass('active');
+			},
+		});
+	});
+}
+</script>
+<!-- footer end -->
+</body>
+</html>
