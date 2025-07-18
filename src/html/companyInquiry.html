@@ -1,0 +1,984 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-Script-type" content="text/javascript">
+    <meta http-equiv="content-Style-type" content="text/css">
+
+	<title>바이브컴퍼니 - AI·빅데이터 선도기업</title>
+	<meta name="description" content="바이브컴퍼니는 Big Data로 시장을 읽고 AI로 업무 혁신을 만들어 갑니다. AX 시대, 전략적 파트너로서 사람과 기술이 함께 성장하는 미래를 만들어갑니다.">
+	<meta name="keywords" content="AI, Big Data, RAG, LLM, 자연어 처리, 인공지능, 데이터 분석, 데이터 추론, 트렌드, 인사이트, 검색엔진, 챗봇, KMS, 리서치, 리포트">
+	<meta property="og:title" content="바이브(VAIV)" />
+	<meta property="og:image" content="/resources/images/vaiv/share_img_re.png?ver=1748334157969" />
+	<meta property="og:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+	<meta property="og:site_name" content="바이브(VAIV)" />
+	<meta property="twitter:title" content="바이브(VAIV)" />
+	<meta property="twitter:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+
+	<meta name="naver-site-verification" content="bce89190c84b84f0baebf7f19c423543a6dcae0b" />
+	<meta name="google-site-verification" content="k9DlVk0vfCkL3643OGmUekZCpk6Ng-X_V-2gOT-a6Mc" />
+	
+	<link rel="apple-touch-icon-precomposed" href="/resources/images/vaiv/homIcon_114_114.png" />
+	<link rel="shortcut icon" href="/resources/images/vaiv/homIcon_72_72.png" />
+	<link rel="icon" href="/resources/images/vaiv/vaiv_favicon.ico" />
+	<link rel="stylesheet" href="/resources/css/style.css?ver=250512" type="text/css"/>
+
+	<script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/js/jquery-scrolltofixed-min.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+    <script src="/resources/js/common.js?ver=1748334157969"></script>
+    
+    <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NXLDV7B7');</script>
+	<!-- End Google Tag Manager -->	
+
+
+
+	<meta name="decorator" content="sub"/>
+    <script src="/resources/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script>
+        //문의유형
+        $(document).ready(function() {
+            $('.category_button ul li').click(function() {
+                $('.category_button ul li.on').removeClass('on');
+                $(this).addClass('on');
+                isClicked = 1;
+            });
+            
+            $('.first_btn').click(function() {
+                $('.category_selectN, .category_select2').css('display','none');
+                $('.category_select1').css('display','block');
+                
+                $('#board_sub_name').val("solution");
+            });
+            
+            $('.second_btn').click(function() {
+                $('.category_selectN, .category_select1').css('display','none');
+                $('.category_select2').css('display','block');
+                
+                $('#board_sub_name').val("system");
+            });
+            
+            $('.third_btn').click(function() {
+                $('.category_select1, .category_select2').css('display','none');
+                $('.category_selectN').css('display','block');
+                
+                $('#board_sub_name').val("marketing");
+            });          
+            
+            $('.fourth_btn').click(function() {
+                $('.category_select1, .category_select2').css('display','none');
+                $('.category_selectN').css('display','block');
+                
+                $('#board_sub_name').val("recruit");
+            });
+            
+            $("#chk_notice1").val("0");
+            $("#chk_notice2").val("0");
+            
+            $("#chk_notice1").change(function(){
+            	if($("#chk_notice1").is(":checked")){
+            		$("#chk_notice1").val("1");
+            	} else{
+            		$("#chk_notice1").val("0");
+            	}
+            });
+            
+            $("#chk_notice2").change(function(){
+            	if($("#chk_notice2").is(":checked")){
+            		$("#chk_notice2").val("1");
+            	} else{
+            		$("#chk_notice2").val("0");
+            	}
+            });
+        });
+    </script>
+   	
+</head>
+<body id=''  class='' >
+<!-- header start -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXLDV7B7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+	var url = location.href;
+	var urlArray = url.split("/");
+	if($.inArray("customer",urlArray) > -1){
+		$(".gnb_list li a").removeClass("on");
+		$("#reference").addClass("on");
+	}else{
+		$(".gnb_list li a").each(function(){
+			var id = $(this).attr("id");
+			if($.inArray(id,urlArray) > -1){
+				$(".gnb_list li a").removeClass("on");
+				$("#"+id).addClass("on");
+			}
+		})
+	}
+	
+    // URL의 쿼리스트링에서 UTM 파라미터 추출
+    function getUTMParams() {
+        const params = new URLSearchParams(window.location.search);
+        const utmParams = {};
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach((key) => {
+            if (params.has(key)) {
+                utmParams[key] = params.get(key);
+            }
+        });
+        return utmParams;
+    }
+
+    // UTM 파라미터를 쿠키에 저장
+    function saveUTMParamsToCookies(utmParams) {
+        const expirationDays = 1; // 쿠키 만료일: 1일
+        Object.keys(utmParams).forEach((key) => {
+            $.cookie(key, utmParams[key], { expires: expirationDays, path: '/' });
+        });
+    }
+    
+    // 쿠키 저장 실행
+    const utmParams = getUTMParams();
+    if (Object.keys(utmParams).length > 0) {
+        saveUTMParamsToCookies(utmParams);
+    }
+    
+}); 
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+
+<div class="responsive-check check-desktop"></div>
+<div class="responsive-check check-tablet"></div>
+<div class="responsive-check check-mobile"></div>
+
+<!-- 회사베너
+<div class="header-banner">
+	<a href="https://vaivcompany.kr/promote/prcenterNotice?posts_id=3741" target="_blank" class="banner-link">
+		<img src="/resources/images/banner_pc.png" class="banner-img banner-img-pc" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+		<img src="/resources/images/banner_mo.png" class="banner-img banner-img-mo" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+	</a>
+	<div class="banner-util">
+		<div class="banner-check">
+			<input type="checkbox" id="banner-not-today" />
+			<label for="banner-not-today">오늘하루 보지 않기</label>
+		</div>
+		<button type="button" class="banner-close-button">
+			<i class="ri-close-circle-fill"></i>
+		</button>
+	</div>
+</div> 
+-->
+<header id="header">
+	<div class="contentsInner">
+		<div class="header-content">
+			<h1 class="header-logo"><a href="/" title="home"><img src="/resources/images/vaiv/company_ci_re.png" alt="VAIV" /></a></h1>
+			<nav id="gnb">
+				<ul class="gnb-depth-list">
+					<li class="list-item">
+						<a href="/company" title="기업정보 바로가기">기업정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/company" title="회사소개 바로가기">회사소개</a>
+							</li>
+							<li class="list-item">
+								<a href="/companyHistory" title="연혁 바로가기">연혁</a>
+							</li>
+							<li class="list-item">
+								<a href="/customer" title="주요 고객사 바로가기">주요 고객사</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterIR" title="투자정보 바로가기">투자정보</a>
+							</li>
+
+
+
+							<li class="list-item">
+								<a href="/companyInquiry" title="문의하기 바로가기">문의하기</a>
+							</li>
+							<li class="list-item">
+								<a href="/company#map" title="오시는 길 바로가기">오시는 길</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/laboratory" title="연구소 바로가기">연구소</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/laboratory?tab=1" title="핵심기술 바로가기">핵심기술</a>
+							</li>
+							<li class="list-item">
+								<a href="/laboratory?tab=2" title="AI·빅데이터연구소 바로가기">AI·빅데이터연구소</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business?tab=solution" title="VAIV Solution 바로가기">VAIV Solution</a>
+							</li>
+							<li class="list-item">
+								<a href="/business?tab=service" title="VAIV Service 바로가기">VAIV Service</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<!-- <li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business/businessSometrend" title="Sometrend 바로가기">Sometrend</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessFintech" title="Fintech 바로가기">Fintech</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIsolver" title="AI Solver 바로가기">AI Solver</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIassistant" title="AI Assistant 바로가기">AI Assistant</a>
+							</li>
+							<li class="list-item">
+								<a href="/reference" title="Reference 바로가기">Reference</a>
+							</li>
+						</ul>
+					</li> -->
+					<li class="list-item">
+						<a href="/promote/prcenterNoticelist" title="홍보센터 바로가기">홍보센터</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/promote/prcenterNoticelist" title="공지사항 바로가기">공지사항</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterPressreleaselist" title="보도자료 바로가기">보도자료</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterVideo" title="홍보영상 바로가기">홍보영상</a>
+							</li>
+
+
+
+
+
+
+							<li class="list-item">
+								<a href="https://blog.naver.com/vaiv_company" title="블로그 바로가기" target="_blank">블로그</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/recruit/recruitmentNoticelist" title="채용정보 바로가기">채용정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/recruit/recruitmentNoticelist" title="채용공고 바로가기">채용공고</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentInformation" title="채용안내 바로가기">채용안내</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentWelfare" title="복지제도 바로가기">복지제도</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/partner" title="파트너 바로가기">파트너</a>
+					</li>
+				</ul>
+				<div class="gnb-bg"></div>
+			</nav>
+			<button type="button" class="header-toggle"><span></span><span></span><span></span></button>
+		</div>
+	</div>
+
+	<div class="header-dim"></div>
+	<div class="desktop-gnb-modal">
+		<button type="button" class="modal-close">
+			<div data-feather="x"></div>
+		</button>
+	</div>
+</header>
+
+<script>
+$(document).ready(function () {
+	initAllGnb();
+	initHeaderBanner();
+
+	$('.gnb-depth2-list .list-item a').on('click', function () {
+		closeMobileGnb();
+		closeDesktopGnbModal();
+	});
+	
+});
+
+$(window).on('resize', function () {
+	initAllGnb();
+});
+
+function initAllGnb() {
+	let mobileGnbTimeout = null;
+
+	if ($('.check-desktop').is(':visible')) { // desktop
+		if (!$('#header').hasClass('desktop')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initDesktopGnb();
+
+			$('#header').addClass('desktop');
+		}
+	} else if ($('.check-tablet').is(':visible')){ // tablet
+		if (!$('#header').hasClass('tablet')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initMobileGnb();
+
+			$('#header').addClass('tablet');
+		}
+	} else if ($('.check-mobile').is(':visible')) { // mobile
+		if (!$('#header').hasClass('mobile')) {
+			clearAllGnb();
+			initMobileGnb();
+			
+			// 모바일일 때 gnb 잠깐 보였다가 들어가는 현상 fix
+			$('#gnb').css({ visibility: 'hidden' });
+			mobileGnbTimeout = setTimeout(function () {
+				$('#gnb').css({ visibility: 'visible' });
+			}, 500);
+
+			$('#header').addClass('mobile');
+		}
+	}
+}
+
+function clearAllGnb() {
+	closeMobileGnb();
+	closeDesktopGnbModal();
+
+	$('.header-toggle').off('click.initDesktopGnb');
+	$('.header-toggle').off('click.initMobileGnb');
+	$('.header-dim').off('click.initDesktopGnb');
+	$('.header-dim').off('click.initMobileGnb');
+	$('#header').removeClass('desktop tablet mobile');
+	$('#gnb').css({ visibility: 'visible' });
+}
+
+function initDesktopGnb() {
+	initDesktopGnbModal();
+
+	$('.header-toggle').on('click.initDesktopGnb', function () {
+		openDesktopGnbModal();
+	});
+
+	$('.header-dim').on('click.initDesktopGnb', function () {
+		closeDesktopGnbModal();
+	});
+
+	$('.desktop-gnb-modal .modal-close').on('click', function () {
+		closeDesktopGnbModal();
+	});
+}
+
+function initMobileGnb() {
+	$('.header-toggle').on('click.initMobileGnb', function () {
+		if (!$(this).hasClass('active')) {
+			openMobileGnb();
+		} else {
+			closeMobileGnb();
+		}
+	});
+
+	$('.header-dim').on('click.initMobileGnb', function () {
+		closeMobileGnb();
+	});
+}
+
+function initDesktopGnbModal() { 
+	if ($('.desktop-gnb-modal').children().length > 1) return;
+
+	const gnbEl = $('#gnb').clone();
+	$('.desktop-gnb-modal').append(gnbEl);
+}
+
+function openDesktopGnbModal() {
+	$('.header-dim').addClass('active');
+	$('.desktop-gnb-modal').stop().fadeIn();
+	$('#container .tab').addClass('inactive');
+}
+
+function closeDesktopGnbModal() {
+	$('.header-dim').removeClass('active');
+	$('.desktop-gnb-modal').hide();
+	$('#container .tab').removeClass('inactive');
+}
+
+function openMobileGnb() {
+	$('body').css({ overflow: 'hidden' });
+	$('#gnb').addClass('active');
+	$('.header-toggle').addClass('active');
+	$('.header-dim').addClass('active');
+	$('#container .tab').addClass('inactive');
+}
+
+function closeMobileGnb() {
+	$('body').css({ overflow: 'visible' });
+	$('#gnb').removeClass('active').scrollTop(0);
+	$('.header-toggle').removeClass('active');
+	$('.header-dim').removeClass('active');
+	$('#container .tab').removeClass('inactive');
+}
+
+function initHeaderBanner() {
+	const cookieName = 'header-banner';
+
+	// 쿠키가 있으면
+	if ($.cookie(cookieName) === '1') {
+		$('.header-banner').hide();
+	}
+
+	// 쿠키가 없으면
+	$('.header-banner .banner-close-button').on('click', function () {
+		if ($('.header-banner .banner-check input').is(':checked')) {
+			$.cookie(cookieName, '1', { expires: 1, path: "/" });
+		}
+
+		$('.header-banner').hide();
+	});
+}
+
+</script>
+<!-- header end -->
+<!-- main content start -->
+
+   <div id="container">
+		<div class="content companywrap">          
+			<div class="conwrap">
+				
+<script type="text/javascript">
+	var list = null;
+	var utm_source = null;
+	var utm_medium = null;
+	var utm_campaign = null;
+	
+	$(document).ready(function() {
+	    //const savedUTMs = loadUTMParamsFromCookies();
+	    utm_source = $.cookie("utm_source");
+	    utm_medium = $.cookie("utm_medium");
+	    utm_campaign = $.cookie("utm_campaign");
+	    
+	    console.log("utm_source:",utm_source);
+	    console.log("utm_medium:",utm_medium);
+	    console.log("utm_campaign:",utm_campaign);
+	    
+		if(window.location.href.endsWith("/companyInquiry") && utm_source != null){
+			let targetURL = window.location.href + "?utm_source="+utm_source
+					+"&utm_medium="+utm_medium
+					+"&utm_campaign="+utm_campaign;
+			window.location.replace(targetURL);
+		}
+	    
+		onReadyInquiry();
+
+		$("[name='is_personal_info']").unbind().click(function() {
+			if(!$(this).is(':checked')) {
+				i$("[name='is_personal_info']").val(0);
+		    }else{
+		    	$("[name='is_personal_info']").val(1);
+			}
+		});
+
+		$("[name='is_marketing']").unbind().click(function() {
+			if(!$(this).is(':checked')) {
+				$("[name='is_marketing']").val(0);
+		    }else{
+		    	$("[name='is_marketing']").val(1);
+			}
+		});
+		let ajax = null;
+		$("#gotoInquiry").click(function(){
+			if(vaildation()){
+				let param = {
+					"type":$("[name='type']").val(),
+					"author_name":$("[name='author_name']").val(),
+					"author_detail":$("[name='author_detail']").val(),
+					"author_tel":$("[name='author_tel']").val(),
+					"author_email":$("[name='author_email']").val(),
+					"title":$("[name='title']").val(),
+					"content":$("[name='content']").val(),
+					"is_marketing":$("#chk_notice1").val(),
+					"is_personal_info":$("#chk_notice2").val()
+				}
+				
+				if(ajax == null){
+					if(confirm("제출하시겠습니까?")){
+						ajax = $.post("/companyInquiry/write",param,function(res){
+							alert("문의가 정상적으로 제출되었습니다.");
+							//console.log("res",res);
+							initForm();
+							return false;
+						}); 
+					}else{
+						return false;
+					}	
+				}else{
+					alert("이미 보내셨습니다.");
+					return false;
+				}
+			}else{
+				return false;
+			}
+		});
+		
+        // URL에서 category와 subType 파라미터 값을 가져옴
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedCategory = urlParams.get('category');
+        const selectedSubType = urlParams.get('subType');
+        
+        // category가 존재하면 해당 category 선택
+        if (selectedCategory !== null) {
+            $("[name='category']").val(selectedCategory).change();
+            
+            // subType이 존재하면 해당 subType 선택
+            if (selectedSubType !== null) {
+            	//console.log(Object.keys(list[selectedCategory].type[selectedSubType])[0]);
+                setTimeout(function() { // subType 옵션이 로드될 시간을 주기 위해 setTimeout 사용
+                    $("[name='subType']").val(Object.keys(list[selectedCategory].type[selectedSubType])[0]).change();
+                }, 100);
+            }
+        }
+	});
+	
+	function initForm(){
+		$("[name='subType']").html($("<option></option>").text("상세구분을 선택해 주세요")).show();
+		$("[name='author_name']").val("");
+		$("[name='author_detail']").val("");
+		$("[name='author_tel']").val("");
+		$("[name='author_email']").val("");
+		$("[name='title']").val("");
+		$("[name='content']").val("");
+		$("[name='category']").val("");
+		$("#chk_notice1").prop("checked",false);
+		$("#chk_notice2").prop("checked",false);
+		$("[name='category'] option:eq(0)").prop("selected",true);
+	}
+	
+	function vaildation(){
+		let checkResult = false;
+		 
+    	let type  =$("[name='type']").val();
+		let author_name = $.trim($("[name='author_name']").val());
+		let author_detail = $.trim($("[name='author_detail']").val());
+		let author_tel = $.trim($("[name='author_tel']").val());
+		let author_email = $.trim($("[name='author_email']").val());
+
+		let title = $.trim($("[name='title']").val());
+		let content = $.trim($("[name='content']").val());
+		
+		let is_personal_info =$("[name='is_personal_info']").val();
+		let is_marketing = $("[name='is_marketing']").val();
+	
+		if(type == '' || type == null){
+			alert("문의 유형을 선택하여 주세요!!");
+		}else if(author_name == '' || author_name == null){
+			alert("보내시는분 이름이 누락되었습니다.");
+			$("[name='author_name']").focus();
+		}else if((author_tel == '' || author_tel == null)){
+			alert("보내시는분 연락처를 적어주셔야 합니다.");
+			$("[name='author_tel']").focus();
+		}else if(author_email == '' || author_email == null){
+			alert("보내시는분 이메일를  적어주셔야 합니다.");
+		}else if(!CheckEmail(author_email)){
+			alert("이메일 형식이 잘못 되었습니다.");
+			$("[name='author_email']").focus();
+		}else if(title == '' || title == null){
+			alert("제목을 입력해주세요");
+			$("[name='title']").focus();
+		}else if(content == '' || content == null){
+			alert("문의 내용이 없습니다.");
+			$("[name='content']").focus();
+		}else if(!$("[name='is_personal_info']").is(":checked")){
+			alert("개인정보 수집 및 이용에 동의하셔야 합니다.");
+		}else{
+			checkResult = true;
+		}
+				
+		$("[name='is_personal_info']").unbind().click(function() {
+			if(!$(this).is(':checked')) {
+				if(confirm("개인정보 이용 동의를 해제하시겠니까?")){
+					checkResult = false;
+				}else{
+					checkResult = true;					
+				}
+		    }else{
+				checkResult = true;
+			}
+		});
+		return checkResult;
+	}
+
+	/**
+	* 문의유형 하드코딩 값들
+	* type 의 좌측은 view이고 우측은 java, mail 등등에 사용되는 value 값이다.
+	* corporateInformationController.java 의 getChargeEmail에서 매핑되어야 한다.
+	*/
+	function onReadyInquiry(){
+		list = [
+			{'title':'문의 유형을 선택해 주세요','type':[{'상세구분을 선택해 주세요':''}]},
+        	{'title':'VAIV Services','type':
+        		[{'Sometrend':'Sometrend'}
+        		,{'Sometrend Cloud':'Sometrend Cloud'}
+        		,{'Sometrend Data+':'Sometrend Data+'}
+        		,{'VAIV Stock':'VAIV Stock'}
+        		,{'VAIV 생활변화관측소':'VAIV 생활변화관측소'}]},
+        		
+        	{'title':'AI Solutions','type':
+        		[{'VAIV Search':'VAIV Search'}
+        		,{'VAIV Chatbot':'VAIV Chatbot'}
+        		,{'VAIV GeM(LLM)':'VAIV GeM(LLM)'}
+        		,{'AI ReportCopilot':'AI ReportCopilot'}
+        		,{'AI TA':'AI TA'}
+        		,{'AI Q&A':'AI Q&A'}
+        		,{'KMS':'KMS'}]},
+        		
+        	{'title':'컨설팅','type':
+        		[{'트렌드 & 브랜딩':'트렌드 & 브랜딩'}
+        		,{'Data':'Data'}
+        		,{'IT & AI':'IT & AI'}]},
+        		
+        	{'title':'금융',"type":"금융"},
+        	{'title':'기술/영업',"type":"기술/영업"},
+        	{'title':'대외협력',"type":"대외협력"},
+        	{'title':'파트너',"type":"파트너"},
+        	{'title':'채용',"type":"채용"},
+        	{'title':'강연',"type":"강연"},
+        	{'title':'기타',"type":"기타"},
+        ];
+		drawCategory(list);
+	}
+
+	function drawCategory(){
+		$.each(list,function(idx,item){
+            let option = $("<option></option>").text(item.title).val(idx);
+            $("[name='category']").append(option);
+        });
+        
+		$("[name='category']").change(function(){
+        	$("[name='subType']").empty();
+        	let index = $(this).val();
+
+        	if(list[index] == undefined){
+        		return false;
+            }
+            
+        	let type = list[index].type;
+        	
+        	if(typeof(type) == "string"){
+            	$("[name='subType']").hide();
+            	$("#type").val(type);
+            	//console.log('string type='+type);
+            }else{
+            	$("[name='subType']").show();
+	        	$.each(type,function(idx,item){
+					$.each(item,function(_idx,_item){
+						if(idx == 0){
+							$("#type").val(_item);
+							//console.log('0 type='+type);
+						}
+						let option = $("<option></option>").text(_idx).val(_item);
+						$("[name='subType']").append(option);
+	             	});
+	            });
+	        	$("[name='subType']").change(function(){
+		        	type = $(this).val();
+		        	$("#type").val(type);
+		        	//console.log('subType type='+type);
+		        });
+            }
+        });
+	}
+	
+	function CheckEmail(str){                                                 
+	     var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+	     if(!reg_email.test(str)) {                            
+	          return false;         
+	     }else{                       
+	          return true;         
+	     }                            
+	} 
+</script>
+
+	<input type="hidden" name="type" id="type">
+	<div class="inquiry_position">
+		<div class="contentsInner">
+		     <!--문의-->
+		    <div class="inquiryWrap">
+		        <div class="row">
+		            <div class="col-md-6">
+		                <div class="inquiry_txt">
+		                	<div>
+		                     <p class="title">문의하기</p>
+		                     <p class="text">
+		                     	궁금하신 사항이 있으시면<BR> 오른쪽의 문의하기를 이용해주세요.<br>담당자가 자세하게 안내해드리겠습니다.
+		                     </p>      
+		                    </div>                              
+		                </div>
+		            </div>
+		
+		            <div class="col-md-6">
+		            
+		                <!-- <div class="inquiry_write">
+		                    <div class="inquiry_row">
+		                        <p class="inquiry_title">문의 유형</p>
+		                        <div class="inquiry_con">
+		                            <div class="inquiry_select">                                                    
+		                                <select name="category">
+		                                </select>   
+		                                <select name="subType">
+		                                    <option value="">상세구분을 선택해 주세요</option>
+		                                </select>                                                   
+		                            </div>                                    
+		                        </div>                                
+		                    </div>
+		                    <div class="inquiry_row">
+		                        <p class="inquiry_title">이름</p>
+		                        <div class="inquiry_con">
+		                            <input type="text" name="author_name" id="author_name">                       
+		                        </div>                                
+		                    </div>                               
+		                    <div class="inquiry_row inquiry_row2">
+		                        <div>
+		                            <p class="inquiry_title">연락처</p>
+		                            <div class="inquiry_con">
+		                                <input type="text" name="author_tel" id="author_tel" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+		                            </div>
+		                        </div>
+		
+		                        <div>
+		                            <p class="inquiry_title">이메일</p>
+		                            <div class="inquiry_con">
+		                                <input type="text" name="author_email" id="author_email">        
+		                            </div> 
+		                        </div>
+		                    </div>
+		
+		                    <div class="inquiry_row">
+		                        <p class="inquiry_title">회사명/직급</p>
+		                        <div class="inquiry_con">
+		                            <input type="text" name="author_detail" id="author_detail">                 
+		                        </div>                                
+		                    </div>
+		
+		                    <div class="inquiry_row">
+		                        <p class="inquiry_title">제목</p>
+		                        <div class="inquiry_con">
+		                            <input type="text" name="title" placeholder="제목을 입력해주세요."> 
+		                        </div>
+		                    </div>
+		
+		                    <div class="inquiry_row">
+		                        <p class="inquiry_title">내용</p>
+		                        <div class="inquiry_con">
+		                            <textarea name="content"  placeholder="문의 내용을 입력해주세요."></textarea>
+		                        </div>
+		                    </div>
+		
+		                    <div>
+		                        <div class="btnArea">
+		                            <div class="check_btn">
+										<span class="checkbox2">
+											<input type="checkbox" name="is_personal_info" value="0" id="chk_notice1">
+											<label for="chk_notice1">개인정보 수집 및 이용에 동의합니다.</label>
+											<span class="notice_text"><a href="/privacy">자세히 보기</a></span>
+										</span>
+		                            </div> 
+		                            <div class="check_btn">
+										<span class="checkbox2">
+											<input type="checkbox" name="is_marketing" value="0" id="chk_notice2">
+											<label for="chk_notice2"><span class="red">(선택)</span>마케팅 이용 및 뉴스레터 수신에 동의합니다.</label>
+										</span>
+		                            </div>
+		                            <button class="btn_l blue" id="gotoInquiry">제출하기</button>
+		                        </div>
+		                    </div>
+		                </div> -->
+		                
+						<div id="salesmap-web-form" data-web-form="https://salesmap.kr/web-form/f2d659b9-8969-48eb-bb0b-e69cae9bfe6a">
+						  <script>
+						    !(function (window, document) {
+						      var currentScript = document.currentScript;
+						      var scriptElement = document.createElement('script');
+						      scriptElement.onload = function () {
+						        window.SmFormSettings.loadForm();
+						      };
+						      scriptElement.id = 'loadFormScript';
+						      scriptElement.src = 'https://salesmap.kr/web-form-loader-v3.js';
+						      currentScript.parentNode.insertBefore(scriptElement, currentScript);
+						      //$("#headlessui-combobox-input-").val("test");
+						    })(window, document);
+						  </script>
+						</div>		                
+		                
+		            </div>
+		        </div>		
+		
+		    </div><!--inquiryWrap-->  
+		    <span class="inquiry_bg">
+		     <object type="image/svg+xml" data="/resources/images/bg_polygon.svg" alt="배경" class="inquiry_bg01"></object>
+		     <object type="image/svg+xml" data="/resources/images/bg_polygon.svg" alt="배경" class="inquiry_bg02"></object>
+		 </span>	                  
+		</div><!--contentsInner-->
+	</div><!--inquiry_position-->   
+			</div>
+		</div>
+	</div>	
+
+<!-- main content end -->
+<!-- footer start -->
+
+<footer id="footer">
+	<div class="contentsInner">
+		<div class="footer-top">
+			<figure class="footer-logo">
+				<img src="/resources/images/vaiv/footer_logo_re.png" alt="VAIV" />
+			</figure>
+			<ul class="footer-sns-list">
+				<li class="list-item list-blog">
+					<a href="https://blog.naver.com/vaiv_company" title="네이버 블로그 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_blog.svg" alt="네이버 블로그"/>
+					</a>
+				</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<li class="list-item list-ytb">
+					<a href="https://www.youtube.com/channel/UCe-PKPEl2nkwrC__8Qy1HUg" title="유튜브 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_ytb.svg" alt="유튜브"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<select class="footer-family" name="familysite_option" title="패밀리사이트 바로가기" onchange="if(this.value) window.open(this.value);">
+				<option value="" selected>패밀리사이트</option>
+				<option value="https://ai.vaiv.kr/">VAIV AI 플랫폼</option>
+				<option value="https://stock.vaiv.kr/">VAIV Stock</option>
+				<option value="https://data.some.co.kr/">Data +</option>
+				<option value="https://some.co.kr/">썸트렌드</option>
+				<option value="https://lifechange.ai/">생활변화관측소</option>
+				<option value="https://whotagged.me/">WHOTAG</option>
+			</select>
+			<div class="footer-content">
+				<ul class="footer-info-list">
+					<li class="list-item">(주)바이브컴퍼니</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">대표자</span>김경서</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">사업자등록번호</span>120-86-08334</li>
+					<li class="list-item">서울특별시 용산구 독서당로 97</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Mail</span><a href="mailto:Biz@vaiv.kr">Biz@vaiv.kr</a></li>
+					<li class="list-item"><span class="list-label">공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
+				</ul>
+				<div class="footer-copy">
+					<h6><a href="/privacy">개인정보 처리방침</a></h6>
+					<p>CopyrightⓒVAIV Company inc. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<a id="top_btn" href="#">Top</a>
+
+
+
+<aside class="chatbot-modal">
+	<div id="chatbot"></div>
+</aside>
+
+<script src="https://chat.vaiv.kr/aiv/assets/js/vaiv-chatbot-frame.js"></script>
+
+<!-- 공통 스크립트 -->
+<script>
+feather.replace();
+</script>
+
+<script>
+$(document).ready(function () {
+	// initChatbot();
+});
+
+function initChatbot() {
+	$('.chatbot-open-button').on('click', function () {
+		$('.chatbot-modal').addClass('active');
+
+		$("#chatbot").vaivChatbot({			
+			key : 'ICe2j-1677139942991',
+			baseUrl : "https://chat.vaiv.kr",
+			isUseGeolocation : true,
+			isScrollStopAtQuestion : true,
+			style : {
+				height: "80vh",		
+				theme : "vaiv"		
+			},
+			ui: {
+				closeBtn: true,
+			},
+			onClose: function () {
+				// console.log('chatbot close');
+				$('.chatbot-modal').removeClass('active');
+			},
+		});
+	});
+}
+</script>
+<!-- footer end -->
+</body>
+</html>
