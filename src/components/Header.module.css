@@ -192,7 +192,7 @@
 
 .gnbDepth2List .listItem a {
   display: block;
-  color: #000 !important;
+  color: #000;
   font-size: 15px;
   line-height: 1.44;
   text-align: center;
@@ -207,8 +207,8 @@
 }
 
 .gnbDepth2List .listItem a:hover {
-  color: #6f42c1;
-  background: transparent;
+  color: #6f42c1 !important;
+  background: transparent !important;
 }
 
 .gnbBg {
