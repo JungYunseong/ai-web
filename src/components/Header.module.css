@@ -175,7 +175,7 @@
   padding: 25px 0 40px;
   list-style: none;
   margin: 0;
-  background: transparent;
+  background: #fff;
   border: none;
   z-index: 66666;
 }
@@ -203,7 +203,7 @@
 }
 
 .gnbBg {
-  z-index: 66665;
+  z-index: 66664;
   display: none;
   position: fixed;
   top: 65px;
@@ -218,7 +218,7 @@
   display: block;
 }
 
-.gnbDepthList:hover + .gnbBg {
+.gnbDepthList:hover ~ .gnbBg {
   display: block;
 }
 
