@@ -65,7 +65,7 @@
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
   position: sticky;
-  top: 80px; /* 헤더 높이만큼 여백 추가 */
+  top: 60px; /* 헤더 높이만큼 여백 추가 */
   z-index: 100;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.95);
@@ -675,5 +675,129 @@
 @media (max-width: 768px) {
   .tabletBreak {
     display: inline;
+  }
+}
+
+/* 문의하기 섹션 */
+.inquirySection {
+  padding: 80px 0;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.inquiryWrap {
+  position: relative;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.colMd6 {
+  flex: 1;
+}
+
+.inquiryTxt {
+  padding: 40px 0;
+}
+
+.inquiryTxt .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.inquiryTxt .text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.inquiryWrite {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.inquiryBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.inquiryBg01 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.inquiryBg02 {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .inquirySection {
+    padding: 60px 0;
+  }
+  
+  .row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .inquiryTxt {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .inquiryTxt .title {
+    font-size: 2rem;
+  }
+  
+  .inquiryWrite {
+    padding: 30px 20px;
+  }
+  
+  .inquiryBg01,
+  .inquiryBg02 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiryTxt .title {
+    font-size: 1.8rem;
+  }
+  
+  .inquiryTxt .text {
+    font-size: 1rem;
+  }
+  
+  .inquiryWrite {
+    padding: 25px 15px;
   }
 } 

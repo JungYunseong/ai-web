@@ -421,6 +421,55 @@ export default function LaboratoryPage() {
         )}
       </div>
 
+      {/* 문의하기 섹션 */}
+      <section className={styles.inquirySection}>
+        <div className={styles.contentsInner}>
+          <div className={styles.inquiryWrap}>
+            <div className={styles.row}>
+              <div className={styles.colMd6}>
+                <div className={styles.inquiryTxt}>
+                  <div>
+                    <p className={styles.title}>문의하기</p>
+                    <p className={styles.text}>
+                      궁금하신 사항이 있으시면<br /> 
+                      오른쪽의 문의하기를 이용해주세요.<br />
+                      담당자가 자세하게 안내해드리겠습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.colMd6}>
+                <div className={styles.inquiryWrite}>
+                  <div id="salesmap-web-form" data-web-form="https://salesmap.kr/web-form/f2d659b9-8969-48eb-bb0b-e69cae9bfe6a">
+                    <script
+                      dangerouslySetInnerHTML={{
+                        __html: `
+                          !(function (window, document) {
+                            var currentScript = document.currentScript;
+                            var scriptElement = document.createElement('script');
+                            scriptElement.onload = function () {
+                              window.SmFormSettings.loadForm();
+                            };
+                            scriptElement.id = 'loadFormScript';
+                            scriptElement.src = 'https://salesmap.kr/web-form-loader-v3.js';
+                            currentScript.parentNode.insertBefore(scriptElement, currentScript);
+                          })(window, document);
+                        `
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span className={styles.inquiryBg}>
+            <object type="image/svg+xml" data="/images/bg_polygon.svg" className={styles.inquiryBg01} />
+            <object type="image/svg+xml" data="/images/bg_polygon.svg" className={styles.inquiryBg02} />
+          </span>
+        </div>
+      </section>
+
       <FooterSection />
     </div>
   );
