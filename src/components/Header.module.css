@@ -168,13 +168,15 @@
   padding: 25px 0 40px;
   list-style: none;
   margin: 0;
-  background: transparent;
+  background: #fff;
   border: none;
   z-index: 66667;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 1.4rem;
 }
 
 .gnbDepth2List .listItem {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  padding: 5px 0;
 }
 
 .gnbDepth2List .listItem:last-child {
@@ -183,12 +185,13 @@
 
 .gnbDepth2List .listItem a {
   display: block;
-  color: #303138;
+  color: #000;
   font-size: 15px;
   line-height: 1.44;
   text-align: center;
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: 500;
 }
 
 .gnbDepth2List .listItem a:hover {
