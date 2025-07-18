@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css');
 
 * {
   box-sizing: border-box;
@@ -55,9 +56,6 @@ a {
 .zmdi-chevron-right:before {
   content: "\f2f9";
 }
-
-/* Remix Icons */
-@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css');
 
 /* 반응형 유틸리티 클래스 */
 .mo {
