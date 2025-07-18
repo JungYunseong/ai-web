@@ -245,27 +245,27 @@
 
 /* 각 메뉴 그룹의 위치 조정 */
 .gnbBg .companyMenu {
-  margin-left: -350px;
+  margin-left: -420px;
 }
 
 .gnbBg .laboratoryMenu {
-  margin-left: -210px;
+  margin-left: -280px;
 }
 
 .gnbBg .businessMenu {
-  margin-left: -70px;
+  margin-left: -140px;
 }
 
 .gnbBg .promoteMenu {
-  margin-left: 70px;
+  margin-left: 0;
 }
 
 .gnbBg .recruitMenu {
-  margin-left: 210px;
+  margin-left: 140px;
 }
 
 .gnbBg .partnerMenu {
-  margin-left: 350px;
+  margin-left: 280px;
 }
 
 .desktopGnbModal {
