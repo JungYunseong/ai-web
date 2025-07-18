@@ -221,12 +221,14 @@
   position: relative;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding-top: 25px;
+  gap: 0;
 }
 
-.gnbDepthList:hover ~ .gnbBg {
+.gnbDepthList:hover ~ .gnbBg,
+.gnbBg:hover {
   display: block;
 }
 
@@ -235,9 +237,30 @@
   position: static;
   width: 140px;
   padding: 0;
-  margin: 0 20px;
+  margin: 0;
   background: transparent;
   border: none;
+}
+
+/* 각 메뉴 그룹의 위치 조정 */
+.gnbBg .companyMenu {
+  margin-left: 0;
+}
+
+.gnbBg .laboratoryMenu {
+  margin-left: 140px;
+}
+
+.gnbBg .businessMenu {
+  margin-left: 280px;
+}
+
+.gnbBg .promoteMenu {
+  margin-left: 420px;
+}
+
+.gnbBg .recruitMenu {
+  margin-left: 560px;
 }
 
 .desktopGnbModal {

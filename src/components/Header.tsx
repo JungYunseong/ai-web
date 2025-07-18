@@ -54,7 +54,7 @@ export default function Header() {
               
               <div className={styles.gnbBg}>
                 <div className={styles.contentsInner}>
-                  <ul className={styles.gnbDepth2List}>
+                  <ul className={`${styles.gnbDepth2List} ${styles.companyMenu}`}>
                     <li className={styles.listItem}>
                       <a href="/company" title="회사소개 바로가기">회사소개</a>
                     </li>
@@ -74,7 +74,7 @@ export default function Header() {
                       <a href="/company#map" title="오시는 길 바로가기">오시는 길</a>
                     </li>
                   </ul>
-                  <ul className={styles.gnbDepth2List}>
+                  <ul className={`${styles.gnbDepth2List} ${styles.laboratoryMenu}`}>
                     <li className={styles.listItem}>
                       <a href="/laboratory?tab=1" title="핵심기술 바로가기">핵심기술</a>
                     </li>
@@ -82,7 +82,7 @@ export default function Header() {
                       <a href="/laboratory?tab=2" title="AI·빅데이터연구소 바로가기">AI·빅데이터연구소</a>
                     </li>
                   </ul>
-                  <ul className={styles.gnbDepth2List}>
+                  <ul className={`${styles.gnbDepth2List} ${styles.businessMenu}`}>
                     <li className={styles.listItem}>
                       <a href="/business?tab=solution" title="VAIV Solution 바로가기">VAIV Solution</a>
                     </li>
@@ -90,7 +90,7 @@ export default function Header() {
                       <a href="/business?tab=service" title="VAIV Service 바로가기">VAIV Service</a>
                     </li>
                   </ul>
-                  <ul className={styles.gnbDepth2List}>
+                  <ul className={`${styles.gnbDepth2List} ${styles.promoteMenu}`}>
                     <li className={styles.listItem}>
                       <a href="/promote/prcenterNoticelist" title="공지사항 바로가기">공지사항</a>
                     </li>
@@ -104,7 +104,7 @@ export default function Header() {
                       <a href="https://blog.naver.com/vaiv_company" title="블로그 바로가기" target="_blank" rel="noopener noreferrer">블로그</a>
                     </li>
                   </ul>
-                  <ul className={styles.gnbDepth2List}>
+                  <ul className={`${styles.gnbDepth2List} ${styles.recruitMenu}`}>
                     <li className={styles.listItem}>
                       <a href="/recruit/recruitmentNoticelist" title="채용공고 바로가기">채용공고</a>
                     </li>
