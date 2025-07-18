@@ -177,6 +177,7 @@
   margin: 0;
   background: transparent;
   border: none;
+  z-index: 66666;
 }
 
 .gnbDepth2List .listItem {
@@ -202,7 +203,7 @@
 }
 
 .gnbBg {
-  z-index: 1;
+  z-index: 66665;
   display: none;
   position: fixed;
   top: 65px;
