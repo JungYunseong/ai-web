@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './FooterSection.module.css';
 
 export default function FooterSection() {
