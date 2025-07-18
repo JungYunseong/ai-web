@@ -45,9 +45,6 @@ export default function Header() {
                       <a href="/customer" title="주요 고객사 바로가기">주요 고객사</a>
                     </li>
                     <li className={styles.listItem}>
-                      <a href="/promote/prcenterIR" title="투자정보 바로가기">투자정보</a>
-                    </li>
-                    <li className={styles.listItem}>
                       <a href="/companyInquiry" title="문의하기 바로가기">문의하기</a>
                     </li>
                     <li className={styles.listItem}>
