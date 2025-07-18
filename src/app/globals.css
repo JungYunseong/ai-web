@@ -56,6 +56,9 @@ a {
   content: "\f2f9";
 }
 
+/* Remix Icons */
+@import url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css');
+
 /* 반응형 유틸리티 클래스 */
 .mo {
   display: none;
