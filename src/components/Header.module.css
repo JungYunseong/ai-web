@@ -207,7 +207,7 @@
 }
 
 .gnbDepth2List .listItem a:hover {
-  color: #1ea0ff;
+  color: #6f42c1;
   background: transparent;
 }
 
@@ -220,7 +220,7 @@
   width: 100%;
   height: 300px;
   background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.075) 0px 10px 1.4rem;
 }
 
 .gnbDepthList > .listItem:hover .gnbDepth2List {
