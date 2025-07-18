@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import BusinessSection from "@/components/home/BusinessSection";
@@ -9,6 +10,7 @@ import FooterSection from "@/components/home/FooterSection";
 export default function Home() {
   return (
     <>
+      <Header />
       <HeroSection />
       <AboutSection />
       <BusinessSection />
