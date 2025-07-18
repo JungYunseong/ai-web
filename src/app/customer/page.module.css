@@ -1,0 +1,200 @@
+/* 주요 고객사 페이지 스타일 */
+.container {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  background: #fff;
+  padding-top: 80px;
+}
+
+.pageTitleWrap {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 5rem 0 3rem;
+  text-align: center;
+  color: white;
+}
+
+.pageTitleInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.pageDesc {
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.vaivColor {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.content {
+  width: 100%;
+}
+
+.conwrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 20px;
+}
+
+.cont {
+  width: 100%;
+}
+
+.referenceList {
+  width: 100%;
+}
+
+.colMd12 {
+  width: 100%;
+}
+
+.customerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.customerItem {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.customerItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.customerLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.customerLogo img {
+  max-width: 80%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.customerItem:hover .customerLogo img {
+  filter: grayscale(0%);
+}
+
+.customerName {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  display: none;
+}
+
+.customerName.show {
+  display: block;
+}
+
+.pcCustomer {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.moCustomer {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .pageDesc {
+    font-size: 1rem;
+  }
+  
+  .conwrap {
+    padding: 2rem 15px;
+  }
+  
+  .customerGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .customerItem {
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+  
+  .customerLogo img {
+    max-height: 50px;
+  }
+  
+  .pcCustomer {
+    display: none;
+  }
+  
+  .moCustomer {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitleWrap {
+    padding: 3rem 0 2rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+  
+  .conwrap {
+    padding: 1.5rem 10px;
+  }
+  
+  .customerGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  
+  .customerItem {
+    padding: 1rem;
+    min-height: 80px;
+  }
+  
+  .customerLogo img {
+    max-height: 40px;
+  }
+  
+  .customerName {
+    font-size: 0.9rem;
+  }
+} 

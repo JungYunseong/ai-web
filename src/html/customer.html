@@ -46,98 +46,12 @@
 
 
 
-<meta name="decorator" content="sub"/>
-<!-- 기본 Google Map용 -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7sSTMO5sgyqu_1l0KuaIK_QAyv0U44c&callback=initMap" async defer></script> -->
-<!-- 기본 Google Map용 -->
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77075bbb08b159f4878384a04af0bda2"></script>
-<!-- //다음 Map -->
-<script type="text/javascript">
-	var map;
-	var map2;
-	
-	function initMap() {
-		drawDaumMap("Seoul_map","바이브컴퍼니","37.535299", "127.010828",1);
-		//drawDaumMap("Sejong_map","산학연클러스터지원센터","36.49932586052773","127.32899134523807",3);
-		drawDaumMap("Sejong_map","바이브컴퍼니 세종","36.49096883172943","127.32692256110721",3);
-// 		drawGoogleMap();
-	}
-
-	function drawDaumMap(target,keyword,x,y,level){
-        /**
-         * //https://developers.kakao.com/
-         * 계정정보
-         * ID : metaverse_pln@kakao.com
-         * PW : DTSvaiv123!@#
-         * 
-         * 로그인 시 브라우저 인증 요청하면 이메일 인증 하시면 되고 해당 이메일 정보
-         * ID : duplanet@vaiv.kr
-         * PW : vaiv08334!!
-         * 
-		**/
-         
-		// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-		var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-
-		var mapContainer = document.getElementById(target), // 지도를 표시할 div 
-		    mapOption = {
-		        center: new kakao.maps.LatLng(x,y), // 지도의 중심좌표
-		        level: level // 지도의 확대 레벨
-		    };  
-
-		// 지도를 생성합니다    
-		var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-		// 마커가 표시될 위치입니다 
-		var markerPosition  = new kakao.maps.LatLng(x,y); 
-
-		// 마커를 생성합니다
-		var marker = new kakao.maps.Marker({
-		    position: markerPosition
+	<meta name="decorator" content="sub"/>
+    <script src="/resources/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
 		});
-
-		// 마커가 지도 위에 표시되도록 설정합니다
-		marker.setMap(map);
-	}
-	
-	function drawGoogleMap(){
-		//기존 등록시킨 Google MAP
-		var myLatlng = new google.maps.LatLng(37.535299, 127.010828);			//Seoul_map
-		//var myLatlng2 = new google.maps.LatLng(36.4993574,127.3267438);		//Sejong_map
-		var myLatlng2 = new google.maps.LatLng(36.49096883172943,127.32692256110721); //Sejong_map
-		map = new google.maps.Map(document.getElementById('Seoul_map'), {
-			center: myLatlng,
-			zoom: 14
-		});
-		var beachMarker = new google.maps.Marker({
-			position: myLatlng,
-			map: map,
-			icon: {
-				url: "/resources/images/map_icon.svg",
-				scaledSize: new google.maps.Size(30, 30)
-			}
-		});
-	
-	
-		//Sejong_map
-		map2 = new google.maps.Map(document.getElementById('Sejong_map'), {
-			center: myLatlng2,
-			zoom: 14
-		});
-		var beachMarker2 = new google.maps.Marker({
-			position: myLatlng2,
-			map: map2,
-			icon: {
-				url: "/resources/images/map_icon.svg",
-				scaledSize: new google.maps.Size(30, 30)
-			}
-		});	
-	}
-	$(document).ready(function() {
-		initMap();
-	});
-</script>
+	</script>
    	
 </head>
 <body id=''  class='' >
@@ -515,158 +429,70 @@ function initHeaderBanner() {
 <!-- header end -->
 <!-- main content start -->
 
-	<div id="container">       
-            <div class="content companywrap">
-                <div class="pageTitle_wrap pageTitle_wrap2">
-                    <h2 class="page_title title_move">회사소개</h2>
-					<p class="page_desc title_move">
+ <div id="container">
+        <div class="pageTitle_wrap pageTitle_wrap2">
+            <div class="pageTitle_inner">
+                <h2 class="page_title title_move">주요 고객사</h2>
+                <p class="page_desc title_move"><em class="vaiv_color">바이브</em>는 다양한 산업군의 고객사와 함께합니다. </p>
+            </div>
+        </div>
+        
+        
+        <div class="content reference_wrap">          
+            <div class="conwrap contentsInner">
+                <!--공지-->
+                <div class="cont">
 
-                        <em class="vaiv_color">바이브</em>는 빅데이터로 시장을 읽고 AI로 업무 혁신을 만들어 갑니다.
-                    </p>
-                </div><!-- //pageTitle_wrap -->
-                <div class="conwrap bg_white">
-                    <figure class="company_visual">
-                        <img src="/resources/images/bg/company_3.jpg" alt="" />
-                    </figure>
-                    <!-- <div class="company_visual_wrap"></div> -->
+                    <!--고객사 리스트-->
+                    <!--<h2>고객사</h2>
+                    <div class="referenceTab">
 
-                    <section class="text_section">
-                        <div class="contentsInner">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div>
-                                        <p class="main_title">
+                        <ul class="department" id="departmentTab">
+                            <li class="tabMenu on"><a href="#none" onclick="showTabMenu('#departmentTab','0');" role="tab">SOME</a></li>
+                            <li class="tabMenu"><a href="#none" onclick="showTabMenu('#departmentTab','1');">AI Solver</a></li> 
+                            <li class="tabMenu"><a href="#none" onclick="showTabMenu('#departmentTab','2');">AI Report</a></li>
+                            <li class="tabMenu"><a href="#none" onclick="showTabMenu('#departmentTab','3');">AI Agent</a></li>
+                        </ul>
 
+                    </div>
+                    <div class="referenceList">
 
-                                            25년 이상 축적된 기술력과 노하우를 바탕으로, <br>
-                                            공공과 민간에 특화된 AI 솔루션과 Big Data 서비스를 제공해 왔습니다.
-                                        </p>
-                                        <p class="sub_title">
-
-
-
-                                                바이브는 한국어의 맥락을 이해하고, 일하는 사람들의 경험을 생각합니다. <br>
-                                                인공지능 기술에 데이터라는 지식을 더하여, 비즈니스 감각이 살아 있는 AI를 연구합니다. <br>
-                                                AX 시대, 믿을 수 있는 전략적 파트너로서 사람과 기술이 함께 성장하는 미래를 만들어갑니다.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>						
-                        </div>
-                    </section><!-- //text_section -->
-
-
-                    <!-- <div class="company_bg">
-                        <div class="contentsInner">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="top_text_box">
-                                        <img src="/resources/images/company_service_2.png" alt="AI powered insight service"/>
-                                    </div>
-                                    <div class="bottom_text_box">
-                                        <p>사람과 공간에 대한 이해를 바탕으로 <br class="only_MO">당신의 더 나은 선택을 돕는 바이브의 AI</p>
-                                        <div class="company_service">                                            
-                                            <div>
-                                                <span>AGILE</span>
-                                                <p>인사이트를 사람들에게<br>빠르게 제공하는 AI</p>
-                                            </div>
-                                            <div>
-                                                <span>RELIABLE</span>
-                                                <p>복잡한 업무를 정확하고<br>신뢰도 높게 처리해주는 AI</p>
-                                            </div>
-                                            <div>
-                                                <span>EASY</span>
-                                                <p>최적의 방법으로 사람과<br>쉽게 커뮤니케이션 하는 AI</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="row tab_con"  id="departmentTab_con">
+                            <div class="col-md-12 tabView tabViewOn">
+                                <img src="resources/images/customerList_01.jpg" class="pc_customer" alt=""/> 
+                                <img src="resources/images/customerList_m_01.jpg" class="mo_customer" alt=""/> 
                             </div>
-                        </div>
-                    </div> --><!-- //visual_wrap -->
-
-                    <section class="text_section center">
-                        <div class="contentsInner">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div>
-                                        <!-- <p class="section_title">BI 소개</p> -->
-                                        <div class="bi_section">
-                                            <img src="/resources/images/vaiv/company_ci_re.png" alt="AI powered insight service" class="bi_logo"/>
-                                        </div>
-
-                                        <div class="bi_section">
-                                            <p class="bi_text">
-                                                바이브 컴퍼니는 독보적인 AI 기술을 기반으로 <br class="only_MO">미래를 내다보고(Vision AI) 가치를 만들고(Value AI) <br class="only_MO">사회 곳곳에서 발생하는 문제를 해결하고(AI Solve) <br class="only_MO"> <br>용기 있게 앞서며(AI brave) 예상을 뛰어넘는 행보를 선보이겠다(AI above)는 의미가 담겨 있습니다.
-
-                                              <!--   바이브를 상징하는 알파벳 D에 무언가 비추는 <br class="only_MO">서치라이트의 이미지를 결합하여 과거를 살펴보고 <br>
-                                            현재를 판단하고 미래를 예측하는<br class="only_MO"> 바이브의 모습을 담았습니다. --></p>
-
-											<!-- 
-                                            <ul class="download_btn">
-                                                <li>
-                                                    <a href="/resources/files/Daumsoft_BI.ai" target="_blank">AI 파일 다운로드</a>
-                                                    <a href="/resources/files/Daumsoft_BI.png" target="_blank">PNG 파일 다운로드</a>
-                                                </li>
-                                            </ul>
-											-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 vision-area">
-                                    <div id="vision" class="vision-link"></div>
-                                    <div>
-                                        <!-- <p class="section_title">비전</p> -->
-                                        <div class="bi_section">
-                                            <img src="/resources/images/vaiv/company_vision.svg" alt="Visionary AI for Value" class="bi_logo type2"/>
-                                        </div>
-
-                                        <div class="bi_section">
-                                            <p class="bi_text">바이브의 AI 기술로 고객의 소중한 시간을 더 가치있게 만들겠습니다.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>						
-                        </div>
-                    </section><!-- //text_section -->
+                            
+                            <div class="col-md-12 tabView">
+                                <img src="resources/images/customerList_02.jpg"  class="pc_customer" alt=""/> 
+                                <img src="resources/images/customerList_m_02.jpg" class="mo_customer" alt=""/> 
+                            </div>
+                            
+                            <div class="col-md-12 tabView">
+                                <img src="resources/images/customerList_03.jpg"  class="pc_customer" alt=""/> 
+                                <img src="resources/images/customerList_m_03.jpg" class="mo_customer" alt=""/> 
+                            </div>
+                            
+                            <div class="col-md-12 tabView">
+                                <img src="resources/images/customerList_04.jpg"  class="pc_customer" alt=""/> 
+                                <img src="resources/images/customerList_m_04.jpg" class="mo_customer" alt=""/> 
+                            </div>
+                            
+                        </div>                       
+                        
+                    </div>-->
                     
-                    
-                    
-                    <section id="map" class="text_section center">
-                        <div class="contentsInner">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div>
-                                        <p class="section_title">오시는 길</p>
-                                        <div class="road_section">
-                                            <div>
-                                                <p class="title">바이브 본사 (Seoul)</p>
-												<div id="Seoul_map" class="map_area"></div>
-                                                <ul>
-                                                    <li>서울 용산구 독서당로 97</li>
-                                                    <li>TEL  |  02-565-0531   FAX  |  02-565-0532   E-mail  |  Biz@vaiv.kr</li>
-                                                </ul>                                                
-                                            </div> 
-                                            
-                                            <div>
-                                                <p class="title">바이브 세종 (Sejong)</p>
-												<div id="Sejong_map" class="map_area"></div>
-                                                <ul>
-                                                    <li>세종특별자치시 집현동로 67</li>
-                                                    <li>TEL  |  02-565-0531   FAX  |  02-565-0532   E-mail  |  Biz@vaiv.kr</li>
-                                                </ul>                                                
-                                            </div>                                            
-                                            
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>						
+                    <div class="referenceList">
+                        <div class="col-md-12">
+                            <img src="/resources/images/customerList_240416.png"  class="pc_customer" alt=""/> 
+                            <img src="/resources/images/customerList_m_2401416.png"  class="mo_customer" alt=""/>                             
                         </div>
-                    </section><!-- //text_section -->
+                    </div>
+                </div><!--con1-->
 
-
-                </div><!--conwrap-->
-            </div><!--content-->            
+            
+            </div><!--conwrap-->
+        </div>
     </div><!--//container--> 
 
 <!-- main content end -->

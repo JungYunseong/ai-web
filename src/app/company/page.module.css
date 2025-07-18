@@ -3,7 +3,6 @@
   width: 100%;
   min-height: calc(100vh - 200px); /* 헤더와 푸터 높이를 고려 */
   background: #fff;
-  padding-top: 80px; /* 헤더 높이만큼 상단 여백 */
 }
 
 .content {
