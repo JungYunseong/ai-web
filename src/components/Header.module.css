@@ -236,12 +236,20 @@
   display: block;
 }
 
-.gnbBg:hover .gnbDepth2List {
+.gnbBg:hover ~ .gnbDepthList .gnbDepth2List {
+  display: block !important;
+}
+
+.gnbBg:hover + .gnbDepthList .gnbDepth2List {
   display: block !important;
 }
 
 .gnb:hover .gnbBg {
   display: block;
+}
+
+.gnb:hover .gnbDepth2List {
+  display: block !important;
 }
 
 .desktopGnbModal {
