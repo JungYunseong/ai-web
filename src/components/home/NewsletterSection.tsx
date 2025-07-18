@@ -25,9 +25,9 @@ export default function NewsletterSection() {
             </a>
           </div>
           <figure className={styles.newsletterImage}>
-            <img src="/resources/images/main/letter_img.png" className={styles.imagePc} alt="" />
-            <img src="/resources/images/main/letter_img_tablet.png" className={styles.imageTab} alt="" />
-            <img src="/resources/images/main/letter_img_mo.png" className={styles.imageMo} alt="" />
+            <img src="/images/main/letter_img.png" className={styles.imagePc} alt="" />
+            <img src="/images/main/letter_img_tablet.png" className={styles.imageTab} alt="" />
+            <img src="/images/main/letter_img_mo.png" className={styles.imageMo} alt="" />
           </figure>
         </div>
       </div>

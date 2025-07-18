@@ -11,7 +11,7 @@ export default function HeroSection() {
       id: 1,
       title: '생성형 AI 파운데이션 모델',
       description: '국내 최고 수준의 한국어 특화 초거대언어모델 VAIVGeM으로 다양한 산업군에서의 AX를 지원합니다.',
-      image: '/resources/images/main/visual_vaiv_gem_img.svg',
+      image: '/images/main/visual_vaiv_gem_img.svg',
       link: '/laboratory?core=1',
       linkText: '자세히보기'
     },
@@ -19,7 +19,7 @@ export default function HeroSection() {
       id: 2,
       title: 'RAG 기반 AI 검색 솔루션',
       description: '당신의 더 나은 선택을 돕는 바이브의 AI',
-      image: '/resources/images/main/visual_vaiv_search_img.svg',
+      image: '/images/main/visual_vaiv_search_img.svg',
       link: '/business?tab=solution',
       linkText: '자세히보기'
     }

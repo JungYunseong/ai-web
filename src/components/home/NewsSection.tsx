@@ -49,7 +49,7 @@ export default function NewsSection() {
               전해드립니다
             </h3>
             <figure>
-              <img src="/resources/images/main/news_banner.png" alt="" />
+              <img src="/images/main/news_banner.png" alt="" />
             </figure>
           </a>
         </div>

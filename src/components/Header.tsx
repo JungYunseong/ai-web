@@ -27,7 +27,7 @@ export default function Header() {
           <div className={styles.headerContent}>
             <h1 className={styles.headerLogo}>
               <a href="/" title="home">
-                <img src="/vaiv-logo.png" alt="VAIV" />
+                <img src="/images/vaiv/company_ci_re.png" alt="VAIV" />
               </a>
             </h1>
             <nav id="gnb" className={`${styles.gnb} ${isMobileMenuOpen ? styles.active : ''}`}>

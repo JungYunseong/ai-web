@@ -69,7 +69,7 @@ export default function AboutSection() {
             >
               {index === 4 ? (
                 <div className={styles.logoContent}>
-                  <img src="/resources/images/logo_vaiv.svg" alt="VAIV" />
+                  <img src="/images/logo_vaiv.svg" alt="VAIV" />
                 </div>
               ) : (
                 <>
