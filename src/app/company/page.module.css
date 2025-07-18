@@ -1,8 +1,9 @@
 /* 회사 소개 페이지 스타일 */
 .container {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px); /* 헤더와 푸터 높이를 고려 */
   background: #fff;
+  padding-top: 80px; /* 헤더 높이만큼 상단 여백 */
 }
 
 .content {
