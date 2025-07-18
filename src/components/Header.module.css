@@ -170,7 +170,7 @@
   margin: 0;
   background: transparent;
   border: none;
-  z-index: 66666;
+  z-index: 66667;
 }
 
 .gnbDepth2List .listItem {
@@ -183,7 +183,7 @@
 
 .gnbDepth2List .listItem a {
   display: block;
-  color: #656565;
+  color: #303138;
   font-size: 15px;
   line-height: 1.44;
   text-align: center;
@@ -196,7 +196,7 @@
 }
 
 .gnbBg {
-  z-index: 66663;
+  z-index: 66665;
   display: none;
   position: fixed;
   top: 65px;
