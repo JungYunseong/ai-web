@@ -102,7 +102,7 @@
 }
 
 .yearHistoryArea {
-  padding: 40px 0 0;
+  padding: 60px 0 0;
 }
 
 .yearTab {
@@ -111,7 +111,7 @@
   text-align: center;
   padding-bottom: 40px;
   border-bottom: 1px solid #e3e4e9;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   list-style: none;
   padding: 0 0 40px 0;
 }
@@ -137,11 +137,11 @@
 }
 
 .yearTab .tabMenu:hover {
-  color: #3b9dff;
+  color: #667eea;
 }
 
 .yearTab .tabMenu.on {
-  color: #3b9dff;
+  color: #667eea;
   font-weight: 500;
 }
 
@@ -198,7 +198,7 @@
   display: inline-block;
   width: 4px;
   height: 4px;
-  background-color: #3b9dff;
+  background-color: #667eea;
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
