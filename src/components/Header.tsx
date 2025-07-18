@@ -91,23 +91,6 @@ export default function Header() {
                     </li>
                   </ul>
                 </li>
-                <li className={styles.listItem}>
-                  <a href="/recruit/recruitmentNoticelist" title="채용정보 바로가기">채용정보</a>
-                  <ul className={styles.gnbDepth2List}>
-                    <li className={styles.listItem}>
-                      <a href="/recruit/recruitmentNoticelist" title="채용공고 바로가기">채용공고</a>
-                    </li>
-                    <li className={styles.listItem}>
-                      <a href="/recruit/recruitmentInformation" title="채용안내 바로가기">채용안내</a>
-                    </li>
-                    <li className={styles.listItem}>
-                      <a href="/recruit/recruitmentWelfare" title="복지제도 바로가기">복지제도</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className={styles.listItem}>
-                  <a href="/partner" title="파트너 바로가기">파트너</a>
-                </li>
               </ul>
               <div className={styles.gnbBg}></div>
             </nav>
