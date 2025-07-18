@@ -112,7 +112,6 @@ export default function Header() {
                   <a href="/partner" title="파트너 바로가기">파트너</a>
                 </li>
               </ul>
-              <div className={styles.gnbBg}></div>
             </nav>
             <button 
               type="button" 
@@ -126,6 +125,7 @@ export default function Header() {
           </div>
         </div>
 
+        <div className={styles.gnbBg}></div>
         <div className={`${styles.headerDim} ${isMobileMenuOpen || isDesktopMenuOpen ? styles.active : ''}`} onClick={closeMenus}></div>
         <div className={`${styles.desktopGnbModal} ${isDesktopMenuOpen ? styles.active : ''}`}>
           <button type="button" className={styles.modalClose} onClick={closeMenus}>
