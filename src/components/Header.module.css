@@ -196,7 +196,7 @@
 }
 
 .gnbBg {
-  z-index: 66664;
+  z-index: 66663;
   display: none;
   position: fixed;
   top: 65px;
@@ -213,6 +213,10 @@
 
 .gnbDepthList > .listItem:hover ~ .gnbBg,
 .gnbBg:hover {
+  display: block;
+}
+
+.gnb:hover .gnbBg {
   display: block;
 }
 
