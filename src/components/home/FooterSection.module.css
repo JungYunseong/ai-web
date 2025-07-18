@@ -1,6 +1,7 @@
 .footer {
   padding: 50px 0 60px;
   border-top: 1px solid #f4f4f5;
+  background: #fff;
 }
 
 .contentsInner {
@@ -13,6 +14,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  align-items: flex-start;
 }
 
 .footerBottom {
@@ -20,6 +22,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
 }
 
 .footerLogo {
@@ -30,11 +33,13 @@
 .footerLogo img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .footerSnsList {
   display: flex;
-  gap: 7px;
+  flex-direction: column;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -45,32 +50,50 @@
 }
 
 .listItem a {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #ccc;
-  transition: background 0.2s;
+  gap: 8px;
+  color: #686a70;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.listBlog:hover a {
+.listItem a:hover {
+  color: #333;
+}
+
+.listItem a::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.listBlog a::before {
   background: #22c56a;
 }
 
-.listYtb:hover a {
+.listYtb a::before {
   background: #ce3934;
 }
 
 .footerFamily {
   width: 120px;
-  padding: 2.5px;
-  border: 0;
-  border-bottom: 1px solid #d9d9d9;
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
   color: #686a70;
   font-size: 12px;
-  background: transparent;
+  background: #fff;
+  cursor: pointer;
+}
+
+.footerFamily:focus {
+  outline: none;
+  border-color: #333;
 }
 
 .footerContent {
@@ -79,11 +102,8 @@
 
 .footerInfoList {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 5px 0;
-  max-width: 395px;
+  gap: 8px 12px;
   margin-bottom: 20px;
   list-style: none;
   margin: 0;
@@ -99,7 +119,7 @@
 
 .listLine {
   color: #96979a;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .listLabel {
@@ -151,6 +171,7 @@
   
   .footerBottom {
     display: block;
+    gap: 20px;
   }
   
   .footerLogo {
@@ -158,33 +179,32 @@
   }
   
   .footerSnsList {
-    gap: 6px;
+    gap: 8px;
   }
   
-  .footerSnsList .listItem a {
-    width: 22px;
-    height: 22px;
+  .listItem a {
+    font-size: 11px;
   }
   
-  .footerSnsList .listItem a img {
-    transform: scale(0.9);
+  .listItem a::before {
+    width: 10px;
+    height: 10px;
   }
   
   .footerFamily {
     width: 104px;
     margin-bottom: 15px;
-    padding: 2px;
-    font-size: 10px;
+    padding: 6px 10px;
+    font-size: 11px;
   }
   
   .footerInfoList {
-    max-width: 330px;
-    gap: 4px 0;
+    gap: 6px 10px;
     margin-bottom: 15px;
   }
   
   .footerInfoList .listItem {
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .footerInfoList .listLine {
@@ -196,6 +216,6 @@
   }
   
   .footerCopy {
-    font-size: 10px;
+    font-size: 11px;
   }
 } 

@@ -8,24 +8,24 @@ export default function FooterSection() {
       <div className={styles.contentsInner}>
         <div className={styles.footerTop}>
           <figure className={styles.footerLogo}>
-            <img src="/resources/images/vaiv/footer_logo_re.png" alt="VAIV" />
+            <img src="/vaiv-logo.png" alt="VAIV" />
           </figure>
           <ul className={styles.footerSnsList}>
             <li className={`${styles.listItem} ${styles.listBlog}`}>
               <a href="https://blog.naver.com/vaiv_company" title="네이버 블로그 바로가기" target="_blank" rel="noopener noreferrer">
-                <img src="/resources/images/icon_footer_blog.svg" alt="네이버 블로그"/>
+                <span>네이버블로</span>
               </a>
             </li>
             <li className={`${styles.listItem} ${styles.listYtb}`}>
               <a href="https://www.youtube.com/channel/UCe-PKPEl2nkwrC__8Qy1HUg" title="유튜브 바로가기" target="_blank" rel="noopener noreferrer">
-                <img src="/resources/images/icon_footer_ytb.svg" alt="유튜브"/>
+                <span>유튜브</span>
               </a>
             </li>
           </ul>
         </div>
         <div className={styles.footerBottom}>
           <select className={styles.footerFamily} name="familysite_option" title="패밀리사이트 바로가기" onChange={(e) => { if(e.target.value) window.open(e.target.value); }}>
-            <option value="" selected>패밀리사이트</option>
+            <option value="">패밀리사이트</option>
             <option value="https://ai.vaiv.kr/">VAIV AI 플랫폼</option>
             <option value="https://stock.vaiv.kr/">VAIV Stock</option>
             <option value="https://data.some.co.kr/">Data +</option>
