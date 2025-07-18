@@ -115,6 +115,11 @@ export default function Header() {
                       <a href="/recruit/recruitmentWelfare" title="복지제도 바로가기">복지제도</a>
                     </li>
                   </ul>
+                  <ul className={`${styles.gnbDepth2List} ${styles.partnerMenu}`}>
+                    <li className={styles.listItem}>
+                      <a href="/partner" title="파트너 바로가기">파트너</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </nav>
