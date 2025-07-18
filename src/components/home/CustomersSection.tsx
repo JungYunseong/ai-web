@@ -30,10 +30,13 @@ export default function CustomersSection() {
     { id: 21, name: '청와대', logo: '/images/main/logo_president.png' }
   ];
 
-  // 무한 스크롤을 위해 첫 번째 카드들을 마지막에 복제
+  // 무한 스크롤을 위해 첫 번째 카드들을 마지막에 복제 (고유한 key를 위해 id 수정)
   const customers = [
     ...originalCustomers,
-    ...originalCustomers.slice(0, 5) // 첫 번째 5개 카드를 마지막에 추가
+    ...originalCustomers.slice(0, 5).map((customer, index) => ({
+      ...customer,
+      id: customer.id + 100 // 원본과 구분하기 위해 100을 더함
+    }))
   ];
 
   useEffect(() => {
