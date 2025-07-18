@@ -6,7 +6,7 @@ import styles from './CustomersSection.module.css';
 export default function CustomersSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const customers = [
+  const originalCustomers = [
     { id: 1, name: '삼성', logo: '/images/main/logo_samsung.png' },
     { id: 2, name: 'LG전자', logo: '/images/main/logo_lge.png' },
     { id: 3, name: '신세계', logo: '/images/main/logo_ssg.png' },
@@ -30,13 +30,26 @@ export default function CustomersSection() {
     { id: 21, name: '청와대', logo: '/images/main/logo_president.png' }
   ];
 
+  // 무한 스크롤을 위해 첫 번째 카드들을 마지막에 복제
+  const customers = [
+    ...originalCustomers,
+    ...originalCustomers.slice(0, 5) // 첫 번째 5개 카드를 마지막에 추가
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % customers.length);
+      setCurrentIndex((prev) => {
+        const nextIndex = prev + 1;
+        // 원본 고객사 수(21개)에 도달하면 처음으로 돌아감
+        if (nextIndex >= originalCustomers.length) {
+          return 0;
+        }
+        return nextIndex;
+      });
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [customers.length]);
+  }, [originalCustomers.length]);
 
   return (
     <section className={styles.customersSection}>
