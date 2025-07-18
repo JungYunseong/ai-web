@@ -1,30 +1,29 @@
 .header {
-  z-index: 66666;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 65px;
+  background: #fff;
+  z-index: 99999;
   border-bottom: 1px solid #eee;
 }
 
 .header::before {
   content: "";
-  z-index: -1;
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: #fff;
+  z-index: -1;
 }
 
 .contentsInner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
   height: 100%;
 }
 
@@ -36,59 +35,54 @@
 }
 
 .headerLogo {
-  width: 100px;
   margin: 0;
 }
 
 .headerLogo a {
   display: block;
-  width: 100%;
 }
 
 .headerLogo a img {
-  display: block;
-  width: 100%;
-  height: auto;
+  height: 32px;
+  width: auto;
 }
 
 .headerToggle {
-  z-index: 99999;
-  position: relative;
-  width: 25px;
-  height: 17px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
   cursor: pointer;
-  display: none;
+  padding: 0;
 }
 
 .headerToggle span {
   display: block;
-  position: absolute;
-  left: 0;
   width: 100%;
   height: 2px;
-  border-radius: 5px;
   background: #303138;
-  transition: all 0.3s;
+  margin: 2px 0;
+  transition: all 0.3s ease;
 }
 
 .headerToggle span:nth-child(1) {
-  top: 0;
+  transform-origin: center;
 }
 
 .headerToggle span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
+  transform-origin: center;
 }
 
 .headerToggle span:nth-child(3) {
-  bottom: 0;
+  transform-origin: center;
 }
 
 .headerToggle.active span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .headerToggle.active span:nth-child(2) {
@@ -96,19 +90,18 @@
 }
 
 .headerToggle.active span:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-225deg);
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .headerDim {
-  z-index: 88888;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99998;
 }
 
 .headerDim.active {
@@ -116,7 +109,7 @@
 }
 
 .gnb {
-  height: 100%;
+  position: relative;
 }
 
 .gnbDepthList {
@@ -214,58 +207,13 @@
   box-shadow: rgba(0, 0, 0, 0.075) 0px 0px 1.4rem;
 }
 
-.gnbBg .contentsInner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 25px;
-  gap: 0;
-}
-
-.gnbDepthList:hover ~ .gnbBg,
-.gnbBg:hover {
+.gnbDepthList > .listItem:hover .gnbDepth2List {
   display: block;
 }
 
-.gnbBg .gnbDepth2List {
-  display: flex;
-  flex-direction: column;
-  position: static;
-  width: 140px;
-  padding: 0;
-  margin: 0;
-  background: transparent;
-  border: none;
-}
-
-/* 각 메뉴 그룹의 위치 조정 */
-.gnbBg .companyMenu {
-  margin-left: -280px;
-}
-
-.gnbBg .laboratoryMenu {
-  margin-left: -140px;
-}
-
-.gnbBg .businessMenu {
-  margin-left: 0;
-}
-
-.gnbBg .promoteMenu {
-  margin-left: 140px;
-}
-
-.gnbBg .recruitMenu {
-  margin-left: 280px;
-}
-
-.gnbBg .partnerMenu {
-  margin-left: 420px;
+.gnbDepthList > .listItem:hover ~ .gnbBg,
+.gnbBg:hover {
+  display: block;
 }
 
 .desktopGnbModal {
@@ -406,7 +354,6 @@
     height: auto;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
-    font-size: 16px;
   }
   
   .gnbDepth2List {
