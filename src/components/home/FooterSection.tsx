@@ -40,6 +40,8 @@ export default function FooterSection() {
               <li className={styles.listItem}><span className={styles.listLabel}>대표자</span>김경서</li>
               <li className={styles.listLine}>|</li>
               <li className={styles.listItem}><span className={styles.listLabel}>사업자등록번호</span>120-86-08334</li>
+            </ul>
+            <ul className={styles.footerInfoList}>
               <li className={styles.listItem}>서울특별시 용산구 독서당로 97</li>
               <li className={styles.listLine}>|</li>
               <li className={styles.listItem}><span className={styles.listLabel}>Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>

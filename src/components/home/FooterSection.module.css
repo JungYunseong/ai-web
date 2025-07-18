@@ -104,10 +104,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px 12px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.footerInfoList:last-of-type {
+  margin-bottom: 20px;
 }
 
 .footerInfoList .listItem {
@@ -200,6 +204,10 @@
   
   .footerInfoList {
     gap: 6px 10px;
+    margin-bottom: 10px;
+  }
+  
+  .footerInfoList:last-of-type {
     margin-bottom: 15px;
   }
   
