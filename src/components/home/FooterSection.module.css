@@ -142,6 +142,10 @@
   white-space: nowrap;
 }
 
+.footerInfoList a::before {
+  display: none;
+}
+
 .footerInfoList a:hover {
   text-decoration: underline;
 }
