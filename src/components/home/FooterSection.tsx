@@ -24,7 +24,7 @@ export default function FooterSection() {
           </ul>
         </div>
         <div className={styles.footerBottom}>
-          <select className={styles.footerFamily} name="familysite_option" title="패밀리사이트 바로가기" onChange={(e) => { if(e.target.value) window.open(e.target.value); }}>
+          <select className={styles.footerFamily} name="familysite_option" title="패밀리사이트 바로가기" onChange={(e) => { if (e.target.value) window.open(e.target.value); }}>
             <option value="">패밀리사이트</option>
             <option value="https://ai.vaiv.kr/">VAIV AI 플랫폼</option>
             <option value="https://stock.vaiv.kr/">VAIV Stock</option>
@@ -47,6 +47,8 @@ export default function FooterSection() {
               <li className={styles.listItem}><span className={styles.listLabel}>Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>
               <li className={styles.listLine}>|</li>
               <li className={styles.listItem}><span className={styles.listLabel}>Mail</span><a href="mailto:Biz@vaiv.kr">Biz@vaiv.kr</a></li>
+            </ul>
+            <ul className={styles.footerInfoList}>
               <li className={styles.listItem}><span className={styles.listLabel}>공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
             </ul>
             <div className={styles.footerCopy}>
