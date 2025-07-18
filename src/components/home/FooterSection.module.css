@@ -1,0 +1,201 @@
+.footer {
+  padding: 50px 0 60px;
+  border-top: 1px solid #f4f4f5;
+}
+
+.contentsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  width: 100px;
+  margin: 0;
+}
+
+.footerLogo img {
+  display: block;
+  width: 100%;
+}
+
+.footerSnsList {
+  display: flex;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  flex-shrink: 0;
+}
+
+.listItem a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.2s;
+}
+
+.listBlog:hover a {
+  background: #22c56a;
+}
+
+.listYtb:hover a {
+  background: #ce3934;
+}
+
+.footerFamily {
+  width: 120px;
+  padding: 2.5px;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  color: #686a70;
+  font-size: 12px;
+  background: transparent;
+}
+
+.footerContent {
+  flex: 1;
+}
+
+.footerInfoList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 0;
+  max-width: 395px;
+  margin-bottom: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerInfoList .listItem {
+  position: relative;
+  color: #686a70;
+  font-size: 12px;
+  line-height: 1.44;
+}
+
+.listLine {
+  color: #96979a;
+  font-size: 8px;
+}
+
+.listLabel {
+  margin-right: 8px;
+  color: #96979a;
+}
+
+.footerInfoList a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footerInfoList a:hover {
+  text-decoration: underline;
+}
+
+.footerCopy {
+  color: #686a70;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.footerCopy h6 {
+  margin-bottom: 4px;
+  color: inherit;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.footerCopy h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footerCopy h6 a:hover {
+  text-decoration: underline;
+}
+
+.footerCopy p {
+  margin: 0;
+}
+
+/* 모바일 반응형 */
+@media only screen and (max-width: 767.98px) {
+  .footer {
+    padding: 40px 0 50px;
+  }
+  
+  .footerBottom {
+    display: block;
+  }
+  
+  .footerLogo {
+    width: 86px;
+  }
+  
+  .footerSnsList {
+    gap: 6px;
+  }
+  
+  .footerSnsList .listItem a {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .footerSnsList .listItem a img {
+    transform: scale(0.9);
+  }
+  
+  .footerFamily {
+    width: 104px;
+    margin-bottom: 15px;
+    padding: 2px;
+    font-size: 10px;
+  }
+  
+  .footerInfoList {
+    max-width: 330px;
+    gap: 4px 0;
+    margin-bottom: 15px;
+  }
+  
+  .footerInfoList .listItem {
+    font-size: 10px;
+  }
+  
+  .footerInfoList .listLine {
+    transform: scale(0.8);
+  }
+  
+  .footerInfoList .listLabel {
+    margin-right: 6px;
+  }
+  
+  .footerCopy {
+    font-size: 10px;
+  }
+} 

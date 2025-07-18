@@ -4,6 +4,7 @@ import BusinessSection from "@/components/home/BusinessSection";
 import CustomersSection from "@/components/home/CustomersSection";
 import NewsSection from "@/components/home/NewsSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
+import FooterSection from "@/components/home/FooterSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CustomersSection />
       <NewsSection />
       <NewsletterSection />
+      <FooterSection />
     </>
   );
 } 
