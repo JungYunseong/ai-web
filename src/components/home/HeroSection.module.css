@@ -1,9 +1,8 @@
 .heroSection {
   position: relative;
   width: 100%;
-  height: calc(100vh - 65px);
-  min-height: 535px;
-  margin-top: 65px;
+  height: 100vh;
+  min-height: 600px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
 }
@@ -140,9 +139,8 @@
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .heroSection {
-    height: calc(100vh - 60px);
-    min-height: 540px;
-    margin-top: 60px;
+    height: 100vh;
+    min-height: 600px;
   }
   
   .slideTitle {
@@ -164,9 +162,8 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    height: calc(100vh - 60px);
-    min-height: 540px;
-    margin-top: 60px;
+    height: 100vh;
+    min-height: 600px;
   }
   
   .slideTitle {
