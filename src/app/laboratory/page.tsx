@@ -9,6 +9,23 @@ export default function LaboratoryPage() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeCore, setActiveCore] = useState(0);
 
+  const [formData, setFormData] = useState({
+    inquiryType: '',
+    inquiryDetail: '',
+    companyName: '',
+    department: '',
+    name: '',
+    jobTitle: '',
+    email: '',
+    phone: '',
+    content: ''
+  });
+
+  const [agreements, setAgreements] = useState({
+    personalInfo: false,
+    marketing: false
+  });
+
   useEffect(() => {
     // URL 파라미터에서 탭 정보 가져오기
     const urlParams = new URLSearchParams(window.location.search);
@@ -37,6 +54,51 @@ export default function LaboratoryPage() {
     const newUrl = new URL(window.location.href);
     newUrl.searchParams.set('core', String(index));
     window.history.pushState({}, '', newUrl);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleAgreementChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = e.target;
+    setAgreements(prev => ({
+      ...prev,
+      [name]: checked
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!agreements.personalInfo) {
+      alert('개인정보 수집 및 이용에 동의하셔야 합니다.');
+      return;
+    }
+
+    // 여기에 실제 제출 로직을 추가할 수 있습니다
+    alert('문의가 정상적으로 제출되었습니다.');
+    
+    // 폼 초기화
+    setFormData({
+      inquiryType: '',
+      inquiryDetail: '',
+      companyName: '',
+      department: '',
+      name: '',
+      jobTitle: '',
+      email: '',
+      phone: '',
+      content: ''
+    });
+    setAgreements({
+      personalInfo: false,
+      marketing: false
+    });
   };
 
   return (
@@ -441,24 +503,159 @@ export default function LaboratoryPage() {
 
               <div className={styles.colMd6}>
                 <div className={styles.inquiryWrite}>
-                  <div id="salesmap-web-form" data-web-form="https://salesmap.kr/web-form/f2d659b9-8969-48eb-bb0b-e69cae9bfe6a">
-                    <script
-                      dangerouslySetInnerHTML={{
-                        __html: `
-                          !(function (window, document) {
-                            var currentScript = document.currentScript;
-                            var scriptElement = document.createElement('script');
-                            scriptElement.onload = function () {
-                              window.SmFormSettings.loadForm();
-                            };
-                            scriptElement.id = 'loadFormScript';
-                            scriptElement.src = 'https://salesmap.kr/web-form-loader-v3.js';
-                            currentScript.parentNode.insertBefore(scriptElement, currentScript);
-                          })(window, document);
-                        `
-                      }}
-                    />
-                  </div>
+                  <form onSubmit={handleSubmit}>
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>문의 유형 *</p>
+                      <div className={styles.inquiryCon}>
+                        <div className={styles.inquirySelect}>
+                          <select 
+                            name="inquiryType" 
+                            value={formData.inquiryType}
+                            onChange={handleInputChange}
+                            required
+                          >
+                            <option value="">문의 유형을 선택해 주세요</option>
+                            <option value="solution">MediAI Solution</option>
+                            <option value="service">MediAI Service</option>
+                            <option value="consulting">의료 AI 컨설팅</option>
+                            <option value="technical">기술/영업</option>
+                            <option value="partnership">파트너십</option>
+                            <option value="recruitment">채용</option>
+                            <option value="lecture">강연</option>
+                            <option value="other">기타</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>문의 내용 *</p>
+                      <div className={styles.inquiryCon}>
+                        <textarea 
+                          name="content"
+                          value={formData.content}
+                          onChange={handleInputChange}
+                          placeholder="문의 내용을 입력해주세요."
+                          required
+                        />
+                        <p className={styles.inquiryGuide}>
+                          솔루션 또는 서비스명(예: MediAI Search, MediAI Chatbot, MediAI GeM, AI ReportCopilot, AI TA, AI Q&A, KMS 등)을 명시하고, 
+                          도입 목적과 사용자 수 등 구체적인 내용을 기재해 주시면 더욱 상세한 상담이 가능합니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>회사명 *</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="text" 
+                          name="companyName"
+                          value={formData.companyName}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>부서 *</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="text" 
+                          name="department"
+                          value={formData.department}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>이름 *</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="text" 
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>직함</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="text" 
+                          name="jobTitle"
+                          value={formData.jobTitle}
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>이메일 *</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="email" 
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inquiryRow}>
+                      <p className={styles.inquiryTitle}>휴대번호 *</p>
+                      <div className={styles.inquiryCon}>
+                        <input 
+                          type="tel" 
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.btnArea}>
+                      <div className={styles.checkBtn}>
+                        <span className={styles.checkbox2}>
+                          <input 
+                            type="checkbox" 
+                            name="personalInfo"
+                            checked={agreements.personalInfo}
+                            onChange={handleAgreementChange}
+                            required
+                          />
+                          <label htmlFor="personalInfo">개인정보 수집 및 이용에 동의합니다.</label>
+                          <span className={styles.noticeText}>
+                            <a href="/privacy">자세히 보기</a>
+                          </span>
+                        </span>
+                      </div>
+                      <div className={styles.checkBtn}>
+                        <span className={styles.checkbox2}>
+                          <input 
+                            type="checkbox" 
+                            name="marketing"
+                            checked={agreements.marketing}
+                            onChange={handleAgreementChange}
+                          />
+                          <label htmlFor="marketing">
+                            <span className={styles.red}>(선택)</span>마케팅 이용 및 뉴스레터 수신에 동의합니다.
+                          </label>
+                        </span>
+                      </div>
+                      <button type="submit" className={styles.btnL}>
+                        제출하기
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
