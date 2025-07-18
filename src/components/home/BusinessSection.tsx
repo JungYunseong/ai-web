@@ -4,15 +4,15 @@ export default function BusinessSection() {
   const businessItems = [
     {
       id: 1,
-      title: 'VAIV Solution',
-      description: '공공과 민간에서 검증된 AI 기술력, 비즈니스 혁신과 AX를 지원하는 솔루션',
+      title: 'MediAI Solution',
+      description: '공공과 민간에서 검증된 의료 AI 기술력, 의료 혁신과 디지털 헬스케어를 지원하는 솔루션',
       link: '/business?tab=solution',
       icon: '/images/main/icon_solution.svg'
     },
     {
       id: 2,
-      title: 'VAIV Service',
-      description: '빅데이터로 시장을 읽고, 기업의 전략적 의사결정을 지원하는 서비스',
+      title: 'MediAI Service',
+      description: '의료 빅데이터로 건강을 읽고, 의료기관의 전략적 의사결정을 지원하는 서비스',
       link: '/business?tab=service',
       icon: '/images/main/icon_service.svg'
     }
