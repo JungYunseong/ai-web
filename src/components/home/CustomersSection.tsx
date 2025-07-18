@@ -50,7 +50,7 @@ export default function CustomersSection() {
         <div className={styles.sliderContainer}>
           <div 
             className={styles.slider}
-            style={{ transform: `translateX(-${currentIndex * 200}px)` }}
+            style={{ transform: `translateX(-${currentIndex * (180 + 32)}px)` }}
           >
             {customers.map((customer) => (
               <div key={customer.id} className={styles.slideItem}>
