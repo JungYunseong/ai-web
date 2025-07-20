@@ -132,7 +132,7 @@ export default function CompanyPage() {
               </div>
             </section>
 
-            <section id="map" className={`${styles.textSection} ${styles.center}`}>
+            {/* <section id="map" className={`${styles.textSection} ${styles.center}`}>
               <div className={styles.contentsInner}>
                 <div className={styles.row}>
                   <div className={styles.colMd12}>
@@ -161,7 +161,7 @@ export default function CompanyPage() {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>

@@ -47,9 +47,9 @@ export default function Header() {
                     <li className={styles.listItem}>
                       <a href="/companyInquiry" title="문의하기 바로가기">문의하기</a>
                     </li>
-                    <li className={styles.listItem}>
+                    {/* <li className={styles.listItem}>
                       <a href="/company#map" title="오시는 길 바로가기">오시는 길</a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li className={styles.listItem}>
