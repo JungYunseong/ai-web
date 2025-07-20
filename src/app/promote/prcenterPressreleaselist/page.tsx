@@ -12,91 +12,21 @@ export default function PrcenterPressreleaselistPage() {
 
   const pressItems = [
     {
-      id: 3885,
+      id: 'press-001',
       type: '보도자료',
-      title: '메디AI컴퍼니, 의료 AI 인재 교류회 \'MediAI Lab Exchange\' 성료',
-      date: '2025.06.30',
-      link: '/promote/prcenterPressrelease?posts_id=3885'
-    },
-    {
-      id: 3884,
-      type: '보도자료',
-      title: '메디AI컴퍼니, 의료 AI 진단 시스템... KCCM 2025서 높은 주목',
-      date: '2025.06.25',
-      link: '/promote/prcenterPressrelease?posts_id=3884'
-    },
-    {
-      id: 3883,
-      type: '보도자료',
-      title: '메디AI컴퍼니, \'MediAI DAY 2025\' 성황리 종료... "의료 AI로 진화하는 세상"',
-      date: '2025.06.20',
-      link: '/promote/prcenterPressrelease?posts_id=3883'
-    },
-    {
-      id: 3882,
-      type: '보도자료',
-      title: '메디AI컴퍼니, 식약처 의료 AI 진단시스템 4년 연속 수주... 의료 AI 시장 입지 강화',
-      date: '2025.06.16',
-      link: '/promote/prcenterPressrelease?posts_id=3882'
-    },
-    {
-      id: 3881,
-      type: '보도자료',
-      title: '의료 AI로 진화하는 세상... 메디AI컴퍼니 AI DAY 2025 개최',
-      date: '2025.06.12',
-      link: '/promote/prcenterPressrelease?posts_id=3881'
-    },
-    {
-      id: 3880,
-      type: '보도자료',
-      title: '메디AI컴퍼니, \'스마트헬스코리아 2025\' 참가... 의료 AI 혁신 기술 선보여',
-      date: '2025.06.09',
-      link: '/promote/prcenterPressrelease?posts_id=3880'
-    },
-    {
-      id: 3879,
-      type: '보도자료',
-      title: '메디AI컴퍼니, 의료 AI 시대 연다... 보건복지부 사업 공동 수주',
-      date: '2025.06.05',
-      link: '/promote/prcenterPressrelease?posts_id=3879'
-    },
-    {
-      id: 3878,
-      type: '보도자료',
-      title: '메디AI컴퍼니, KCC정보통신 세미나서 \'의료 AI 챗봇 기반 진료 자동화\' 발표',
-      date: '2025.05.29',
-      link: '/promote/prcenterPressrelease?posts_id=3878'
-    },
-    {
-      id: 3877,
-      type: '보도자료',
-      title: '메디AI컴퍼니-에이에스티글로벌, 의료 AI 공동 사업 협력 MOU 체결',
-      date: '2025.05.22',
-      link: '/promote/prcenterPressrelease?posts_id=3877'
-    },
-    {
-      id: 3876,
-      type: '보도자료',
-      title: '메디AI컴퍼니, 의료 빅데이터 결합... 정확도 높은 의료 AI 진단 구현',
-      date: '2025.05.20',
-      link: '/promote/prcenterPressrelease?posts_id=3876'
+      title: '메디AI컴퍼니, 의료 AI 진단 정확도 95% 달성... FDA 승인 신청',
+      date: '2024.12.18',
+      link: '/promote/prcenterPressrelease/press-001'
     }
   ];
 
   const mediaItems = [
     {
-      id: 3875,
+      id: 'media-001',
       type: '언론 속 모습',
-      title: '메디AI컴퍼니, 의료 AI 기술로 의료기관 디지털 전환 가속화',
-      date: '2025.05.15',
-      link: '/promote/prcenterPressrelease?posts_id=3875'
-    },
-    {
-      id: 3874,
-      type: '언론 속 모습',
-      title: '메디AI컴퍼니, 의료 빅데이터 분석으로 환자 진단 정확도 향상',
-      date: '2025.05.10',
-      link: '/promote/prcenterPressrelease?posts_id=3874'
+      title: '[의료신문] 메디AI컴퍼니, 의료 AI 혁신으로 의료 접근성 향상 이끈다',
+      date: '2024.12.16',
+      link: '/promote/prcenterMedia/media-001'
     }
   ];
 

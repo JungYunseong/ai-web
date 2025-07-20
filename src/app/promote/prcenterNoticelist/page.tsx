@@ -11,74 +11,18 @@ export default function PrcenterNoticelistPage() {
 
   const noticeItems = [
     {
-      id: 3884,
+      id: 'notice-001',
       type: '공지',
-      title: '[긴급입찰공고] 2024 식약처 의료 AI 진단시스템 구축사업 위탁용역',
-      date: '2024.07.16',
-      link: '/promote/prcenterNotice?posts_id=3884'
+      title: '메디AI컴퍼니, 의료 AI 솔루션 개발자 모집 공고',
+      date: '2024.12.20',
+      link: '/promote/prcenterNotice/notice-001'
     },
     {
-      id: 3741,
+      id: 'notice-002',
       type: '공지',
-      title: '2024 의료 AI 바우처 지원 사업 수요 의료기관 모집',
-      date: '2024.02.14',
-      link: '/promote/prcenterNotice?posts_id=3741'
-    },
-    {
-      id: 3533,
-      type: '공지',
-      title: '[긴급입찰공고] 2023 식약처 의료 영상 AI 진단시스템 구축사업 위탁용역(품질검수 및 성능평가 모듈 개발)',
-      date: '2023.05.15',
-      link: '/promote/prcenterNotice?posts_id=3533'
-    },
-    {
-      id: 3534,
-      type: '공지',
-      title: '[긴급입찰공고] 2023 식약처 의료 AI 진단시스템 구축사업 위탁용역(의료 영상 데이터 전처리 및 가공)',
-      date: '2023.05.15',
-      link: '/promote/prcenterNotice?posts_id=3534'
-    },
-    {
-      id: 3535,
-      type: '공지',
-      title: '[긴급입찰공고] 2023 식약처 의료 AI 진단시스템 구축사업 위탁용역(진단정확도 향상을 위한 의료 영상 데이터 구축)',
-      date: '2023.05.15',
-      link: '/promote/prcenterNotice?posts_id=3535'
-    },
-    {
-      id: 3476,
-      type: '공지',
-      title: '[공고] 무상증자 공고',
-      date: '2023.03.29',
-      link: '/promote/prcenterNotice?posts_id=3476'
-    },
-    {
-      id: 3465,
-      type: '공지',
-      title: '[공고] 2022년 사업보고서',
-      date: '2023.03.23',
-      link: '/promote/prcenterNotice?posts_id=3465'
-    },
-    {
-      id: 3242,
-      type: '공지',
-      title: '[긴급입찰공고] 2022 식약처 의료 AI 진단시스템 구축사업 위탁용역(데이터 구축)',
-      date: '2022.09.19',
-      link: '/promote/prcenterNotice?posts_id=3242'
-    },
-    {
-      id: 3243,
-      type: '공지',
-      title: '[긴급입찰공고] 2022 식약처 의료 AI 진단시스템 구축사업 위탁용역(데이터 가공)',
-      date: '2022.09.19',
-      link: '/promote/prcenterNotice?posts_id=3243'
-    },
-    {
-      id: 3183,
-      type: '공지',
-      title: '[긴급입찰공고] 2022 식약처 의료 AI 학습데이터 구축사업 위탁용역(의료 영상 데이터 수집)',
-      date: '2022.08.01',
-      link: '/promote/prcenterNotice?posts_id=3183'
+      title: '메디AI컴퍼니, 의료 AI 플랫폼 베타 서비스 오픈 안내',
+      date: '2024.12.15',
+      link: '/promote/prcenterNotice/notice-002'
     }
   ];
 
@@ -136,7 +80,7 @@ export default function PrcenterNoticelistPage() {
                     <tr key={item.id}>
                       <td>{item.type}</td>
                       <td>
-                        <a href={item.link}>{item.title}</a>
+                        <a href={`/promote/prcenterNotice/${item.id}`}>{item.title}</a>
                       </td>
                       <td className={styles.date}>{item.date}</td>
                     </tr>
