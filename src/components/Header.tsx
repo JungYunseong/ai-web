@@ -59,7 +59,7 @@ export default function Header() {
                       <a href="/laboratory?tab=1" title="핵심기술 바로가기">핵심기술</a>
                     </li>
                     <li className={styles.listItem}>
-                      <a href="/laboratory?tab=2" title="AI·빅데이터연구소 바로가기">AI·빅데이터연구소</a>
+                      <a href="/laboratory?tab=2" title="의료 AI·빅데이터연구소 바로가기">의료 AI·빅데이터연구소</a>
                     </li>
                   </ul>
                 </li>
@@ -67,10 +67,10 @@ export default function Header() {
                   <a href="/business" title="비즈니스 바로가기">비즈니스</a>
                   <ul className={styles.gnbDepth2List}>
                     <li className={styles.listItem}>
-                      <a href="/business?tab=solution" title="VAIV Solution 바로가기">VAIV Solution</a>
+                      <a href="/business?tab=solution" title="MediAI Solution 바로가기">MediAI Solution</a>
                     </li>
                     <li className={styles.listItem}>
-                      <a href="/business?tab=service" title="VAIV Service 바로가기">VAIV Service</a>
+                      <a href="/business?tab=service" title="MediAI Service 바로가기">MediAI Service</a>
                     </li>
                   </ul>
                 </li>

@@ -7,9 +7,9 @@ export default function NewsletterSection() {
         <div className={styles.newsletterContent}>
           <div className={styles.newsletterText}>
             <div className={styles.newsletterTitle}>
-              <h6>바이브의 뉴스레터 <em>'바이레터'</em></h6>
+              <h6>메디AI의 뉴스레터 <em>'메디레터'</em></h6>
               <h5>
-                <b>바이브의 소식</b>을 <br/>
+                <b>메디AI의 소식</b>을 <br/>
                 매월 메일로 <br className="br-tab"/>
                 받아보실 수 있습니다.
               </h5>
@@ -17,7 +17,7 @@ export default function NewsletterSection() {
             <a 
               href="https://page.stibee.com/subscriptions/402163" 
               className={styles.arrowButton} 
-              title="바이레터 구독하기" 
+              title="메디레터 구독하기" 
               target="_blank"
               rel="noopener noreferrer"
             >

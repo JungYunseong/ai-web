@@ -4,31 +4,31 @@ export default function NewsSection() {
   const newsItems = [
     {
       id: 1,
-      title: '바이브컴퍼니, 생성형 AI 인재 교류회 \'Cross-AI Lab Exchange\' 성료',
+      title: '메디AI컴퍼니, 의료 AI 인재 교류회 \'MediAI Lab Exchange\' 성료',
       date: '2025.07.02',
       link: '/promote/prcenterPressrelease?posts_id=4060'
     },
     {
       id: 2,
-      title: '바이브컴퍼니, RAG 기반 지식관리 시스템… KCCM 2025서 높은 주목',
+      title: '메디AI컴퍼니, 의료 AI 진단 시스템… KCCM 2025서 높은 주목',
       date: '2025.06.25',
       link: '/promote/prcenterPressrelease?posts_id=4058'
     },
     {
       id: 3,
-      title: '바이브컴퍼니, \'VAIV AI DAY 2025\' 성황리 종료… "에이전트로 진화하는 세상"',
+      title: '메디AI컴퍼니, \'MediAI DAY 2025\' 성황리 종료… "의료 AI로 진화하는 세상"',
       date: '2025.06.20',
       link: '/promote/prcenterPressrelease?posts_id=4057'
     },
     {
       id: 4,
-      title: '바이브컴퍼니, 식약처 식의약 데이터 플랫폼 4년 연속 수주… 공공 데이터 시장 입지 강화',
+      title: '메디AI컴퍼니, 식약처 의료 AI 진단시스템 4년 연속 수주… 의료 AI 시장 입지 강화',
       date: '2025.06.16',
       link: '/promote/prcenterPressrelease?posts_id=4056'
     },
     {
       id: 5,
-      title: '에이전트로 진화하는 세상… 바이브컴퍼니 AI DAY 2025 개최',
+      title: '의료 AI로 진화하는 세상… 메디AI컴퍼니 AI DAY 2025 개최',
       date: '2025.06.12',
       link: '/promote/prcenterPressrelease?posts_id=4054'
     }
@@ -38,13 +38,13 @@ export default function NewsSection() {
     <section className={styles.newsSection}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>바이브 소식</h2>
+          <h2>메디AI 소식</h2>
         </div>
         
         <div className={styles.newsBanner}>
           <a href="/promote/prcenterPressreleaselist" title="보도자료 바로가기">
             <h3>
-              바이브컴퍼니의 <br/>
+              메디AI컴퍼니의 <br/>
               <b>새로운 소식</b>을 <br className="tablet" />
               전해드립니다
             </h3>

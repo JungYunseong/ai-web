@@ -13,35 +13,35 @@ export default function PrcenterNoticelistPage() {
     {
       id: 3884,
       type: '공지',
-      title: '[긴급입찰공고] 2024 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역',
+      title: '[긴급입찰공고] 2024 식약처 의료 AI 진단시스템 구축사업 위탁용역',
       date: '2024.07.16',
       link: '/promote/prcenterNotice?posts_id=3884'
     },
     {
       id: 3741,
       type: '공지',
-      title: 'NIPA 2024 AI 바우처 지원 사업 수요 기업 모집',
+      title: '2024 의료 AI 바우처 지원 사업 수요 의료기관 모집',
       date: '2024.02.14',
       link: '/promote/prcenterNotice?posts_id=3741'
     },
     {
       id: 3533,
       type: '공지',
-      title: '[긴급입찰공고] 2023 NIPA AI융합 유해화물질 판독시스템 구축사업 위탁용역(품질검수 및 성능평가 모듈 개발)',
+      title: '[긴급입찰공고] 2023 식약처 의료 영상 AI 진단시스템 구축사업 위탁용역(품질검수 및 성능평가 모듈 개발)',
       date: '2023.05.15',
       link: '/promote/prcenterNotice?posts_id=3533'
     },
     {
       id: 3534,
       type: '공지',
-      title: '[긴급입찰공고] 2023 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(열화상/분광스펙트럼 정보가 통합된 다중 스펙트럼 이미지 데이터 전처리 및 가공)',
+      title: '[긴급입찰공고] 2023 식약처 의료 AI 진단시스템 구축사업 위탁용역(의료 영상 데이터 전처리 및 가공)',
       date: '2023.05.15',
       link: '/promote/prcenterNotice?posts_id=3534'
     },
     {
       id: 3535,
       type: '공지',
-      title: '[긴급입찰공고] 2023 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(판독정확도 향상을 위한 열화상 분광스펙트럼 정보 통합 학습데이터 구축)',
+      title: '[긴급입찰공고] 2023 식약처 의료 AI 진단시스템 구축사업 위탁용역(진단정확도 향상을 위한 의료 영상 데이터 구축)',
       date: '2023.05.15',
       link: '/promote/prcenterNotice?posts_id=3535'
     },
@@ -62,21 +62,21 @@ export default function PrcenterNoticelistPage() {
     {
       id: 3242,
       type: '공지',
-      title: '[긴급입찰공고] 2022 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(데이터 구축)',
+      title: '[긴급입찰공고] 2022 식약처 의료 AI 진단시스템 구축사업 위탁용역(데이터 구축)',
       date: '2022.09.19',
       link: '/promote/prcenterNotice?posts_id=3242'
     },
     {
       id: 3243,
       type: '공지',
-      title: '[긴급입찰공고] 2022 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(데이터 가공)',
+      title: '[긴급입찰공고] 2022 식약처 의료 AI 진단시스템 구축사업 위탁용역(데이터 가공)',
       date: '2022.09.19',
       link: '/promote/prcenterNotice?posts_id=3243'
     },
     {
       id: 3183,
       type: '공지',
-      title: '[긴급입찰공고1] 2022 NIA 인공지능 학습데이터(2-82.3D관광지 데이터) 위탁용역(설악산 전체 데이터 취득)',
+      title: '[긴급입찰공고] 2022 식약처 의료 AI 학습데이터 구축사업 위탁용역(의료 영상 데이터 수집)',
       date: '2022.08.01',
       link: '/promote/prcenterNotice?posts_id=3183'
     }

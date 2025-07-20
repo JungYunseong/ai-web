@@ -1,0 +1,720 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-Script-type" content="text/javascript">
+    <meta http-equiv="content-Style-type" content="text/css">
+
+	<title>바이브컴퍼니 - AI·빅데이터 선도기업</title>
+	<meta name="description" content="바이브컴퍼니는 Big Data로 시장을 읽고 AI로 업무 혁신을 만들어 갑니다. AX 시대, 전략적 파트너로서 사람과 기술이 함께 성장하는 미래를 만들어갑니다.">
+	<meta name="keywords" content="AI, Big Data, RAG, LLM, 자연어 처리, 인공지능, 데이터 분석, 데이터 추론, 트렌드, 인사이트, 검색엔진, 챗봇, KMS, 리서치, 리포트">
+	<meta property="og:title" content="바이브(VAIV)" />
+	<meta property="og:image" content="/resources/images/vaiv/share_img_re.png?ver=1748334157969" />
+	<meta property="og:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+	<meta property="og:site_name" content="바이브(VAIV)" />
+	<meta property="twitter:title" content="바이브(VAIV)" />
+	<meta property="twitter:description" content="비즈니스 AI+Data. 시장을 읽는 데이터와 검증된 AI 솔루션을 제공합니다." />
+
+	<meta name="naver-site-verification" content="bce89190c84b84f0baebf7f19c423543a6dcae0b" />
+	<meta name="google-site-verification" content="k9DlVk0vfCkL3643OGmUekZCpk6Ng-X_V-2gOT-a6Mc" />
+	
+	<link rel="apple-touch-icon-precomposed" href="/resources/images/vaiv/homIcon_114_114.png" />
+	<link rel="shortcut icon" href="/resources/images/vaiv/homIcon_72_72.png" />
+	<link rel="icon" href="/resources/images/vaiv/vaiv_favicon.ico" />
+	<link rel="stylesheet" href="/resources/css/style.css?ver=250512" type="text/css"/>
+
+	<script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/js/jquery-scrolltofixed-min.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+    <script src="/resources/js/common.js?ver=1748334157969"></script>
+    
+    <!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NXLDV7B7');</script>
+	<!-- End Google Tag Manager -->	
+
+
+
+   <meta name="decorator" content="sub"/>
+   	
+</head>
+<body id=''  class='' >
+<!-- header start -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXLDV7B7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+	var url = location.href;
+	var urlArray = url.split("/");
+	if($.inArray("customer",urlArray) > -1){
+		$(".gnb_list li a").removeClass("on");
+		$("#reference").addClass("on");
+	}else{
+		$(".gnb_list li a").each(function(){
+			var id = $(this).attr("id");
+			if($.inArray(id,urlArray) > -1){
+				$(".gnb_list li a").removeClass("on");
+				$("#"+id).addClass("on");
+			}
+		})
+	}
+	
+    // URL의 쿼리스트링에서 UTM 파라미터 추출
+    function getUTMParams() {
+        const params = new URLSearchParams(window.location.search);
+        const utmParams = {};
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach((key) => {
+            if (params.has(key)) {
+                utmParams[key] = params.get(key);
+            }
+        });
+        return utmParams;
+    }
+
+    // UTM 파라미터를 쿠키에 저장
+    function saveUTMParamsToCookies(utmParams) {
+        const expirationDays = 1; // 쿠키 만료일: 1일
+        Object.keys(utmParams).forEach((key) => {
+            $.cookie(key, utmParams[key], { expires: expirationDays, path: '/' });
+        });
+    }
+    
+    // 쿠키 저장 실행
+    const utmParams = getUTMParams();
+    if (Object.keys(utmParams).length > 0) {
+        saveUTMParamsToCookies(utmParams);
+    }
+    
+}); 
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+
+<div class="responsive-check check-desktop"></div>
+<div class="responsive-check check-tablet"></div>
+<div class="responsive-check check-mobile"></div>
+
+<!-- 회사베너
+<div class="header-banner">
+	<a href="https://vaivcompany.kr/promote/prcenterNotice?posts_id=3741" target="_blank" class="banner-link">
+		<img src="/resources/images/banner_pc.png" class="banner-img banner-img-pc" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+		<img src="/resources/images/banner_mo.png" class="banner-img banner-img-mo" alt="AI바우처로 최대 2억까지 지원받고, VAIV의 AI솔루션을 도입해보세요." />
+	</a>
+	<div class="banner-util">
+		<div class="banner-check">
+			<input type="checkbox" id="banner-not-today" />
+			<label for="banner-not-today">오늘하루 보지 않기</label>
+		</div>
+		<button type="button" class="banner-close-button">
+			<i class="ri-close-circle-fill"></i>
+		</button>
+	</div>
+</div> 
+-->
+<header id="header">
+	<div class="contentsInner">
+		<div class="header-content">
+			<h1 class="header-logo"><a href="/" title="home"><img src="/resources/images/vaiv/company_ci_re.png" alt="VAIV" /></a></h1>
+			<nav id="gnb">
+				<ul class="gnb-depth-list">
+					<li class="list-item">
+						<a href="/company" title="기업정보 바로가기">기업정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/company" title="회사소개 바로가기">회사소개</a>
+							</li>
+							<li class="list-item">
+								<a href="/companyHistory" title="연혁 바로가기">연혁</a>
+							</li>
+							<li class="list-item">
+								<a href="/customer" title="주요 고객사 바로가기">주요 고객사</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterIR" title="투자정보 바로가기">투자정보</a>
+							</li>
+
+
+
+							<li class="list-item">
+								<a href="/companyInquiry" title="문의하기 바로가기">문의하기</a>
+							</li>
+							<li class="list-item">
+								<a href="/company#map" title="오시는 길 바로가기">오시는 길</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/laboratory" title="연구소 바로가기">연구소</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/laboratory?tab=1" title="핵심기술 바로가기">핵심기술</a>
+							</li>
+							<li class="list-item">
+								<a href="/laboratory?tab=2" title="AI·빅데이터연구소 바로가기">AI·빅데이터연구소</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business?tab=solution" title="VAIV Solution 바로가기">VAIV Solution</a>
+							</li>
+							<li class="list-item">
+								<a href="/business?tab=service" title="VAIV Service 바로가기">VAIV Service</a>
+							</li>
+
+
+
+						</ul>
+					</li>
+					<!-- <li class="list-item">
+						<a href="/business" title="비즈니스 바로가기">비즈니스</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/business/businessSometrend" title="Sometrend 바로가기">Sometrend</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessFintech" title="Fintech 바로가기">Fintech</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIsolver" title="AI Solver 바로가기">AI Solver</a>
+							</li>
+							<li class="list-item">
+								<a href="/business/businessAIassistant" title="AI Assistant 바로가기">AI Assistant</a>
+							</li>
+							<li class="list-item">
+								<a href="/reference" title="Reference 바로가기">Reference</a>
+							</li>
+						</ul>
+					</li> -->
+					<li class="list-item">
+						<a href="/promote/prcenterNoticelist" title="홍보센터 바로가기">홍보센터</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/promote/prcenterNoticelist" title="공지사항 바로가기">공지사항</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterPressreleaselist" title="보도자료 바로가기">보도자료</a>
+							</li>
+							<li class="list-item">
+								<a href="/promote/prcenterVideo" title="홍보영상 바로가기">홍보영상</a>
+							</li>
+
+
+
+
+
+
+							<li class="list-item">
+								<a href="https://blog.naver.com/vaiv_company" title="블로그 바로가기" target="_blank">블로그</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/recruit/recruitmentNoticelist" title="채용정보 바로가기">채용정보</a>
+						<ul class="gnb-depth2-list">
+							<li class="list-item">
+								<a href="/recruit/recruitmentNoticelist" title="채용공고 바로가기">채용공고</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentInformation" title="채용안내 바로가기">채용안내</a>
+							</li>
+							<li class="list-item">
+								<a href="/recruit/recruitmentWelfare" title="복지제도 바로가기">복지제도</a>
+							</li>
+						</ul>
+					</li>
+					<li class="list-item">
+						<a href="/partner" title="파트너 바로가기">파트너</a>
+					</li>
+				</ul>
+				<div class="gnb-bg"></div>
+			</nav>
+			<button type="button" class="header-toggle"><span></span><span></span><span></span></button>
+		</div>
+	</div>
+
+	<div class="header-dim"></div>
+	<div class="desktop-gnb-modal">
+		<button type="button" class="modal-close">
+			<div data-feather="x"></div>
+		</button>
+	</div>
+</header>
+
+<script>
+$(document).ready(function () {
+	initAllGnb();
+	initHeaderBanner();
+
+	$('.gnb-depth2-list .list-item a').on('click', function () {
+		closeMobileGnb();
+		closeDesktopGnbModal();
+	});
+	
+});
+
+$(window).on('resize', function () {
+	initAllGnb();
+});
+
+function initAllGnb() {
+	let mobileGnbTimeout = null;
+
+	if ($('.check-desktop').is(':visible')) { // desktop
+		if (!$('#header').hasClass('desktop')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initDesktopGnb();
+
+			$('#header').addClass('desktop');
+		}
+	} else if ($('.check-tablet').is(':visible')){ // tablet
+		if (!$('#header').hasClass('tablet')) {
+			clearTimeout(mobileGnbTimeout);
+			clearAllGnb();
+			initMobileGnb();
+
+			$('#header').addClass('tablet');
+		}
+	} else if ($('.check-mobile').is(':visible')) { // mobile
+		if (!$('#header').hasClass('mobile')) {
+			clearAllGnb();
+			initMobileGnb();
+			
+			// 모바일일 때 gnb 잠깐 보였다가 들어가는 현상 fix
+			$('#gnb').css({ visibility: 'hidden' });
+			mobileGnbTimeout = setTimeout(function () {
+				$('#gnb').css({ visibility: 'visible' });
+			}, 500);
+
+			$('#header').addClass('mobile');
+		}
+	}
+}
+
+function clearAllGnb() {
+	closeMobileGnb();
+	closeDesktopGnbModal();
+
+	$('.header-toggle').off('click.initDesktopGnb');
+	$('.header-toggle').off('click.initMobileGnb');
+	$('.header-dim').off('click.initDesktopGnb');
+	$('.header-dim').off('click.initMobileGnb');
+	$('#header').removeClass('desktop tablet mobile');
+	$('#gnb').css({ visibility: 'visible' });
+}
+
+function initDesktopGnb() {
+	initDesktopGnbModal();
+
+	$('.header-toggle').on('click.initDesktopGnb', function () {
+		openDesktopGnbModal();
+	});
+
+	$('.header-dim').on('click.initDesktopGnb', function () {
+		closeDesktopGnbModal();
+	});
+
+	$('.desktop-gnb-modal .modal-close').on('click', function () {
+		closeDesktopGnbModal();
+	});
+}
+
+function initMobileGnb() {
+	$('.header-toggle').on('click.initMobileGnb', function () {
+		if (!$(this).hasClass('active')) {
+			openMobileGnb();
+		} else {
+			closeMobileGnb();
+		}
+	});
+
+	$('.header-dim').on('click.initMobileGnb', function () {
+		closeMobileGnb();
+	});
+}
+
+function initDesktopGnbModal() { 
+	if ($('.desktop-gnb-modal').children().length > 1) return;
+
+	const gnbEl = $('#gnb').clone();
+	$('.desktop-gnb-modal').append(gnbEl);
+}
+
+function openDesktopGnbModal() {
+	$('.header-dim').addClass('active');
+	$('.desktop-gnb-modal').stop().fadeIn();
+	$('#container .tab').addClass('inactive');
+}
+
+function closeDesktopGnbModal() {
+	$('.header-dim').removeClass('active');
+	$('.desktop-gnb-modal').hide();
+	$('#container .tab').removeClass('inactive');
+}
+
+function openMobileGnb() {
+	$('body').css({ overflow: 'hidden' });
+	$('#gnb').addClass('active');
+	$('.header-toggle').addClass('active');
+	$('.header-dim').addClass('active');
+	$('#container .tab').addClass('inactive');
+}
+
+function closeMobileGnb() {
+	$('body').css({ overflow: 'visible' });
+	$('#gnb').removeClass('active').scrollTop(0);
+	$('.header-toggle').removeClass('active');
+	$('.header-dim').removeClass('active');
+	$('#container .tab').removeClass('inactive');
+}
+
+function initHeaderBanner() {
+	const cookieName = 'header-banner';
+
+	// 쿠키가 있으면
+	if ($.cookie(cookieName) === '1') {
+		$('.header-banner').hide();
+	}
+
+	// 쿠키가 없으면
+	$('.header-banner .banner-close-button').on('click', function () {
+		if ($('.header-banner .banner-check input').is(':checked')) {
+			$.cookie(cookieName, '1', { expires: 1, path: "/" });
+		}
+
+		$('.header-banner').hide();
+	});
+}
+
+</script>
+<!-- header end -->
+<!-- main content start -->
+
+    <div id="container">
+        <div class="content noticewrap">          
+            <div class="conwrap contentsInner">
+                <!--공고_게시글-->
+                <div class="con3 write_show">
+
+						<button class="con_list" onClick="location.href='/promote/prcenterNoticelist'">목록으로</button>
+                        <div class="con_wrap">
+                            <div class="con_header">
+                               
+                                <span class="category"><em>공지</em></span>
+                                <span class="date">2024.07.16</span>
+								 <p class="title">[긴급입찰공고] 2024 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역</p>
+                            </div>
+                            <div class="con_text">
+								<div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><a name="_top"></a><b><span lang="EN-US" style="font-size: 14pt; line-height: 160%;">(</span></b><b><span style="font-size: 14pt; line-height: 160%;">긴급입찰공고</span></b><b><span lang="EN-US" style="font-size: 14pt; line-height: 160%;">)</span></b><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a" align="center" style="text-align:center;word-break:keep-all"><b><span lang="EN-US" style="font-size: 14pt; line-height: 160%;">202</span></b><b><span lang="EN-US" style="font-size: 14pt; line-height: 160%;">4</span></b><b><span lang="EN-US" style="font-size: 14pt; line-height: 160%;"> NIPA AI</span></b><b><span style="font-size: 14pt; line-height: 160%;">융합</span></b><b><span style="font-size: 14pt; line-height: 160%;"> </span></b><b><span style="font-size: 14pt; line-height: 160%;">유해화학물질</span></b><b><span style="font-size: 14pt; line-height: 160%;"> </span></b><b><span style="font-size: 14pt; line-height: 160%;">판독시스템</span></b><b><span style="font-size: 14pt; line-height: 160%;"> </span></b><b><span style="font-size: 14pt; line-height: 160%;">구축사업</span></b><b><span style="font-size: 14pt; line-height: 160%;"> </span></b><b><span style="font-size: 14pt; line-height: 160%;">위탁용역</span></b><span lang="EN-US"><br>
+</span><b><span lang="EN-US" style="font-size: 12pt; line-height: 160%;">(</span></b><b><span style="font-size: 12pt; line-height: 160%;">현장실증을</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">위한</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">시도소방시스템과</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">연계인터페이스개발</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">및</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">화면</span></b><b><span style="font-size: 12pt; line-height: 160%;"> </span></b><b><span style="font-size: 12pt; line-height: 160%;">개발</span></b><b><span lang="EN-US" style="font-size: 12pt; line-height: 160%;">)</span></b><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="a">과학기술정보통신부가 주관하고<span lang="EN-US"> NIPA </span>정보통신산업진흥원에서 발주하여 바이브컴퍼니가 참여하는<span lang="EN-US"> 202</span><span lang="EN-US">4</span><span lang="EN-US"> AI</span>융합 유해화학물질 판독시스템 구축사업과 관련하여 아래와 같이 일반용역을 공고합니다<span lang="EN-US">.</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 10pt; margin-right: 0cm;">
+
+<p class="1" style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US">1. </span><!--[endif]--><b>입찰에</b><b> </b><b>부치는</b><b> </b><b>사항</b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 20pt; margin-right: 0cm;">
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">가. </span><!--[endif]-->사업명<span lang="EN-US">: </span>현장실증을 위한 시도소방시스템과 연계인터페이스개발 및 화면 개발<span lang="EN-US"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (202</span><span lang="EN-US">4</span>년<span lang="EN-US"> AI</span>융합 유해 화학물질 판독시스템 구축 사업<span lang="EN-US">)</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">나. </span><!--[endif]-->사업내용<span lang="EN-US">: </span>제안요청서 참조<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">다. </span><!--[endif]-->사업기간<span lang="EN-US">: </span>착수일로부터<span lang="EN-US"> 202</span><span lang="EN-US">4</span>년<span lang="EN-US"> 11</span>월<span lang="EN-US"> 30</span>일까지<span lang="EN-US">(</span>유지<span lang="EN-US" style="font-family: &quot;맑은 고딕&quot;;">·</span>보수는<span lang="EN-US"> 202</span><span lang="EN-US">4</span><span lang="EN-US">.12.31.</span>까지<span lang="EN-US">)</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">라. </span><!--[endif]-->사업금액<span lang="EN-US">: </span>금 <span lang="EN-US">8</span><span lang="EN-US">5,000,000</span>원<span lang="EN-US">(</span>금 팔천오백만원<span lang="EN-US">) </span><span lang="EN-US" style="font-family: &quot;맑은 고딕&quot;;">※</span>부가세제외<span lang="EN-US"><br>
+</span><span lang="EN-US" style="font-family: &quot;맑은 고딕&quot;;">※</span>낙찰결정 후 바이브컴퍼니 회계기준일에 맞추어 지급<span lang="EN-US">(</span>선금<span lang="EN-US"> 70%, </span>잔금<span lang="EN-US"> 30%)</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">마. </span><!--[endif]-->입찰방법<span lang="EN-US">: </span>제한경쟁입찰<span lang="EN-US">(</span>협상에 의한 계약<span lang="EN-US">)</span><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 10pt; margin-right: 0cm;">
+
+<p class="1" style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US">2. </span><!--[endif]--><b>입찰참가</b><b> </b><b>자격</b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 20pt; margin-right: 0cm;">
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">바. </span><!--[endif]-->국가를 당사자로하는 계약에 관한 법률 시행령 제<span lang="EN-US"> 12</span>조에 의한 입찰 참가자격을 갖춘자<span lang="EN-US">, </span>동법 시행규칙 제<span lang="EN-US"> 14</span>조에 의한 자격을 갖추고 동법시행령 제<span lang="EN-US"> 76</span>조에 의거 제한받지 않는 자<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">사. </span><!--[endif]-->공고일 현재 소프트웨어진흥법 제<span lang="EN-US">58</span>조 및 같은 법 시행령 제<span lang="EN-US">17</span>조의 규정에 의한 소프트웨어 사업자<span lang="EN-US">(</span>컴퓨터관련서비스사업<span lang="EN-US">)[1468] </span>등록을 필한 업체<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">아. </span><!--[endif]-->중소기업기본법 제<span lang="EN-US"> 2</span>조에 따른 중소기업자 및 소상공인 보호 및 지원에 관한 법률 제<span lang="EN-US">2</span>조에 따른 소상공인으로서 중소기업 범위 및 확인에 관한 규정에 따라 발급된 중소기업 소상공인확인서를 소지한자<span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 10pt; margin-right: 0cm;">
+
+<p class="1" style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US">3. </span><!--[endif]--><b>제안서</b><b> </b><b>접수</b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 20pt; margin-right: 0cm;">
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">자. </span><!--[endif]-->제출마감<span lang="EN-US">: 202</span><span lang="EN-US">4</span><span lang="EN-US">.0</span><span lang="EN-US">7</span><span lang="EN-US">.30.</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">차. </span><!--[endif]-->접수방법<span lang="EN-US">: </span>전자우편에 의한 접수<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">카. </span><!--[endif]-->제출처<span lang="EN-US">:</span>주식회사 바이브컴퍼니<span lang="EN-US">(<a href="mailto:chkim@vaiv.kr"><span style="color:blue;text-underline:blue;text-decoration:none underline;
+text-line-through:none">chkim@vaiv.kr</span></a></span><span lang="EN-US">)</span><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 10pt; margin-right: 0cm;">
+
+<p class="1" style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US">4. </span><!--[endif]--><b>낙찰자</b><b> </b><b>안내</b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 20pt; margin-right: 0cm;">
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">타. </span><!--[endif]--><span lang="EN-US">(</span>평가<span lang="EN-US">)</span>바이브컴퍼니 내부평가 지침에 의거하여 평가실시 후 최종낙찰자 선정<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="2" style="margin-left:0cm;text-indent:0cm;mso-list:l1 level2 lfo2"><!--[if !supportLists]--><span lang="EN-US">파. </span><!--[endif]--><span lang="EN-US">(</span>안내<span lang="EN-US">)</span>별도의 공고없이 낙찰자를 제안서 제출한 이메일로 개별통보<span lang="EN-US"><o:p></o:p></span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+</div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm; margin-left: 10pt; margin-right: 0cm;">
+
+<p class="1" style="margin-left:0cm;text-indent:0cm;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span lang="EN-US">5. </span><!--[endif]--><b>문의처</b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div><p class="a"><a name="_top"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+<p class="a"><span lang="EN-US">&nbsp;&nbsp;&nbsp; </span>제안서 작성 지침 등 세부적인 내용은 주식회사 바이브컴퍼니<span lang="EN-US">(<a href="mailto:chkim@vaiv.kr"><span style="color:blue;text-underline:blue;text-decoration:none underline;
+text-line-through:none">chkim@vaiv.kr</span></a></span><span lang="EN-US">)</span>로 문의 바람<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="a"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="a" align="center" style="text-align:center;word-break:keep-all"><span lang="EN-US">202</span><span lang="EN-US">4</span><span lang="EN-US">.0</span><span lang="EN-US">7</span><span lang="EN-US">.1</span><span lang="EN-US">6</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a" align="center" style="text-align:center;word-break:keep-all">위와 같이 공고 함<span lang="EN-US">.</span><span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="a" align="center" style="text-align:center;word-break:keep-all"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="a" align="center" style="text-align:center;word-break:keep-all"><b><span style="font-size: 15pt; line-height: 160%;">주식회사</span></b><b><span style="font-size: 15pt; line-height: 160%;"> </span></b><b><span style="font-size: 15pt; line-height: 160%;">바이브컴퍼니</span></b><span lang="EN-US"><o:p></o:p></span></p>
+
+</div></div><div style="border-width: 1pt; border-style: none; border-color: black; padding: 0cm;">
+
+</div>
+                            </div>
+                            
+                            <div class="con_file">
+	                           <span class="file">
+	                           
+	                           </span>     	
+	                        </div>
+                        </div>
+
+
+                       <div class="btn_wrap row">
+                            <div class="col-md-12 btn_wrap">   
+                            	
+                            	<button class="board_btn" onClick="location.href='/promote/prcenterNotice?posts_id=3741'"><i class="zmdi zmdi-chevron-left"></i> 이전글</button>
+                            	                         
+                                
+                            </div>
+                        </div>
+ 
+                                 
+                </div><!--con3-->
+            </div><!--conwrap-->
+        </div>
+    </div><!--//container--> 
+
+<!-- main content end -->
+<!-- footer start -->
+
+<footer id="footer">
+	<div class="contentsInner">
+		<div class="footer-top">
+			<figure class="footer-logo">
+				<img src="/resources/images/vaiv/footer_logo_re.png" alt="VAIV" />
+			</figure>
+			<ul class="footer-sns-list">
+				<li class="list-item list-blog">
+					<a href="https://blog.naver.com/vaiv_company" title="네이버 블로그 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_blog.svg" alt="네이버 블로그"/>
+					</a>
+				</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<li class="list-item list-ytb">
+					<a href="https://www.youtube.com/channel/UCe-PKPEl2nkwrC__8Qy1HUg" title="유튜브 바로가기" target="_blank">
+						<img src="/resources/images/icon_footer_ytb.svg" alt="유튜브"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<select class="footer-family" name="familysite_option" title="패밀리사이트 바로가기" onchange="if(this.value) window.open(this.value);">
+				<option value="" selected>패밀리사이트</option>
+				<option value="https://ai.vaiv.kr/">VAIV AI 플랫폼</option>
+				<option value="https://stock.vaiv.kr/">VAIV Stock</option>
+				<option value="https://data.some.co.kr/">Data +</option>
+				<option value="https://some.co.kr/">썸트렌드</option>
+				<option value="https://lifechange.ai/">생활변화관측소</option>
+				<option value="https://whotagged.me/">WHOTAG</option>
+			</select>
+			<div class="footer-content">
+				<ul class="footer-info-list">
+					<li class="list-item">(주)바이브컴퍼니</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">대표자</span>김경서</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">사업자등록번호</span>120-86-08334</li>
+					<li class="list-item">서울특별시 용산구 독서당로 97</li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>
+					<li class="list-line">|</li>
+					<li class="list-item"><span class="list-label">Mail</span><a href="mailto:Biz@vaiv.kr">Biz@vaiv.kr</a></li>
+					<li class="list-item"><span class="list-label">공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
+				</ul>
+				<div class="footer-copy">
+					<h6><a href="/privacy">개인정보 처리방침</a></h6>
+					<p>CopyrightⓒVAIV Company inc. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<a id="top_btn" href="#">Top</a>
+
+
+
+<aside class="chatbot-modal">
+	<div id="chatbot"></div>
+</aside>
+
+<script src="https://chat.vaiv.kr/aiv/assets/js/vaiv-chatbot-frame.js"></script>
+
+<!-- 공통 스크립트 -->
+<script>
+feather.replace();
+</script>
+
+<script>
+$(document).ready(function () {
+	// initChatbot();
+});
+
+function initChatbot() {
+	$('.chatbot-open-button').on('click', function () {
+		$('.chatbot-modal').addClass('active');
+
+		$("#chatbot").vaivChatbot({			
+			key : 'ICe2j-1677139942991',
+			baseUrl : "https://chat.vaiv.kr",
+			isUseGeolocation : true,
+			isScrollStopAtQuestion : true,
+			style : {
+				height: "80vh",		
+				theme : "vaiv"		
+			},
+			ui: {
+				closeBtn: true,
+			},
+			onClose: function () {
+				// console.log('chatbot close');
+				$('.chatbot-modal').removeClass('active');
+			},
+		});
+	});
+}
+</script>
+<!-- footer end -->
+</body>
+</html>
