@@ -1,0 +1,437 @@
+/* 메인 컨테이너 */
+.main {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* 페이지 타이틀 섹션 */
+.pageTitleWrap {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.pageTitleWrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.pageTitleInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.pageDesc {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.vaivColor {
+  color: #ffd700;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 컨텐츠 섹션 */
+.content {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.conWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 비디오 리스트 */
+.videoList {
+  margin-bottom: 40px;
+}
+
+.prVideoList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  margin: 0;
+}
+
+.video {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video:hover .thumbnail img {
+  transform: scale(1.05);
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(102, 126, 234, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.playButton i {
+  color: #fff;
+  font-size: 24px;
+  margin-left: 3px;
+}
+
+.video:hover .playButton {
+  opacity: 1;
+}
+
+.title {
+  padding: 20px 20px 10px;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.title:hover {
+  color: #667eea;
+}
+
+.category {
+  display: inline-block;
+  margin: 0 20px 10px;
+  padding: 4px 12px;
+  background: #667eea;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.date {
+  display: block;
+  margin: 0 20px 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pagination ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  align-items: center;
+}
+
+.pagination li {
+  margin: 0;
+}
+
+.pagination a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #666;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination a:hover {
+  background: #f8f9fa;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.pagination a.on {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+.pagination .pprev,
+.pagination .prev,
+.pagination .next,
+.pagination .nnext {
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 500;
+}
+
+.pagination .pprev:hover,
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .nnext:hover {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+/* 비디오 팝업 */
+.videoPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.popupContent {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.videoPlay {
+  width: 100%;
+  background: #000;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.videoPlay iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.videoInfo {
+  padding: 30px;
+}
+
+.popTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.popDate {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 20px 0;
+}
+
+.popInfo {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.videoClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.videoClose:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .pageTitleWrap {
+    padding: 60px 0 40px;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageDesc {
+    font-size: 1.1rem;
+  }
+  
+  .content {
+    padding: 40px 0;
+  }
+  
+  .conWrap {
+    padding: 0 15px;
+  }
+  
+  .prVideoList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .thumbnail {
+    height: 180px;
+  }
+  
+  .title {
+    padding: 15px 15px 8px;
+    font-size: 0.95rem;
+  }
+  
+  .category {
+    margin: 0 15px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .date {
+    margin: 0 15px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .pagination ul {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  
+  .pagination a {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-width: 35px;
+  }
+  
+  .pagination .pprev,
+  .pagination .nnext {
+    display: none;
+  }
+  
+  .videoPlay iframe {
+    height: 300px;
+  }
+  
+  .videoInfo {
+    padding: 20px;
+  }
+  
+  .popTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .pageDesc {
+    font-size: 1rem;
+  }
+  
+  .thumbnail {
+    height: 160px;
+  }
+  
+  .title {
+    padding: 12px 12px 6px;
+    font-size: 0.9rem;
+  }
+  
+  .category {
+    margin: 0 12px 6px;
+    font-size: 0.7rem;
+  }
+  
+  .date {
+    margin: 0 12px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .pagination a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    min-width: 30px;
+  }
+  
+  .videoPlay iframe {
+    height: 250px;
+  }
+  
+  .videoInfo {
+    padding: 15px;
+  }
+  
+  .popTitle {
+    font-size: 1rem;
+  }
+} 
