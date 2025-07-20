@@ -1,83 +1,34 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import { getPostBySlug, getPostSlugs, Post } from '@/lib/markdown';
+import { getPostBySlug, getPostSlugs } from '@/lib/markdown';
 import styles from './page.module.css';
+import Link from 'next/link';
 
-export default function MediaCoverageDetailPage() {
-  const params = useParams();
-  const router = useRouter();
-  const [post, setPost] = useState<Post | null>(null);
-  const [prevSlug, setPrevSlug] = useState<string | null>(null);
-  const [nextSlug, setNextSlug] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-  useEffect(() => {
-    const loadPost = async () => {
-      if (params.slug) {
-        const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
-        const postData = getPostBySlug('media-coverage', slug);
-        
-        if (postData) {
-          setPost(postData);
-          
-          // 이전/다음 글 찾기
-          const allSlugs = getPostSlugs('media-coverage');
-          const currentIndex = allSlugs.indexOf(slug);
-          
-          if (currentIndex > 0) {
-            setNextSlug(allSlugs[currentIndex - 1]); // 날짜 역순이므로 인덱스 반대
-          }
-          if (currentIndex < allSlugs.length - 1) {
-            setPrevSlug(allSlugs[currentIndex + 1]); // 날짜 역순이므로 인덱스 반대
-          }
-        }
-        setLoading(false);
-      }
-    };
-
-    loadPost();
-  }, [params.slug]);
-
-  if (loading) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.loading}>로딩 중...</div>
-      </div>
-    );
-  }
-
+export default function MediaCoverageDetailPage({ params }: PageProps) {
+  const post = getPostBySlug('media-coverage', params.slug);
+  
   if (!post) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.error}>게시물을 찾을 수 없습니다.</div>
-      </div>
-    );
+    notFound();
   }
 
-  const handlePrevClick = () => {
-    if (prevSlug) {
-      router.push(`/promote/prcenterMedia/${prevSlug}`);
-    }
-  };
-
-  const handleNextClick = () => {
-    if (nextSlug) {
-      router.push(`/promote/prcenterMedia/${nextSlug}`);
-    }
-  };
+  // 이전/다음 글 찾기
+  const allSlugs = getPostSlugs('media-coverage');
+  const currentIndex = allSlugs.indexOf(params.slug);
+  const prevSlug = currentIndex < allSlugs.length - 1 ? allSlugs[currentIndex + 1] : null;
+  const nextSlug = currentIndex > 0 ? allSlugs[currentIndex - 1] : null;
 
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <button 
-          className={styles.listButton}
-          onClick={() => router.push('/promote/prcenterPressreleaselist')}
-        >
+        <Link href="/promote/prcenterPressreleaselist" className={styles.listButton}>
           목록으로
-        </button>
+        </Link>
         
         <div className={styles.postWrapper}>
           <div className={styles.postHeader}>
@@ -115,25 +66,28 @@ export default function MediaCoverageDetailPage() {
         <div className={styles.navigationButtons}>
           <div className={styles.buttonWrapper}>
             {prevSlug && (
-              <button 
-                className={styles.navButton}
-                onClick={handlePrevClick}
-              >
+              <Link href={`/promote/prcenterMedia/${prevSlug}`} className={styles.navButton}>
                 <i className="zmdi zmdi-chevron-left"></i> 이전글
-              </button>
+              </Link>
             )}
             
             {nextSlug && (
-              <button 
-                className={styles.navButton}
-                onClick={handleNextClick}
-              >
+              <Link href={`/promote/prcenterMedia/${nextSlug}`} className={styles.navButton}>
                 다음글 <i className="zmdi zmdi-chevron-right"></i>
-              </button>
+              </Link>
             )}
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+// 정적 생성을 위한 함수
+export function generateStaticParams() {
+  const { getPostSlugs } = require('@/lib/markdown');
+  const slugs = getPostSlugs('media-coverage');
+  return slugs.map((slug: string) => ({
+    slug,
+  }));
 } 

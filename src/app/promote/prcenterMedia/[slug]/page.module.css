@@ -22,11 +22,14 @@
   font-size: 14px;
   margin: 20px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .listButton:hover {
   background: #e9ecef;
   border-color: #adb5bd;
+  text-decoration: none;
 }
 
 .postWrapper {
@@ -192,10 +195,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 
 .navButton:hover {
   background: #e55a00;
+  text-decoration: none;
 }
 
 .navButton:disabled {

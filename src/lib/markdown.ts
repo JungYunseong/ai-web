@@ -76,4 +76,12 @@ export function getPostSlugs(category: string): string[] {
 export function getPostsByCategory(category: string, limit?: number): Post[] {
   const posts = getAllPosts(category);
   return limit ? posts.slice(0, limit) : posts;
+}
+
+// 정적 생성을 위한 함수들
+export function generateStaticParams(category: string) {
+  const slugs = getPostSlugs(category);
+  return slugs.map((slug) => ({
+    slug,
+  }));
 } 
