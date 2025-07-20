@@ -65,13 +65,13 @@ export default function MediaCoverageDetailPage({ params }: PageProps) {
             <div className={styles.buttonWrapper}>
               {prevSlug && (
                 <Link href={`/promote/prcenterMedia/${prevSlug}`} className={styles.navButton}>
-                  <i className="zmdi zmdi-chevron-left"></i> 이전글
+                  <span className={styles.arrowLeft}></span> 이전글
                 </Link>
               )}
               
               {nextSlug && (
                 <Link href={`/promote/prcenterMedia/${nextSlug}`} className={styles.navButton}>
-                  다음글 <i className="zmdi zmdi-chevron-right"></i>
+                  다음글 <span className={styles.arrowRight}></span>
                 </Link>
               )}
             </div>

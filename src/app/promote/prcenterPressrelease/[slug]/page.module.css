@@ -185,6 +185,22 @@
   cursor: not-allowed;
 }
 
+/* 화살표 아이콘 */
+.arrowLeft, .arrowRight {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.arrowLeft {
+  border-right: 8px solid white;
+}
+
+.arrowRight {
+  border-left: 8px solid white;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .container {

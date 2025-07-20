@@ -52,13 +52,13 @@ export default function NoticeDetailPage({ params }: PageProps) {
             <div className={styles.buttonWrapper}>
               {prevSlug && (
                 <Link href={`/promote/prcenterNotice/${prevSlug}`} className={styles.navButton}>
-                  <i className="zmdi zmdi-chevron-left"></i> 이전글
+                  <span className={styles.arrowLeft}></span> 이전글
                 </Link>
               )}
               
               {nextSlug && (
                 <Link href={`/promote/prcenterNotice/${nextSlug}`} className={styles.navButton}>
-                  다음글 <i className="zmdi zmdi-chevron-right"></i>
+                  다음글 <span className={styles.arrowRight}></span>
                 </Link>
               )}
             </div>
