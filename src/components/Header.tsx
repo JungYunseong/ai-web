@@ -86,9 +86,9 @@ export default function Header() {
                     <li className={styles.listItem}>
                       <a href="/promote/prcenterVideo" title="홍보영상 바로가기">홍보영상</a>
                     </li>
-                    <li className={styles.listItem}>
+                    {/* <li className={styles.listItem}>
                       <a href="https://blog.naver.com/vaiv_company" title="블로그 바로가기" target="_blank" rel="noopener noreferrer">블로그</a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
               </ul>
