@@ -35,18 +35,18 @@ export default function FooterSection() {
           </select>
           <div className={styles.footerContent}>
             <ul className={styles.footerInfoList}>
-              <li className={styles.listItem}>(주)바이브컴퍼니</li>
+              <li className={styles.listItem}>(주)에이치에스투에쿼티</li>
               <li className={styles.listLine}>|</li>
-              <li className={styles.listItem}><span className={styles.listLabel}>대표자</span>김경서</li>
+              <li className={styles.listItem}><span className={styles.listLabel}>대표자</span>조창민</li>
               <li className={styles.listLine}>|</li>
-              <li className={styles.listItem}><span className={styles.listLabel}>사업자등록번호</span>120-86-08334</li>
+              <li className={styles.listItem}><span className={styles.listLabel}>사업자등록번호</span>272-86-03251</li>
             </ul>
             <ul className={styles.footerInfoList}>
-              <li className={styles.listItem}>서울특별시 용산구 독서당로 97</li>
+              <li className={styles.listItem}>서울특별시 강남구 테헤란로 147, 15층</li>
               <li className={styles.listLine}>|</li>
-              <li className={styles.listItem}><span className={styles.listLabel}>Tel</span><a href="tel:02-565-0531">02-565-0531</a></li>
+              <li className={styles.listItem}><span className={styles.listLabel}>Tel</span><a href="tel:0507-1360-1935">0507-1360-1935</a></li>
               <li className={styles.listLine}>|</li>
-              <li className={styles.listItem}><span className={styles.listLabel}>Mail</span><a href="mailto:Biz@vaiv.kr">Biz@vaiv.kr</a></li>
+              <li className={styles.listItem}><span className={styles.listLabel}>Mail</span><a href="mailto:hs2equity@hs2equity.com">hs2equity@hs2equity.com</a></li>
             </ul>
             <ul className={styles.footerInfoList}>
               <li className={styles.listItem}><span className={styles.listLabel}>공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
