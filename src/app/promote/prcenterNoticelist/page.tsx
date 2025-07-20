@@ -114,21 +114,6 @@ export default function PrcenterNoticelistPage() {
       {/* 컨텐츠 섹션 */}
       <div className={styles.content}>
         <div className={styles.conWrap}>
-          {/* 탭 네비게이션 */}
-          <div className={styles.tabNavigation}>
-            <ul className={styles.tabList}>
-              <li className={`${styles.tabItem} ${activeTab === 'notice' ? styles.active : ''}`}>
-                <button onClick={() => handleTabChange('notice')}>공지사항</button>
-              </li>
-              <li className={`${styles.tabItem} ${activeTab === 'press' ? styles.active : ''}`}>
-                <button onClick={() => handleTabChange('press')}>보도자료</button>
-              </li>
-              <li className={`${styles.tabItem} ${activeTab === 'video' ? styles.active : ''}`}>
-                <button onClick={() => handleTabChange('video')}>홍보영상</button>
-              </li>
-            </ul>
-          </div>
-
           {/* 공지사항 탭 */}
           {activeTab === 'notice' && (
             <div className={styles.noticeList}>

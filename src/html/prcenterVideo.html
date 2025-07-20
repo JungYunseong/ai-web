@@ -47,6 +47,87 @@
 
 
 	<meta name="decorator" content="sub"/>
+		<script>    
+        function Request(){
+        	var requestParam = "";
+        	this.getParameter = function(param){
+        		var url = unescape(location.href);
+        		var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+        		
+        		for(var i=0; i<paramArr.length; i++){
+        			var temp = paramArr[i].split("=");
+        			if(temp[0].toUpperCase() == param.toUpperCase()){
+        				requestParam = paramArr[i].split("=")[1];
+        				break;
+        			}
+        		}
+        		return requestParam;
+        	}
+        }
+        
+        $(document).ready(function(){
+        	$('.video_popup').hide();
+        	
+        	var request = new Request();
+        	var posts_id = request.getParameter("posts_id");
+        	
+        	
+        	// 메인에서 홍보센터 홍보영상 글 눌렀을 때 바로 리스트페이지에서 영상 팝업창 뜰 수 있게 해줌.
+        	if(posts_id != ""){
+        		showPopup({posts_id:posts_id});
+        	}
+        });
+        
+        function showPopup(posts){
+        	var posts_id = posts['posts_id'];
+        	
+        	$.ajax({
+        		type:'post',
+        		url:'/prcenterVideo/popUp',
+        		data:{
+        			"posts_id":posts_id
+        		},
+        		success:function(data){
+        			var videoTag;
+        			if(data.video == "" || data.video == null){
+        				var youtubearray = data.external_url.split("v=");
+        				var youtubeid = youtubearray[1];
+        				if (typeof(youtubeid) == "undefined"){
+        					let lastIndex = data.external_url.lastIndexOf('/')+1;
+        					youtubeid = data.external_url.substring(lastIndex,data.external_url.length);
+        					//console.log('/index'+data.external_url.lastIndexOf('/')+"="+youtubeid);
+        					if(data.external_url.indexOf("naver.com") > 0){
+        						videoTag = '<iframe id="popVideo" width="778" height="500" src="'+ 'https://tv.naver.com/embed/'+ youtubeid +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            				}else{
+            					videoTag = '<iframe id="popVideo" width="778" height="500" src="'+ 'https://www.youtube.com/embed/'+ youtubeid +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                			}
+            			}else{
+        					videoTag = '<iframe id="popVideo" width="778" height="500" src="'+ 'https://www.youtube.com/embed/'+ youtubeid +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            			}
+        				//console.log(videoTag);
+        			} else {
+        				videoTag = '<video src="'+ '/uploadfiles/videos/'+ data.video +'" id="popVideo" width="778" height="500"  controls/>';
+        			}
+        			
+        			$(".video_play").html(videoTag);
+        			
+        			$('#popTitle').text(data.title);
+                	$('#popInfo').html(data.content);
+                	$('#popDate').text(data.pubDay);
+        		},
+        		error:function(err){
+        			
+        		}
+        	})
+        	
+        	$('.video_popup').show();
+        }
+        
+        function hidePopup(){
+        	$('.video_popup').hide();
+        	$("#popVideo").attr("src","");
+        }
+    </script>
    	
 </head>
 <body id=''  class='' >
@@ -425,175 +506,222 @@ function initHeaderBanner() {
 <!-- main content start -->
 
     <div id="container">
-         <div class="pageTitle_wrap pageTitle_wrap2">
+		<div class="pageTitle_wrap pageTitle_wrap2">
             <div class="pageTitle_inner">
-                <h2 class="page_title title_move">공지사항</h2>
-                <p class="page_desc title_move"><em class="vaiv_color">바이브</em>의 새로운 소식을 전달합니다.</p>
+                <h2 class="page_title title_move">홍보영상</h2>
+                <p class="page_desc title_move">영상 속 <em class="vaiv_color">바이브</em> 이야기를 소개합니다.</p>
             </div>
         </div><!-- //pageTitle_wrap -->
-        
-        
+
         <div class="content noticewrap">          
             <div class="conwrap contentsInner">
                 <!--공지-->
-                <div class="con1 con">
-                    <!--게시물리스트-->
-                    <div class="noticeList listcss">
-                        <table>
-                            <caption class="skip">공지 전체목록</caption>
-                            <colgroup>
-                                <col width="70">
-                                <col>
-                                <col width="120">
-                            </colgroup>
-
-                            <tbody>
+                <div class="con3 con">
+					<!--동영상 리스트-->
+                    <div class="video_list">
+                    	
+                           	
+                            	
+                            
+                            	<ul class="pr-video-list">
+                        	
+                            	
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3591'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230818_920e699c-01e1-4c6c-855f-29e4692f0aee_캡처.PNG" alt="새로운 검색의 시대에 함께할 VAIV Search를 소개합니다."/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3591'});" style="cursor:pointer">새로운 검색의 시대에 함께할 VAIV Search를 소개합니다.</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.08.18</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        
+                           	
+                            	
                             
                             	
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3884">[긴급입찰공고] 2024 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역</a></td>
-                                        <td class="date">2024.07.16</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3741">NIPA 2024 AI 바우처 지원 사업 수요 기업 모집</a></td>
-                                        <td class="date">2024.02.14</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3533">[긴급입찰공고] 2023 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(품질검수 및 성능평가 모듈 개발)</a></td>
-                                        <td class="date">2023.05.15</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3534">[긴급입찰공고] 2023 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(열화상/분광스펙트럼 정보가 통합된 다중 스펙트럼 이미지 데이터 전처리 및 가공)</a></td>
-                                        <td class="date">2023.05.15</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3535">[긴급입찰공고] 2023 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(판독정확도 향상을 위한 열화상 분광스펙트럼 정보 통합 학습데이터 구축)</a></td>
-                                        <td class="date">2023.05.15</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3476">[공고] 무상증자 공고</a></td>
-                                        <td class="date">2023.03.29</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3465">[공고] 2022년 사업보고서</a></td>
-                                        <td class="date">2023.03.23</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3242">[긴급입찰공고] 2022 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(데이터 구축)</a></td>
-                                        <td class="date">2022.09.19</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3243">[긴급입찰공고] 2022 NIPA AI융합 유해화학물질 판독시스템 구축사업 위탁용역(데이터 가공)</a></td>
-                                        <td class="date">2022.09.19</td>
-                                    </tr>
-                                
-                                	
-                                
-                                	<tr>
-                                      	<td>공지</td>
-                                        <td><a href="/promote/prcenterNotice?posts_id=3183">[긴급입찰공고1] 2022 NIA 인공지능 학습데이터(2-82.3D관광지 데이터) 위탁용역(설악산 전체 데이터 취득)</a></td>
-                                        <td class="date">2022.08.01</td>
-                                    </tr>
-                                
-                          
-                            </tbody>
-                        </table>
-                    </div><!--noticeList-->    
-                </div><!--con1-->
-				
-                   <div class="row">
-                   	<div class="pagenation col-md-4 col-md-offset-4">
-                   		<ul>
-                   			<li><a href="/promote/prcenterNoticelist?page=1" class="pprev">처음으로</a></li>
-                          	
-                          		
-                          			<li><a href="#" class="prev">이전으로</a></li>
-                          		
-                          		
-                          	    
-                          	
-                    	
-                    		
-                    		
-                    			
-                    				<li><a href="#" class="on">1</a></li>
-                    			
-                    			
-                    				                        		
-                    	
-                    		
-                    		
-                    			
-                    			
-                    				<li><a href="/promote/prcenterNoticelist?page=2">2</a></li>
-                    			
-                    				                        		
-                    	
-                    		
-                    		
-                    			
-                    			
-                    				<li><a href="/promote/prcenterNoticelist?page=3">3</a></li>
-                    			
-                    				                        		
-                    	
-                    		
-                    			
-                    			
-                    				<li><a href="/promote/prcenterNoticelist?page=2" class="next">다음으로</a></li>	
-                    			
-                    		
-                    		
-                            <li><a href="/promote/prcenterNoticelist?page=3" class="nnext">마지막으로</a></li>
-                   		</ul>
-                   	</div>
-                   </div>
-                    
-
-                <!--보도자료-->
-                <div class="con2 con" style="display:none">
-
-                </div><!--con2-->
-
-                <!--홍보영상-->
-                <div class="con3 con" style="display:none">
-
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3571'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230704_3b43ea0e-a0b9-4f54-9794-c0150fc53145_230619_V리후생_썸네일_5편.png" alt="[V리후생] 주 1회 재택 &amp; 다회 재택 비교"/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3571'});" style="cursor:pointer">[V리후생] 주 1회 재택 &amp; 다회 재택 비교</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.06.23</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        
+                           	
+                            	
+                            
+                            	
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3546'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230524_75c4aac3-2719-45e6-a328-c2f2b0e43327_유튜브_JOB다한_썸네일_5편.png" alt="[JOB다한] 바이브컴퍼니 어시스턴트개발그룹 챗봇 개발자 직무 소개"/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3546'});" style="cursor:pointer">[JOB다한] 바이브컴퍼니 어시스턴트개발그룹 챗봇 개발자 직무 소개</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.05.23</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        		</ul>
+                        	
+                        
+                           	
+                            	
+                            
+                            	<ul class="pr-video-list">
+                        	
+                            	
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3545'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230524_4f96dc60-bf22-4096-8f21-a24b939111e5_13편.jpg" alt="이게 진짜 중소기업의 사옥이 맞습니까...?"/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3545'});" style="cursor:pointer">이게 진짜 중소기업의 사옥이 맞습니까...?</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.05.21</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        
+                           	
+                            	
+                            
+                            	
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3530'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230515_6a779eb0-6942-4eea-a05a-e8905921ab9b_12편-2.jpg" alt="사람들은 왜 사운즈한남을 가는 걸까? 여기가 핫플인 이유?"/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3530'});" style="cursor:pointer">사람들은 왜 사운즈한남을 가는 걸까? 여기가 핫플인 이유?</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.05.12</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        
+                           	
+                            	
+                            
+                            	
+                            <li class="list-item">
+                             <div class="video">
+                                 <div class="thumbnail" onclick="showPopup({posts_id:'3518'});" style="cursor:pointer">  <!-- 원래는 class="thumbnail" -->
+                                     <img  src="/uploadfiles/images/230427_56197362-6256-44bd-b45b-fa2262b48cd8_챗봇섬네일.png" alt="국내 최초 AI Chatbot, VAIV Chatbot"/>
+                                 </div>
+                                 <p class="title" onclick="showPopup({posts_id:'3518'});" style="cursor:pointer">국내 최초 AI Chatbot, VAIV Chatbot</p>
+                                 <span class="category">홍보영상</span>
+                                 <span class="date">2023.04.27</span>
+                                 
+                             </div>              
+                        	</li>
+                        	
+                        	
+                        		</ul>
+                        	
+                        
+                    </div>
+					
+					<div class="video_popup">
+					    <div>
+					        <div class="video_play">
+					        	
+					        </div>
+					
+					        <div class="video_info">
+					            <p class="title" id="popTitle"><span></span></p>
+					            <p class="date" id="popDate"></p>
+					            <p class="info" id="popInfo"></p>
+					        </div>
+					        
+					        <button class="video_close" onclick="hidePopup();">닫기</button>
+					    </div>
+					</div>
+					
                 </div><!--con3-->
+
+				
+                 <div class="row">
+                 	<div class="pagenation col-md-4 col-md-offset-4">
+                 		<ul>
+                 			<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=1" class="pprev">처음으로</a></li>
+                        	
+                        		
+                        			<li><a href="#" class="prev">이전으로</a></li>
+                        		
+                        		
+                        	    
+                        	
+                  	
+                  		
+                  		
+                  			
+                  				<li><a href="#" class="on">1</a></li>
+                  			
+                  			
+                  				                        		
+                  	
+                  		
+                  		
+                  			
+                  			
+                  				<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=2">2</a></li>
+                  			
+                  				                        		
+                  	
+                  		
+                  		
+                  			
+                  			
+                  				<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=3">3</a></li>
+                  			
+                  				                        		
+                  	
+                  		
+                  		
+                  			
+                  			
+                  				<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=4">4</a></li>
+                  			
+                  				                        		
+                  	
+                  		
+                  		
+                  			
+                  			
+                  				<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=5">5</a></li>
+                  			
+                  				                        		
+                  	
+                  		
+                  			
+                  			
+                  				<li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=2" class="next">다음으로</a></li>
+                  			
+                  		
+                  		
+                        <li><a href="/promote/prcenterVideo?board_sub_name=promotionVideo&status=null&page=5" class="nnext">마지막으로</a></li>
+                 		</ul>
+                 	</div>
+                 </div>
+                
+
             </div><!--conwrap-->
         </div>
     </div><!--//container--> 

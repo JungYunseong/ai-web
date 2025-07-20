@@ -1,0 +1,351 @@
+/* 메인 컨테이너 */
+.main {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* 페이지 타이틀 섹션 */
+.pageTitleWrap {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0 60px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.pageTitleWrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.pageTitleInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.pageDesc {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.vaivColor {
+  color: #ffd700;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 컨텐츠 섹션 */
+.content {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.conWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 정렬 및 필터 */
+.noticeWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.noticeSortText {
+  font-size: 1rem;
+  color: #333;
+}
+
+.colorText {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.noticeSortBox {
+  display: flex;
+  gap: 10px;
+}
+
+.noticeSortMenu {
+  background: none;
+  border: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.noticeSortMenu:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.noticeSortMenu.active {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+/* 보도자료 리스트 */
+.noticeList {
+  margin-bottom: 40px;
+}
+
+.noticeList table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #333;
+}
+
+.noticeList th,
+.noticeList td {
+  padding: 15px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.noticeList th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.noticeList td:first-child {
+  width: 100px;
+  font-weight: 500;
+  color: #667eea;
+}
+
+.noticeList td:nth-child(2) {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.noticeList td:last-child {
+  width: 120px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.noticeList a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  line-height: 1.5;
+}
+
+.noticeList a:hover {
+  color: #667eea;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.emptyMessage {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pagination ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  align-items: center;
+}
+
+.pagination li {
+  margin: 0;
+}
+
+.pagination a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #666;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination a:hover {
+  background: #f8f9fa;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.pagination a.on {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+.pagination .pprev,
+.pagination .prev,
+.pagination .next,
+.pagination .nnext {
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 500;
+}
+
+.pagination .pprev:hover,
+.pagination .prev:hover,
+.pagination .next:hover,
+.pagination .nnext:hover {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+/* 유틸리티 클래스 */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .pageTitleWrap {
+    padding: 60px 0 40px;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pageDesc {
+    font-size: 1.1rem;
+  }
+  
+  .content {
+    padding: 40px 0;
+  }
+  
+  .conWrap {
+    padding: 0 15px;
+  }
+  
+  .noticeWrap {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .noticeSortBox {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .noticeSortMenu {
+    flex: 1;
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .noticeList th,
+  .noticeList td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .noticeList td:first-child {
+    width: 80px;
+  }
+  
+  .noticeList td:last-child {
+    width: 100px;
+  }
+  
+  .pagination ul {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  
+  .pagination a {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-width: 35px;
+  }
+  
+  .pagination .pprev,
+  .pagination .nnext {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .pageDesc {
+    font-size: 1rem;
+  }
+  
+  .noticeSortText {
+    font-size: 0.9rem;
+  }
+  
+  .noticeList th,
+  .noticeList td {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .noticeList td:nth-child(2) {
+    padding-left: 10px;
+  }
+  
+  .pagination a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    min-width: 30px;
+  }
+} 
