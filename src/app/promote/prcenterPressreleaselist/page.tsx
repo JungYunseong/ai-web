@@ -20,7 +20,7 @@ export default function PrcenterPressreleaselistPage() {
     }
   ];
 
-  const NEXT.CLINICtems = [
+  const mediaItems = [
     {
       id: 'media-001',
       type: '언론 속 모습',
@@ -31,14 +31,14 @@ export default function PrcenterPressreleaselistPage() {
   ];
 
   const itemsPerPage = 10;
-  const allItems = [...pressItems, ...NEXT.CLINICtems];
+  const allItems = [...pressItems, ...mediaItems];
   
   const getFilteredItems = () => {
     switch (activeTab) {
       case 'release':
         return pressItems;
       case 'other':
-        return NEXT.CLINICtems;
+        return mediaItems;
       default:
         return allItems;
     }
