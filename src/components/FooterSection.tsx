@@ -8,7 +8,7 @@ export default function FooterSection() {
       <div className={styles.contentsInner}>
         <div className={styles.footerTop}>
           <figure className={styles.footerLogo}>
-            <img src="/images/vaiv/footer_logo_re.png" alt="VAIV" />
+            <img src="/ai-web/images/vaiv/footer_logo_re.png" alt="NEXT.CLINIC" />
           </figure>
           {/* <ul className={styles.footerSnsList}>
             <li className={`${styles.listItem} ${styles.listBlog}`}>
@@ -53,7 +53,7 @@ export default function FooterSection() {
             </ul> */}
             <div className={styles.footerCopy}>
               <h6><a href="/ai-web/privacy">개인정보 처리방침</a></h6>
-              <p>CopyrightⓒVAIV Company inc. All Rights Reserved.</p>
+              <p>Copyrightⓒ(주)에이치에스투에쿼티. All Rights Reserved.</p>
             </div>
           </div>
         </div>

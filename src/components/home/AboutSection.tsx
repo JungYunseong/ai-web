@@ -48,7 +48,7 @@ export default function AboutSection() {
     <section className={styles.aboutSection}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>메디AI 소개</h2>
+          <h2>NEXT.CLINIC 소개</h2>
         </div>
         <div className={styles.introGrid}>
           {introItems.map((item, index) => (

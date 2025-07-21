@@ -76,7 +76,7 @@ export default function HeroSection() {
       <section className={styles.heroSection}>
         <div className={styles.loadingContainer}>
           <div className={styles.loadingSpinner}></div>
-          <p className={styles.loadingText}>바이브컴퍼니</p>
+          <p className={styles.loadingText}>NEXT.CLINIC</p>
         </div>
       </section>
     );
