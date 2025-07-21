@@ -1,10 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  distDir: 'out',
-  basePath: '/ai-web',
+  // 개발 환경에서는 정적 내보내기 설정을 비활성화
+  ...(process.env.NODE_ENV === 'production' && {
+    output: 'export',
+    trailingSlash: true,
+    distDir: 'out',
+    basePath: '/ai-web',
+  }),
   images: {
     unoptimized: true,
     domains: ["via.placeholder.com"],
