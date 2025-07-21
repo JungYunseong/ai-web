@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
   distDir: 'out',
+  basePath: '/ai-web',
   images: {
     unoptimized: true,
     domains: ["via.placeholder.com"],
