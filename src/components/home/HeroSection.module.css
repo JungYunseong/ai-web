@@ -7,6 +7,37 @@
   overflow: hidden;
 }
 
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loadingText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .slideContainer {
   position: relative;
   width: 100%;
@@ -109,38 +140,37 @@
 
 .slideDots {
   position: absolute;
-  bottom: 2rem;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 1rem;
-  z-index: 3;
+  gap: 10px;
 }
 
 .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .dot.active {
   background: white;
-  border-color: white;
+  transform: scale(1.2);
 }
 
 .dot:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .heroSection {
-    height: calc(100vh - 60px);
-    min-height: 540px;
+    height: calc(100vh - 65px);
+    min-height: 400px;
   }
   
   .slideTitle {
@@ -152,7 +182,7 @@
   }
   
   .slideImage img {
-    max-width: 300px;
+    max-width: 250px;
   }
   
   .slideContent {
@@ -162,9 +192,8 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    height: calc(100vh - 60px);
-    min-height: 540px;
-    margin-top: 60px;
+    height: calc(100vh - 65px);
+    min-height: 350px;
   }
   
   .slideTitle {
@@ -172,7 +201,7 @@
   }
   
   .slideImage img {
-    max-width: 250px;
+    max-width: 200px;
   }
   
   .slideLink {

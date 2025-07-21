@@ -5,6 +5,7 @@ import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const slides = [
     {
@@ -26,12 +27,60 @@ export default function HeroSection() {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    // 이미지 프리로딩
+    const preloadImages = async () => {
+      try {
+        // 타임아웃 설정 (5초)
+        const timeoutPromise = new Promise<never>((_, reject) => {
+          setTimeout(() => reject(new Error('이미지 로딩 타임아웃')), 5000);
+        });
 
-    return () => clearInterval(interval);
-  }, [slides.length]);
+        const loadPromise = Promise.all(
+          slides.map(slide => {
+            return new Promise<void>((resolve) => {
+              const img = new Image();
+              img.onload = () => resolve();
+              img.onerror = () => {
+                console.warn(`이미지 로딩 실패: ${slide.image}`);
+                resolve(); // 에러가 있어도 계속 진행
+              };
+              img.src = slide.image;
+            });
+          })
+        );
+
+        await Promise.race([loadPromise, timeoutPromise]);
+        setIsLoading(false);
+      } catch (error) {
+        console.error('이미지 로딩 실패:', error);
+        // 에러가 있어도 로딩을 완료시킴
+        setIsLoading(false);
+      }
+    };
+
+    preloadImages();
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 4000);
+
+      return () => clearInterval(interval);
+    }
+  }, [slides.length, isLoading]);
+
+  if (isLoading) {
+    return (
+      <section className={styles.heroSection}>
+        <div className={styles.loadingContainer}>
+          <div className={styles.loadingSpinner}></div>
+          <p className={styles.loadingText}>바이브컴퍼니</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.heroSection}>
