@@ -1,7 +1,7 @@
 /* 문의하기 섹션 스타일 */
 .inquirySection {
   position: relative;
-  background-color: #52a8ff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
 }
 
@@ -179,15 +179,17 @@
   font-size: 20px;
   line-height: 100%;
   border-radius: 30px;
-  background-color: #52a8ff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btnL:hover {
-  background-color: #3a9dff;
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
 .inquiryBg {
