@@ -114,7 +114,7 @@ export default function LaboratoryPage() {
                     </div>
                     <div className={styles.coreSofiaText}>
                       <p>
-                        그리스어로 '지혜'를 뜻하는 빅데이터 인공지능 플랫폼 SOFIA는 <br/>
+                        그리스어로 &apos;지혜&apos;를 뜻하는 빅데이터 인공지능 플랫폼 SOFIA는 <br/>
                         데이터에서 정보, 지식, 지혜를 발굴하는 인공지능 · 빅데이터 기술의 집약체입니다. <br/>
                         SOFIA는 데이터의 수집에서 분석, 인사이트 발굴 그리고 <br className={styles.tabletBreak} />의사결정에 이르는 비즈니스 전 과정을 수행합니다.
                       </p>

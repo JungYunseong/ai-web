@@ -6,9 +6,38 @@ import FooterSection from '../../components/FooterSection';
 import styles from './page.module.css';
 
 // 카카오맵 타입 선언
+interface KakaoLatLng {
+  lat: () => number;
+  lng: () => number;
+}
+
+interface KakaoMapOptions {
+  center: KakaoLatLng;
+  level: number;
+}
+
+interface KakaoMarkerOptions {
+  position: KakaoLatLng;
+}
+
+interface KakaoMap {
+  setCenter: (latlng: KakaoLatLng) => void;
+  setLevel: (level: number) => void;
+}
+
+interface KakaoMarker {
+  setMap: (map: KakaoMap | null) => void;
+}
+
 declare global {
   interface Window {
-    kakao: any;
+    kakao: {
+      maps: {
+        LatLng: new (lat: number, lng: number) => KakaoLatLng;
+        Map: new (container: HTMLElement, options: KakaoMapOptions) => KakaoMap;
+        Marker: new (options: KakaoMarkerOptions) => KakaoMarker;
+      };
+    };
   }
 }
 

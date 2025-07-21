@@ -8,7 +8,15 @@ import styles from './page.module.css';
 export default function PrcenterVideoPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState<any>(null);
+  const [selectedVideo, setSelectedVideo] = useState<{
+    id: number;
+    title: string;
+    category: string;
+    date: string;
+    thumbnail: string;
+    videoUrl: string;
+    description: string;
+  } | null>(null);
 
   const videoItems = [
     {
@@ -87,7 +95,15 @@ export default function PrcenterVideoPage() {
     }
   }, []);
 
-  const handleVideoClick = (video: any) => {
+  const handleVideoClick = (video: {
+    id: number;
+    title: string;
+    category: string;
+    date: string;
+    thumbnail: string;
+    videoUrl: string;
+    description: string;
+  }) => {
     setSelectedVideo(video);
     setShowPopup(true);
   };

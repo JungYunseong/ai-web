@@ -7,13 +7,14 @@ import Header from '@/components/Header';
 import FooterSection from '@/components/FooterSection';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function MediaCoverageDetailPage({ params }: PageProps) {
-  const post = getPostBySlug('media-coverage', params.slug);
+export default async function MediaCoverageDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug('media-coverage', slug);
   
   if (!post) {
     notFound();
@@ -21,7 +22,7 @@ export default function MediaCoverageDetailPage({ params }: PageProps) {
 
   // 이전/다음 글 찾기
   const allSlugs = getPostSlugs('media-coverage');
-  const currentIndex = allSlugs.indexOf(params.slug);
+  const currentIndex = allSlugs.indexOf(slug);
   const prevSlug = currentIndex < allSlugs.length - 1 ? allSlugs[currentIndex + 1] : null;
   const nextSlug = currentIndex > 0 ? allSlugs[currentIndex - 1] : null;
 
@@ -86,7 +87,6 @@ export default function MediaCoverageDetailPage({ params }: PageProps) {
 
 // 정적 생성을 위한 함수
 export function generateStaticParams() {
-  const { getPostSlugs } = require('@/lib/markdown');
   const slugs = getPostSlugs('media-coverage');
   return slugs.map((slug: string) => ({
     slug,

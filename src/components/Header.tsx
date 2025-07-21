@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -26,9 +27,9 @@ export default function Header() {
         <div className={styles.contentsInner}>
           <div className={styles.headerContent}>
             <h1 className={styles.headerLogo}>
-              <a href="/" title="home">
+              <Link href="/" title="home">
                 <img src="/images/vaiv/company_ci_re.png" alt="VAIV" />
-              </a>
+              </Link>
             </h1>
             <nav id="gnb" className={`${styles.gnb} ${isMobileMenuOpen ? styles.active : ''}`}>
               <ul className={styles.gnbDepthList}>
