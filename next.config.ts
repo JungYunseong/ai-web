@@ -3,8 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/ai-web',
-  assetPrefix: '/ai-web/',
+  distDir: 'out',
   images: {
     unoptimized: true,
     domains: ["via.placeholder.com"],
