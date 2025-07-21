@@ -58,7 +58,7 @@ export default function AboutSection() {
             >
               {index === 4 ? (
                 <div className={styles.logoContent}>
-                  <img src="/ai-web/images/logo.svg" alt="MediAI" />
+                  <img src="/images/logo.svg" alt="MediAI" />
                 </div>
               ) : (
                 <>

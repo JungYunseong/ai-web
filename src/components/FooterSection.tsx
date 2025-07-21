@@ -8,7 +8,7 @@ export default function FooterSection() {
       <div className={styles.contentsInner}>
         <div className={styles.footerTop}>
           <figure className={styles.footerLogo}>
-            <img src="/ai-web/images/vaiv/footer_logo_re.png" alt="NEXT.CLINIC" />
+            <img src="/images/nc/footer_logo_re.png" alt="NEXT.CLINIC" />
           </figure>
           {/* <ul className={styles.footerSnsList}>
             <li className={`${styles.listItem} ${styles.listBlog}`}>

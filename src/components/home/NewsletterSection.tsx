@@ -27,21 +27,21 @@ export default function NewsletterSection() {
           </div>
           <figure className={styles.newsletterImage}>
             <Image 
-              src="/ai-web/images/main/letter_img.png" 
+              src="/images/main/letter_img.png" 
               className={styles.imagePc} 
               alt="뉴스레터 이미지 PC" 
               width={400}
               height={300}
             />
             <Image 
-              src="/ai-web/images/main/letter_img_tablet.png" 
+              src="/images/main/letter_img_tablet.png" 
               className={styles.imageTab} 
               alt="뉴스레터 이미지 태블릿" 
               width={400}
               height={300}
             />
             <Image 
-              src="/ai-web/images/main/letter_img_mo.png" 
+              src="/images/main/letter_img_mo.png" 
               className={styles.imageMo} 
               alt="뉴스레터 이미지 모바일" 
               width={400}

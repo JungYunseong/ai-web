@@ -28,7 +28,7 @@ export default function Header() {
           <div className={styles.headerContent}>
             <h1 className={styles.headerLogo}>
               <Link href="/ai-web/" title="home">
-                <img src="/ai-web/images/vaiv/company_ci_re.png" alt="NEXT.CLINIC" />
+                <img src="/images/nc/company_ci_re.png" alt="NEXT.CLINIC" />
               </Link>
             </h1>
             <nav id="gnb" className={`${styles.gnb} ${isMobileMenuOpen ? styles.active : ''}`}>
