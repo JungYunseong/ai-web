@@ -14,31 +14,31 @@ export default function PrcenterPressreleaselistPage() {
     {
       id: 'press-001',
       type: '보도자료',
-      title: '메디AI컴퍼니, 의료 AI 진단 정확도 95% 달성... FDA 승인 신청',
+      title: 'NEXT.CLINIC, 의료 AI 진단 정확도 95% 달성... FDA 승인 신청',
       date: '2024.12.18',
       link: '/promote/prcenterPressrelease/press-001'
     }
   ];
 
-  const mediaItems = [
+  const NEXT.CLINICtems = [
     {
       id: 'media-001',
       type: '언론 속 모습',
-      title: '[의료신문] 메디AI컴퍼니, 의료 AI 혁신으로 의료 접근성 향상 이끈다',
+      title: '[의료신문] NEXT.CLINIC, 의료 AI 혁신으로 의료 접근성 향상 이끈다',
       date: '2024.12.16',
       link: '/promote/prcenterMedia/media-001'
     }
   ];
 
   const itemsPerPage = 10;
-  const allItems = [...pressItems, ...mediaItems];
+  const allItems = [...pressItems, ...NEXT.CLINICtems];
   
   const getFilteredItems = () => {
     switch (activeTab) {
       case 'release':
         return pressItems;
       case 'other':
-        return mediaItems;
+        return NEXT.CLINICtems;
       default:
         return allItems;
     }

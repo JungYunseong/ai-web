@@ -1,16 +1,16 @@
 ---
 id: "001"
-title: "메디AI컴퍼니, 의료 AI 솔루션 개발자 모집 공고"
+title: "NEXT.CLINIC, 의료 AI 솔루션 개발자 모집 공고"
 category: "공지사항"
 date: "2024.12.20"
-author: "메디AI컴퍼니"
+author: "NEXT.CLINIC"
 ---
 
-# 메디AI컴퍼니, 의료 AI 솔루션 개발자 모집 공고
+# NEXT.CLINIC, 의료 AI 솔루션 개발자 모집 공고
 
 ## 1. 모집 개요
 
-메디AI컴퍼니는 의료 AI 기술 혁신을 이끌어갈 우수한 인재를 모집합니다.
+NEXT.CLINIC는 의료 AI 기술 혁신을 이끌어갈 우수한 인재를 모집합니다.
 
 ### 가. 모집인원
 - 의료 AI 엔지니어: 3명
@@ -25,7 +25,7 @@ author: "메디AI컴퍼니"
 ## 2. 근무조건
 
 ### 가. 근무지
-- 서울특별시 강남구 테헤란로 123 메디AI빌딩
+- 서울특별시 강남구 테헤란로 123 NEXT.CLINIC빌딩
 
 ### 나. 근무시간
 - 주 5일 근무 (월-금, 09:00-18:00)
@@ -52,7 +52,7 @@ author: "메디AI컴퍼니"
 - 전자우편에 의한 접수
 
 ### 라. 제출처
-- 메디AI컴퍼니 (recruit@mediai.kr)
+- NEXT.CLINIC (recruit@NEXT.CLINIC.kr)
 
 ## 4. 선발절차
 
@@ -70,10 +70,10 @@ author: "메디AI컴퍼니"
 
 - 담당자: 인사팀 김OO
 - 연락처: 02-1234-5678
-- 이메일: recruit@mediai.kr
+- 이메일: recruit@NEXT.CLINIC.kr
 
 ---
 
 **2024.12.20**
 
-**메디AI컴퍼니** 
+**NEXT.CLINIC** 

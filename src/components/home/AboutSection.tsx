@@ -25,11 +25,11 @@ export default function AboutSection() {
     {
       id: 5,
       title: '자체 생성형 의료 LLM모델 도메인 특화 맞춤형 구축 가능',
-      value: 'MediAI',
+      value: 'NEXT.CLINIC',
     },
     {
       id: 6,
-      title: '메디AI컴퍼니 솔루션∙서비스 이용 의료기관 수',
+      title: 'NEXT.CLINIC 솔루션∙서비스 이용 의료기관 수',
       value: '700+',
     },
     {
@@ -39,7 +39,7 @@ export default function AboutSection() {
     },
     {
       id: 8,
-      title: '메디AI컴퍼니 솔루션∙서비스 이용 의료기관 만족도',
+      title: 'NEXT.CLINIC 솔루션∙서비스 이용 의료기관 만족도',
       value: '95%',
     }
   ];
@@ -58,7 +58,7 @@ export default function AboutSection() {
             >
               {index === 4 ? (
                 <div className={styles.logoContent}>
-                  <img src="/images/logo.svg" alt="MediAI" />
+                  <img src="/images/logo.svg" alt="NEXT.CLINIC" />
                 </div>
               ) : (
                 <>

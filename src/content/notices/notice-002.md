@@ -1,21 +1,21 @@
 ---
 id: "002"
-title: "메디AI컴퍼니, 의료 AI 플랫폼 베타 서비스 오픈 안내"
+title: "NEXT.CLINIC, 의료 AI 플랫폼 베타 서비스 오픈 안내"
 category: "공지사항"
 date: "2024.12.15"
-author: "메디AI컴퍼니"
+author: "NEXT.CLINIC"
 ---
 
-# 메디AI컴퍼니, 의료 AI 플랫폼 베타 서비스 오픈 안내
+# NEXT.CLINIC, 의료 AI 플랫폼 베타 서비스 오픈 안내
 
-안녕하세요, 메디AI컴퍼니입니다.
+안녕하세요, NEXT.CLINIC입니다.
 
-저희 메디AI컴퍼니에서 개발한 의료 AI 플랫폼의 베타 서비스를 오픈하게 되어 안내드립니다.
+저희 NEXT.CLINIC에서 개발한 의료 AI 플랫폼의 베타 서비스를 오픈하게 되어 안내드립니다.
 
 ## 서비스 개요
 
 ### 서비스명
-- **메디AI 플랫폼 (MediAI Platform)**
+- **NEXT.CLINIC 플랫폼 (NEXT.CLINIC Platform)**
 
 ### 주요 기능
 1. **의료 이미지 분석 AI**
@@ -44,7 +44,7 @@ author: "메디AI컴퍼니"
 - 2024.12.15 ~ 2025.01.31
 
 ### 신청 방법
-1. 메디AI컴퍼니 홈페이지 접속
+1. NEXT.CLINIC 홈페이지 접속
 2. 베타 서비스 신청 페이지에서 신청서 작성
 3. 서류 검토 후 참여 승인
 4. 계정 발급 및 사용 안내
@@ -64,12 +64,12 @@ author: "메디AI컴퍼니"
 ## 문의 및 지원
 
 ### 기술 지원
-- 이메일: support@mediai.kr
+- 이메일: support@NEXT.CLINIC.kr
 - 전화: 02-1234-5678 (평일 09:00-18:00)
 
 ### 베타 서비스 신청
-- 홈페이지: https://www.mediai.kr/beta
-- 이메일: beta@mediai.kr
+- 홈페이지: https://www.NEXT.CLINIC.kr/beta
+- 이메일: beta@NEXT.CLINIC.kr
 
 ## 향후 계획
 
@@ -81,4 +81,4 @@ author: "메디AI컴퍼니"
 
 **2024.12.15**
 
-**메디AI컴퍼니** 
+**NEXT.CLINIC** 

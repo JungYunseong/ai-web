@@ -29,25 +29,25 @@ export default function BusinessPage() {
 
   const solutionItems = [
     {
-      title: 'MediAI Diagnosis',
+      title: 'NEXT.CLINIC Diagnosis',
       description: '의료 영상 AI 진단 시스템',
       icon: 'ri-heart-pulse-line',
       link: '/business/solution/diagnosis'
     },
     {
-      title: 'MediAI Assistant',
+      title: 'NEXT.CLINIC Assistant',
       description: '의료진 AI 어시스턴트',
       icon: 'ri-user-voice-line',
       link: '/business/solution/assistant'
     },
     {
-      title: 'MediAI Research',
+      title: 'NEXT.CLINIC Research',
       description: '의료 데이터 AI 분석',
       icon: 'ri-file-chart-line',
       link: '/business/solution/research'
     },
     {
-      title: 'MediAI Platform',
+      title: 'NEXT.CLINIC Platform',
       description: '의료 AI 통합 플랫폼',
       icon: 'ri-hospital-line',
       link: '/business/solution/platform'
@@ -56,37 +56,37 @@ export default function BusinessPage() {
 
   const serviceItems = [
     {
-      title: 'MediAI Analytics',
+      title: 'NEXT.CLINIC Analytics',
       description: '의료 빅데이터 분석 서비스',
       icon: 'ri-pie-chart-line',
       link: '/business/service/analytics'
     },
     {
-      title: 'MediAI Cloud',
+      title: 'NEXT.CLINIC Cloud',
       description: '의료 AI 클라우드 플랫폼',
       icon: 'ri-cloud-line',
       link: '/business/service/cloud'
     },
     {
-      title: 'MediAI Data+',
+      title: 'NEXT.CLINIC Data+',
       description: '의료 데이터 API 서비스',
       icon: 'ri-folder-cloud-line',
       link: '/business/service/data'
     },
     {
-      title: 'MediAI Insights',
+      title: 'NEXT.CLINIC Insights',
       description: '의료 인사이트 분석 서비스',
       icon: 'ri-lightbulb-line',
       link: '/business/service/insights'
     },
     {
-      title: 'MediAI Connect',
+      title: 'NEXT.CLINIC Connect',
       description: '의료기관 연동 서비스',
       icon: 'ri-hospital-line',
       link: '/business/service/connect'
     },
     {
-      title: 'MediAI Report',
+      title: 'NEXT.CLINIC Report',
       description: '의료 리포트 생성 서비스',
       icon: 'ri-file-text-line',
       link: '/business/service/report'
@@ -102,7 +102,7 @@ export default function BusinessPage() {
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>비즈니스</h1>
           <p className={styles.pageText}>
-            메디AI는 의료기관의 디지털 혁신을 위한 <br className={styles.notMobile} />
+            NEXT.CLINIC는 의료기관의 디지털 혁신을 위한 <br className={styles.notMobile} />
             의료 AI 기반 솔루션 및 서비스를 제공합니다.
           </p>
         </div>
@@ -113,10 +113,10 @@ export default function BusinessPage() {
         <div className={styles.tabContainer}>
           <ul className={styles.tabList}>
             <li className={`${styles.tabItem} ${activeTab === 'solution' ? styles.active : ''}`}>
-              <button onClick={() => handleTabClick('solution')}>MediAI Solution</button>
+              <button onClick={() => handleTabClick('solution')}>NEXT.CLINIC Solution</button>
             </li>
             <li className={`${styles.tabItem} ${activeTab === 'service' ? styles.active : ''}`}>
-              <button onClick={() => handleTabClick('service')}>MediAI Service</button>
+              <button onClick={() => handleTabClick('service')}>NEXT.CLINIC Service</button>
             </li>
           </ul>
         </div>
@@ -130,7 +130,7 @@ export default function BusinessPage() {
             <div className={styles.contentsInner}>
               <div className={styles.businessInfo}>
                 <div className={styles.businessInfoTitle}>
-                  <h3>MediAI Solution</h3>
+                  <h3>NEXT.CLINIC Solution</h3>
                 </div>
                 <div className={styles.businessInfoText}>
                   <p>
@@ -169,7 +169,7 @@ export default function BusinessPage() {
             <div className={styles.contentsInner}>
               <div className={styles.businessInfo}>
                 <div className={styles.businessInfoTitle}>
-                  <h3>MediAI Service</h3>
+                  <h3>NEXT.CLINIC Service</h3>
                 </div>
                 <div className={styles.businessInfoText}>
                   <p>

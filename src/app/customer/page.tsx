@@ -37,7 +37,7 @@ export default function CustomerPage() {
           <div className={styles.pageTitleInner}>
             <h2 className={styles.pageTitle}>주요 고객사</h2>
             <p className={styles.pageDesc}>
-              <em className={styles.vaivColor}>메디AI</em>는 다양한 의료기관과 함께합니다.
+              <em className={styles.vaivColor}>NEXT.CLINIC</em>는 다양한 의료기관과 함께합니다.
             </p>
           </div>
         </div>

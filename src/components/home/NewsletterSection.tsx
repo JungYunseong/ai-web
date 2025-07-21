@@ -8,9 +8,9 @@ export default function NewsletterSection() {
         <div className={styles.newsletterContent}>
           <div className={styles.newsletterText}>
             <div className={styles.newsletterTitle}>
-              <h6>메디AI의 뉴스레터 <em>&apos;메디레터&apos;</em></h6>
+              <h6>NEXT.CLINIC의 뉴스레터 <em>&apos;메디레터&apos;</em></h6>
               <h5>
-                <b>메디AI의 소식</b>을 <br/>
+                <b>NEXT.CLINIC의 소식</b>을 <br/>
                 매월 메일로 <br className="br-tab"/>
                 받아보실 수 있습니다.
               </h5>

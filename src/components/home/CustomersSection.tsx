@@ -58,7 +58,7 @@ export default function CustomersSection() {
     <section className={styles.customersSection}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>메디AI는 다양한 의료기관의 <br />
+          <h2>NEXT.CLINIC는 다양한 의료기관의 <br />
             <a href="/ai-web/customer" title="주요 고객사 바로가기">700</a>여 고객사와 함께합니다
           </h2>
         </div>

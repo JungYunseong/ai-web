@@ -21,30 +21,30 @@ export default function PrcenterVideoPage() {
   const videoItems = [
     {
       id: 3591,
-      title: '새로운 의료 AI 시대에 함께할 MediAI Diagnosis를 소개합니다.',
+      title: '새로운 의료 AI 시대에 함께할 NEXT.CLINIC Diagnosis를 소개합니다.',
       category: '홍보영상',
       date: '2023.08.18',
-      thumbnail: '/images/video_thumbnails/mediai_diagnosis_thumbnail.jpg',
+      thumbnail: '/images/video_thumbnails/NEXT.CLINIC_diagnosis_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example1',
-      description: '새로운 의료 AI 시대, MediAI Diagnosis를 통해 더욱 정확하고 빠른 진단 경험을 제공합니다.'
+      description: '새로운 의료 AI 시대, NEXT.CLINIC Diagnosis를 통해 더욱 정확하고 빠른 진단 경험을 제공합니다.'
     },
     {
       id: 3571,
-      title: '[MediAI 후생] 주 1회 재택 & 다회 재택 비교',
+      title: '[NEXT.CLINIC 후생] 주 1회 재택 & 다회 재택 비교',
       category: '홍보영상',
       date: '2023.06.23',
-      thumbnail: '/images/video_thumbnails/mediai_welfare_thumbnail.jpg',
+      thumbnail: '/images/video_thumbnails/NEXT.CLINIC_welfare_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example2',
-      description: '메디AI의 재택근무 제도를 소개합니다. 주 1회 재택과 다회 재택의 차이점을 비교해보세요.'
+      description: 'NEXT.CLINIC의 재택근무 제도를 소개합니다. 주 1회 재택과 다회 재택의 차이점을 비교해보세요.'
     },
     {
       id: 3546,
-      title: '[JOB다한] 메디AI컴퍼니 의료AI개발그룹 의료 AI 개발자 직무 소개',
+      title: '[JOB다한] NEXT.CLINIC 의료AI개발그룹 의료 AI 개발자 직무 소개',
       category: '홍보영상',
       date: '2023.05.23',
       thumbnail: '/images/video_thumbnails/job_intro_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example3',
-      description: '메디AI컴퍼니의 의료 AI 개발자 직무를 소개합니다. 의료 AI 기술로 환자들을 돕는 개발자의 일상을 만나보세요.'
+      description: 'NEXT.CLINIC의 의료 AI 개발자 직무를 소개합니다. 의료 AI 기술로 환자들을 돕는 개발자의 일상을 만나보세요.'
     },
     {
       id: 3545,
@@ -53,25 +53,25 @@ export default function PrcenterVideoPage() {
       date: '2023.05.21',
       thumbnail: '/images/video_thumbnails/office_tour_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example4',
-      description: '메디AI컴퍼니의 사옥을 소개합니다. 의료 AI 기업이라고 믿기지 않는 멋진 사옥을 둘러보세요.'
+      description: 'NEXT.CLINIC의 사옥을 소개합니다. 의료 AI 기업이라고 믿기지 않는 멋진 사옥을 둘러보세요.'
     },
     {
       id: 3530,
       title: '의료 AI로 진화하는 의료기관, 여기가 미래인 이유?',
       category: '홍보영상',
       date: '2023.05.12',
-      thumbnail: '/images/video_thumbnails/mediai_future_thumbnail.jpg',
+      thumbnail: '/images/video_thumbnails/NEXT.CLINIC_future_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example5',
       description: '의료 AI의 미래를 탐구합니다. 왜 많은 의료기관들이 의료 AI를 도입하는지 알아보세요.'
     },
     {
       id: 3518,
-      title: '국내 최초 의료 AI Assistant, MediAI Assistant',
+      title: '국내 최초 의료 AI Assistant, NEXT.CLINIC Assistant',
       category: '홍보영상',
       date: '2023.04.27',
-      thumbnail: '/images/video_thumbnails/mediai_assistant_thumbnail.jpg',
+      thumbnail: '/images/video_thumbnails/NEXT.CLINIC_assistant_thumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/example6',
-      description: '국내 최초 의료 AI 어시스턴트, MediAI Assistant를 소개합니다. 혁신적인 의료 AI 기술로 진료 서비스를 혁신합니다.'
+      description: '국내 최초 의료 AI 어시스턴트, NEXT.CLINIC Assistant를 소개합니다. 혁신적인 의료 AI 기술로 진료 서비스를 혁신합니다.'
     }
   ];
 

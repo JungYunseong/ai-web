@@ -98,8 +98,8 @@ export default function InquirySection() {
                           required
                         >
                           <option value="">문의 유형을 선택해 주세요</option>
-                          <option value="solution">MediAI Solution</option>
-                          <option value="service">MediAI Service</option>
+                          <option value="solution">NEXT.CLINIC Solution</option>
+                          <option value="service">NEXT.CLINIC Service</option>
                           <option value="consulting">의료 AI 컨설팅</option>
                           <option value="technical">기술/영업</option>
                           <option value="partnership">파트너십</option>
@@ -122,7 +122,7 @@ export default function InquirySection() {
                         required
                       />
                       <p className={styles.inquiryGuide}>
-                        솔루션 또는 서비스명(예: MediAI Search, MediAI Chatbot, MediAI GeM, AI ReportCopilot, AI TA, AI Q&A, KMS 등)을 명시하고, 
+                        솔루션 또는 서비스명(예: NEXT.CLINIC Search, NEXT.CLINIC Chatbot, NEXT.CLINIC GeM, AI ReportCopilot, AI TA, AI Q&A, KMS 등)을 명시하고, 
                         도입 목적과 사용자 수 등 구체적인 내용을 기재해 주시면 더욱 상세한 상담이 가능합니다.
                       </p>
                     </div>

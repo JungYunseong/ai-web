@@ -68,10 +68,10 @@ export default function Header() {
                   <a href="/ai-web/business" title="비즈니스 바로가기">비즈니스</a>
                   <ul className={styles.gnbDepth2List}>
                     <li className={styles.listItem}>
-                      <a href="/ai-web/business?tab=solution" title="MediAI Solution 바로가기">MediAI Solution</a>
+                      <a href="/ai-web/business?tab=solution" title="NEXT.CLINIC Solution 바로가기">NEXT.CLINIC Solution</a>
                     </li>
                     <li className={styles.listItem}>
-                      <a href="/ai-web/business?tab=service" title="MediAI Service 바로가기">MediAI Service</a>
+                      <a href="/ai-web/business?tab=service" title="NEXT.CLINIC Service 바로가기">NEXT.CLINIC Service</a>
                     </li>
                   </ul>
                 </li>

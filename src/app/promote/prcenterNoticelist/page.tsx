@@ -13,14 +13,14 @@ export default function PrcenterNoticelistPage() {
     {
       id: 'notice-001',
       type: '공지',
-      title: '메디AI컴퍼니, 의료 AI 솔루션 개발자 모집 공고',
+      title: 'NEXT.CLINIC, 의료 AI 솔루션 개발자 모집 공고',
       date: '2024.12.20',
       link: '/promote/prcenterNotice/notice-001'
     },
     {
       id: 'notice-002',
       type: '공지',
-      title: '메디AI컴퍼니, 의료 AI 플랫폼 베타 서비스 오픈 안내',
+      title: 'NEXT.CLINIC, 의료 AI 플랫폼 베타 서비스 오픈 안내',
       date: '2024.12.15',
       link: '/promote/prcenterNotice/notice-002'
     }

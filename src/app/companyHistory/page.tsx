@@ -15,7 +15,7 @@ export default function CompanyHistoryPage() {
         {
           year: '2025',
           items: [
-            'AI 기반 의료 진단 보조 시스템 \'MediAI Assistant\' 출시',
+            'AI 기반 의료 진단 보조 시스템 \'NEXT.CLINIC Assistant\' 출시',
             '의료 영상 분석 AI 플랫폼 \'RadiologyAI\' 상용화',
             '개인 맞춤형 건강 관리 AI 서비스 \'HealthAI Care\' 출시'
           ]
@@ -28,7 +28,7 @@ export default function CompanyHistoryPage() {
             '2024년 의료 AI 혁신 기술 개발 지원 사업 선정',
             '2024년 AI 의료기기 인증 획득',
             '보건복지부 \'AI 기반 의료진단 정확도 향상 사업\' 추진',
-            '의료 AI 전문 모델 \'MediAI 2.0\' 출시',
+            '의료 AI 전문 모델 \'NEXT.CLINIC 2.0\' 출시',
             '의료 AI 윤리 가이드라인 개발 기관 선정',
             '2024 AI 의료기기 바우처 지원사업 공급기업 선정'
           ]
@@ -37,10 +37,10 @@ export default function CompanyHistoryPage() {
           year: '2023',
           items: [
             '\'의료 AI 기술 개발 및 상용화 지원 사업\' 공급기업 선정',
-            '\'MediAI Cloud\' 의료 AI 클라우드 플랫폼 출시',
+            '\'NEXT.CLINIC Cloud\' 의료 AI 클라우드 플랫폼 출시',
             'AI 기반 의료 문서 자동화 시스템 \'MediDoc AI\' 출시',
             '식약처 \'AI 의료기기 임상시험 가이드라인\' 개발 참여',
-            '의료 AI 언어모델 \'MediAI(MedicalAI)\' 공개',
+            '의료 AI 언어모델 \'NEXT.CLINIC(MedicalAI)\' 공개',
             '대표이사 변경(박의료 대표이사)'
           ]
         },
@@ -63,7 +63,7 @@ export default function CompanyHistoryPage() {
             '국립암센터 AI 진단 시스템 2단계 구축',
             '대표이사 변경(이의료 대표이사)',
             '스마트 의료 AI ASP 출시',
-            'MediAI 의료 영상 분석 서비스 개시',
+            'NEXT.CLINIC 의료 영상 분석 서비스 개시',
             '국민건강보험공단 AI 기반 진료 분석 모델 개발',
             '세종시 AI 기반 의료 관제 시스템 구축 및 운영 사업 참여'
           ]
@@ -78,18 +78,18 @@ export default function CompanyHistoryPage() {
             'AI 기반 의료진 피로도 측정 시스템 구축',
             '국립의료원 AI 기반 의료정보시스템 구축',
             '의료 AI 스타트업 상장(IPO)',
-            '㈜메디AI컴퍼니(MediAI company)로 사명 변경',
+            '㈜NEXT.CLINIC(NEXT.CLINIC company)로 사명 변경',
             '국립암센터 AI 진단 시스템 1단계 구축',
-            'MediAI(Medical AI, 구 의료메트릭스) BI 변경',
+            'NEXT.CLINIC(Medical AI, 구 의료메트릭스) BI 변경',
             '의료 AI 기술평가 AA 등급 획득',
-            'B2B 의료 AI 분석 플랫폼 \'MediAI Platform\' 리뉴얼 오픈',
+            'B2B 의료 AI 분석 플랫폼 \'NEXT.CLINIC Platform\' 리뉴얼 오픈',
             '과학기술정보통신부 \'2020 의료 AI 바우처 지원사업\' 공급기업 선정'
           ]
         },
         {
           year: '2019',
           items: [
-            'MediAI Review+ 진단 오픈',
+            'NEXT.CLINIC Review+ 진단 오픈',
             '서울대병원과 AI 의료진단 시스템 구축을 위한 업무협약 체결',
             '2019년 스마트 병원 시범사업(세종, 부산) AI 의료시스템 마스터플랜 수립',
             '국립암센터 / 국립중앙의료원 AI 챗봇 구축',
@@ -97,7 +97,7 @@ export default function CompanyHistoryPage() {
             '과학기술정보통신부 \'2019 의료 AI 바우처 지원사업\' 공급기업 선정',
             '삼성서울병원 AI 기반의 의료진단 조기 경보시스템 개발',
             '식약처 AI 기반 의료기기 안전성 위험징후 포착 지원 시스템 구축',
-            '의료 AI 연구소 \'MediAI Lab\' 개소'
+            '의료 AI 연구소 \'NEXT.CLINIC Lab\' 개소'
           ]
         },
         {
@@ -197,7 +197,7 @@ export default function CompanyHistoryPage() {
         {
           year: '2010',
           items: [
-            'MediAI Biz 론칭',
+            'NEXT.CLINIC Biz 론칭',
             'T world/EBS 의료 포탈 통합검색 고도화',
             'SK M&C 의료 오피니언마이닝 기반 검색 시스템 구축',
             '서울대병원/연세대병원, 국민건강보험공단 의료 VOC 관리시스템 구축',
@@ -244,7 +244,7 @@ export default function CompanyHistoryPage() {
             '의료 대화 로봇 프로그램 가상 에이전트(Medical Virtual Representative) 기술 개발',
             '의료 검색엔진 기술 개발',
             '의료 자연언어처리 연구소(Medical NLP Lab) 설립',
-            '메디AI소프트 설립',
+            'NEXT.CLINIC소프트 설립',
             '㈜다음커뮤니케이션 의료기술사업부서 사내 인큐베이팅'
           ]
         }
@@ -260,8 +260,8 @@ export default function CompanyHistoryPage() {
       {
         year: '2024',
         items: [
-          '메디AI컴퍼니-서울대병원 의료 AI 사업 협력 MOU 체결',
-          '메디AI컴퍼니-연세대병원, 의료 AI 사업 관련 MOU 체결',
+          'NEXT.CLINIC-서울대병원 의료 AI 사업 협력 MOU 체결',
+          'NEXT.CLINIC-연세대병원, 의료 AI 사업 관련 MOU 체결',
           '의료정보산업협회 \'2024 Emerging Medical AI+X TOP100\' 기업 선정'
         ]
       },
@@ -269,8 +269,8 @@ export default function CompanyHistoryPage() {
         year: '2023',
         items: [
           '디지털플랫폼정부 의료 표창(보건복지부 장관상)',
-          '한국일보 의료 디지털 이노베이션 대상 수상(메디AI 진단)',
-          '메디AI컴퍼니-고려대병원, 전략적 파트너십 체결',
+          '한국일보 의료 디지털 이노베이션 대상 수상(NEXT.CLINIC 진단)',
+          'NEXT.CLINIC-고려대병원, 전략적 파트너십 체결',
           '의료정보산업협회 \'2023 Emerging Medical AI+X TOP100\' 기업 선정'
         ]
       },
@@ -278,52 +278,52 @@ export default function CompanyHistoryPage() {
         year: '2022',
         items: [
           '올해의 의료 디지털 전환 우수기업 선정(보건복지부 주관/의료정보원 원장상)',
-          '메디AI컴퍼니-P&K의료임상연구센터, 의료 컨설팅 사업 협력을 위한 MOU 체결',
-          '메디AI컴퍼니-씨웨이브, 의료 AI 사업 협력을 위한 MOU 체결',
-          '메디AI컴퍼니-펫미, 의료 플랫폼 내 메타커머스 구현을 위한 MOU 체결',
-          '메디AI컴퍼니-한국예총, 의료 AI 사업 협력 위한 MOU 체결',
+          'NEXT.CLINIC-P&K의료임상연구센터, 의료 컨설팅 사업 협력을 위한 MOU 체결',
+          'NEXT.CLINIC-씨웨이브, 의료 AI 사업 협력을 위한 MOU 체결',
+          'NEXT.CLINIC-펫미, 의료 플랫폼 내 메타커머스 구현을 위한 MOU 체결',
+          'NEXT.CLINIC-한국예총, 의료 AI 사업 협력 위한 MOU 체결',
           '의료정보산업협회 \'2022 Emerging Medical AI+X TOP100\' 기업 선정',
           '제21회 대한민국 소프트웨어(SW)기업경쟁력 대상(의료기여 부문/보건복지부 장관상)',
           '2022 고용노동부 청년친화강소기업 선정(의료, 일생활균형 우수)',
-          '메디AI컴퍼니-스파이더아이앤씨, 의료 AI 플랫폼 내 퀵커머스 사업 협력 MOU 체결'
+          'NEXT.CLINIC-스파이더아이앤씨, 의료 AI 플랫폼 내 퀵커머스 사업 협력 MOU 체결'
         ]
       },
       {
         year: '2021',
         items: [
-          '메디AI컴퍼니-롯데백화점, 의료 AI 커머스 플랫폼 개발을 위한 MOU 체결',
-          '메디AI컴퍼니-HS애드, 의료 상호 협력을 위한 MOU 체결',
-          '메디AI컴퍼니-KMAC 의료 플랫폼 비즈니스 공동 론칭을 위한 전략적 파트너십 체결',
-          '메디AI컴퍼니-신한DS 의료 AI 플랫폼 사업 협력을 위한 MOU 체결',
-          '메디AI컴퍼니-청운대학교, 의료 교육사업 협력 MOU 체결',
-          '메디AI컴퍼니-인천테크노파크 의료 스타트업 발굴 및 육성을 위한 MOU 체결',
-          '메디AI컴퍼니-녹스 의료 독점 파트너십 계약 체결',
-          '메디AI컴퍼니-금성계전 의료 업무협약 MOU 체결'
+          'NEXT.CLINIC-롯데백화점, 의료 AI 커머스 플랫폼 개발을 위한 MOU 체결',
+          'NEXT.CLINIC-HS애드, 의료 상호 협력을 위한 MOU 체결',
+          'NEXT.CLINIC-KMAC 의료 플랫폼 비즈니스 공동 론칭을 위한 전략적 파트너십 체결',
+          'NEXT.CLINIC-신한DS 의료 AI 플랫폼 사업 협력을 위한 MOU 체결',
+          'NEXT.CLINIC-청운대학교, 의료 교육사업 협력 MOU 체결',
+          'NEXT.CLINIC-인천테크노파크 의료 스타트업 발굴 및 육성을 위한 MOU 체결',
+          'NEXT.CLINIC-녹스 의료 독점 파트너십 계약 체결',
+          'NEXT.CLINIC-금성계전 의료 업무협약 MOU 체결'
         ]
       },
       {
         year: '2020',
         items: [
           '의료정보산업협회 \'2021 Emerging Medical AI+X TOP100\' 기업 선정',
-          '메디AI컴퍼니-새한항업 의료 업무협력 MOU 체결',
-          '메디AI컴퍼니-펜타시스템 의료 업무협력 MOU 체결',
-          '메디AI컴퍼니-광양시-POSCO, 광양 스마트 의료 도시 조성을 위한 업무협약',
-          '메디AI소프트-NICE지니데이타, 의료 신기술 기반 데이터 사업화를 위한 업무협력 MOU 체결',
-          '메디AI소프트-나래ICT 의료 업무협약 체결',
-          '메디AI소프트-고려대 의료 빅데이터 연구개발 및 기술사업화 MOU 체결',
-          '메디AI소프트-렉시스넥시스 Medical tech challenge korea 성공적 개최를 위한 업무협약 체결',
+          'NEXT.CLINIC-새한항업 의료 업무협력 MOU 체결',
+          'NEXT.CLINIC-펜타시스템 의료 업무협력 MOU 체결',
+          'NEXT.CLINIC-광양시-POSCO, 광양 스마트 의료 도시 조성을 위한 업무협약',
+          'NEXT.CLINIC소프트-NICE지니데이타, 의료 신기술 기반 데이터 사업화를 위한 업무협력 MOU 체결',
+          'NEXT.CLINIC소프트-나래ICT 의료 업무협약 체결',
+          'NEXT.CLINIC소프트-고려대 의료 빅데이터 연구개발 및 기술사업화 MOU 체결',
+          'NEXT.CLINIC소프트-렉시스넥시스 Medical tech challenge korea 성공적 개최를 위한 업무협약 체결',
           '고용노동부 청년친화 강소기업 선정(의료, 일/생활/균형 부문)'
         ]
       },
       {
         year: '2019',
         items: [
-          '메디AI소프트-제주특별자치도 의료 ICT기술 분야 민관 상생을 위한 업무협약 체결',
-          '메디AI소프트-서울특별시 서울시 의료생활 데이터 제작을 통한 데이터 경제 활성화를 위한 민간기업 다자 간 민관 협력 의료 빅데이터 MOU 체결',
-          '메디AI소프트-CUPIA-KCNET 의료 AI 활용 사업 등의 상호협력과 전략적 제휴를 위한 MOU 체결',
-          '메디AI소프트-고려대학교 의료 빅데이터 연구 개발 및 기술사업화를 위한 MOU 체결',
-          '메디AI소프트-경희대학교 의료 H&T 애널리틱스센터 설립을 위한 MOU 체결',
-          '메디AI소프트-선린인터넷고 의료 산학협력 MOU 체결',
+          'NEXT.CLINIC소프트-제주특별자치도 의료 ICT기술 분야 민관 상생을 위한 업무협약 체결',
+          'NEXT.CLINIC소프트-서울특별시 서울시 의료생활 데이터 제작을 통한 데이터 경제 활성화를 위한 민간기업 다자 간 민관 협력 의료 빅데이터 MOU 체결',
+          'NEXT.CLINIC소프트-CUPIA-KCNET 의료 AI 활용 사업 등의 상호협력과 전략적 제휴를 위한 MOU 체결',
+          'NEXT.CLINIC소프트-고려대학교 의료 빅데이터 연구 개발 및 기술사업화를 위한 MOU 체결',
+          'NEXT.CLINIC소프트-경희대학교 의료 H&T 애널리틱스센터 설립을 위한 MOU 체결',
+          'NEXT.CLINIC소프트-선린인터넷고 의료 산학협력 MOU 체결',
           'Medical Contextual CA™ GS 1등급 품질 인증 획득',
           '일하기 좋은 의료 SW 전문기업 선정(경영진 리더십 부문)',
           '대한상공회의소 \'일하기 좋은 의료 중소기업\' 2년 연속 선정',
@@ -336,8 +336,8 @@ export default function CompanyHistoryPage() {
       {
         year: '2018',
         items: [
-          '메디AI소프트-세종특별자치시 의료 투자 MOU 체결',
-          '메디AI소프트-HPC이노베이션허브 의료 간 업무협약',
+          'NEXT.CLINIC소프트-세종특별자치시 의료 투자 MOU 체결',
+          'NEXT.CLINIC소프트-HPC이노베이션허브 의료 간 업무협약',
           '2018년도 대한민국 의료 ICT INNOVATION 대상 보건복지부 장관 표창 수상',
           '2018 대한민국 의료 소프트웨어 기술 대상 수상',
           '2018년 대한상공회의소 \'일하기 좋은 의료 중소기업\' 선정',
@@ -350,7 +350,7 @@ export default function CompanyHistoryPage() {
       {
         year: '2016 ~2017',
         items: [
-          '서울대병원-메디AI소프트 의료 MOU 체결'
+          '서울대병원-NEXT.CLINIC소프트 의료 MOU 체결'
         ]
       },
       {
@@ -403,7 +403,7 @@ export default function CompanyHistoryPage() {
           <div className={styles.pageTitleInner}>
             <h2 className={styles.pageTitle}>연혁</h2>
             <p className={styles.pageDesc}>
-              메디AI는 의료 혁신과 더불어 <br className={styles.onlyMo} />사람을 위한 의료 기술을 제공합니다.
+              NEXT.CLINIC는 의료 혁신과 더불어 <br className={styles.onlyMo} />사람을 위한 의료 기술을 제공합니다.
             </p>
           </div>
         </div>

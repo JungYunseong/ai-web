@@ -49,7 +49,7 @@ export default function LaboratoryPage() {
         <div className={styles.container}>
           <h1 className={styles.pageTitle}>연구소</h1>
           <p className={styles.pageText}>
-            메디AI컴퍼니는 자사 핵심 기술 플랫폼인 SOFIA를 기반으로 <br className={styles.notMobile} />
+            NEXT.CLINIC는 자사 핵심 기술 플랫폼인 SOFIA를 기반으로 <br className={styles.notMobile} />
             인공지능·빅데이터연구소에서 <br className={styles.notMobile} />
             다양한 솔루션 및 서비스를 제공하기 위한 연구 개발을 끊임없이 진행하고 있습니다.
           </p>
@@ -194,7 +194,7 @@ export default function LaboratoryPage() {
                           <div className={styles.listText}>
                             <h4>Big Data Processing</h4>
                             <ul className={styles.listDepth2}>
-                              <li>메디AI컴퍼니 고유 색인 기술 Big Index를 통한 데이터 처리</li>
+                              <li>NEXT.CLINIC 고유 색인 기술 Big Index를 통한 데이터 처리</li>
                               <li>중복, 유사 문서 처리, 스팸 필터링 등 강력한 후처리를 통해 신뢰성 확보</li>
                             </ul>
                           </div>
@@ -237,7 +237,7 @@ export default function LaboratoryPage() {
                     <div className={styles.coreGemText}>
                       <p>
                         최대 72B(720억개)의 파라미터로 구성된 메디GeM(Medi Generative Model for language)은 <br/>
-                        메디AI컴퍼니의 자체 기술력으로 개발한 국내 최고 수준의 한국어 특화 초거대 언어모델로, <br/>
+                        NEXT.CLINIC의 자체 기술력으로 개발한 국내 최고 수준의 한국어 특화 초거대 언어모델로, <br/>
                         응용지향적이고 공공기관, 도서관, 금융 등 도메인에 특화된 LLM을 제공합니다.
                       </p>
                       <em>#초거대 #언어모델 #국내최고 #응용지향적 #LLM</em>
@@ -323,7 +323,7 @@ export default function LaboratoryPage() {
                   </figure>
                 </div>
                 <div className={styles.subInfoText}>
-                  <p>인공지능·빅데이터연구소의 목표는 메디AI컴퍼니의 핵심 기술의 개발 및 발전 동력의 발굴입니다. 2000년 설립 초기에는 주로 자연언어처리와 검색 기술, 대화 에이전트 연구가 주를 이루다가 초대용량의 빅데이터 처리, 정형 데이터 분석, 핀테크, 딥러닝을 비롯한 기계학습에 대한 심도 있는 연구 등 새로운 기술이 떠오름에 따라 해당 분야의 연구개발 수행 역시 연구소의 목표가 되고 있습니다. 그 중에서도 인공지능 및 빅데이터 분야에서 신기술을 모색하고 현재의 기술 성능을 높일 수 있는 방법을 연구하며, 시장의 패러다임을 바꿀 수 있는 제품을 개발하기 위해 노력하고 있습니다.</p>
+                  <p>인공지능·빅데이터연구소의 목표는 NEXT.CLINIC의 핵심 기술의 개발 및 발전 동력의 발굴입니다. 2000년 설립 초기에는 주로 자연언어처리와 검색 기술, 대화 에이전트 연구가 주를 이루다가 초대용량의 빅데이터 처리, 정형 데이터 분석, 핀테크, 딥러닝을 비롯한 기계학습에 대한 심도 있는 연구 등 새로운 기술이 떠오름에 따라 해당 분야의 연구개발 수행 역시 연구소의 목표가 되고 있습니다. 그 중에서도 인공지능 및 빅데이터 분야에서 신기술을 모색하고 현재의 기술 성능을 높일 수 있는 방법을 연구하며, 시장의 패러다임을 바꿀 수 있는 제품을 개발하기 위해 노력하고 있습니다.</p>
                 </div>
               </div>
             </section>

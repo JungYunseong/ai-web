@@ -11,7 +11,7 @@ export default function HeroSection() {
     {
       id: 1,
       title: '의료 AI 파운데이션 모델',
-      description: '국내 최고 수준의 의료 특화 초거대언어모델 MediAI로 다양한 의료 분야에서의 AI 진단을 지원합니다.',
+      description: '국내 최고 수준의 의료 특화 초거대언어모델 NEXT.CLINIC로 다양한 의료 분야에서의 AI 진단을 지원합니다.',
       image: '/ai-web/images/main/visual_vaiv_gem_img.svg',
       link: '/ai-web/laboratory?core=1',
       linkText: '자세히보기'
@@ -19,7 +19,7 @@ export default function HeroSection() {
     {
       id: 2,
       title: '의료 영상 분석 AI 솔루션',
-      description: '당신의 더 나은 건강을 돕는 메디AI의 의료 AI',
+      description: '당신의 더 나은 건강을 돕는 NEXT.CLINIC의 의료 AI',
       image: '/ai-web/images/main/visual_vaiv_search_img.svg',
       link: '/ai-web/business?tab=solution',
       linkText: '자세히보기'

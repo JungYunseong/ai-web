@@ -24,13 +24,13 @@ export default function NewsSection() {
     <section className={styles.newsSection}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>메디AI 소식</h2>
+          <h2>NEXT.CLINIC 소식</h2>
         </div>
         
         <div className={styles.newsBanner}>
           <a href="/ai-web/promote/prcenterPressreleaselist" title="보도자료 바로가기">
             <h3>
-              메디AI컴퍼니의 <br/>
+              NEXT.CLINIC의 <br/>
               <b>새로운 소식</b>을 <br className="tablet" />
               전해드립니다
             </h3>
