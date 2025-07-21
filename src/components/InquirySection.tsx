@@ -217,7 +217,7 @@ export default function InquirySection() {
                         />
                         <label htmlFor="personalInfo">개인정보 수집 및 이용에 동의합니다.</label>
                         <span className={styles.noticeText}>
-                          <a href="/privacy">자세히 보기</a>
+                          <a href="/ai-web/privacy">자세히 보기</a>
                         </span>
                       </span>
                     </div>

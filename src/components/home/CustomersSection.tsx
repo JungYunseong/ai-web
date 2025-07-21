@@ -58,9 +58,8 @@ export default function CustomersSection() {
     <section className={styles.customersSection}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>
-            메디AI는 다양한 의료기관의 <br />
-            <a href="/customer" title="주요 고객사 바로가기">700</a>여 고객사와 함께합니다
+          <h2>메디AI는 다양한 의료기관의 <br />
+            <a href="/ai-web/customer" title="주요 고객사 바로가기">700</a>여 고객사와 함께합니다
           </h2>
         </div>
         <div className={styles.sliderContainer}>
@@ -70,7 +69,7 @@ export default function CustomersSection() {
           >
             {customers.map((customer) => (
               <div key={customer.id} className={styles.slideItem}>
-                <a href="/customer" title="주요 고객사 바로가기">
+                <a href="/ai-web/customer" title="주요 고객사 바로가기">
                   <img src={customer.logo} alt={`${customer.name} 로고`} />
                 </a>
               </div>

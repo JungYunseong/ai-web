@@ -28,7 +28,7 @@ export default function NewsSection() {
         </div>
         
         <div className={styles.newsBanner}>
-          <a href="/promote/prcenterPressreleaselist" title="보도자료 바로가기">
+          <a href="/ai-web/promote/prcenterPressreleaselist" title="보도자료 바로가기">
             <h3>
               메디AI컴퍼니의 <br/>
               <b>새로운 소식</b>을 <br className="tablet" />
@@ -46,7 +46,7 @@ export default function NewsSection() {
               <em>더 많은 뉴스</em>를 <br/>
               확인해 보세요
             </h3>
-            <a href="/promote/prcenterPressreleaselist" className={styles.arrowButton} title="보도자료 바로가기">
+            <a href="/ai-web/promote/prcenterPressreleaselist" className={styles.arrowButton} title="보도자료 바로가기">
               자세히보기 <span className={styles.arrowRight}></span>
             </a>
           </div>

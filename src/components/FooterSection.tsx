@@ -52,7 +52,7 @@ export default function FooterSection() {
               <li className={styles.listItem}><span className={styles.listLabel}>공익신고제보</span><a href="mailto:helpvaiv@vaiv.kr">helpvaiv@vaiv.kr</a></li>
             </ul> */}
             <div className={styles.footerCopy}>
-              <h6><a href="/privacy">개인정보 처리방침</a></h6>
+              <h6><a href="/ai-web/privacy">개인정보 처리방침</a></h6>
               <p>CopyrightⓒVAIV Company inc. All Rights Reserved.</p>
             </div>
           </div>
