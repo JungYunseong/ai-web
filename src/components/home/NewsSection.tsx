@@ -1,38 +1,24 @@
 import styles from './NewsSection.module.css';
+import { getPostsByCategory } from '@/lib/markdown';
 
 export default function NewsSection() {
-  const newsItems = [
-    {
-      id: 1,
-      title: '메디AI컴퍼니, 의료 AI 인재 교류회 \'MediAI Lab Exchange\' 성료',
-      date: '2025.07.02',
-      link: '/promote/prcenterPressrelease?posts_id=4060'
-    },
-    {
-      id: 2,
-      title: '메디AI컴퍼니, 의료 AI 진단 시스템… KCCM 2025서 높은 주목',
-      date: '2025.06.25',
-      link: '/promote/prcenterPressrelease?posts_id=4058'
-    },
-    {
-      id: 3,
-      title: '메디AI컴퍼니, \'MediAI DAY 2025\' 성황리 종료… "의료 AI로 진화하는 세상"',
-      date: '2025.06.20',
-      link: '/promote/prcenterPressrelease?posts_id=4057'
-    },
-    {
-      id: 4,
-      title: '메디AI컴퍼니, 식약처 의료 AI 진단시스템 4년 연속 수주… 의료 AI 시장 입지 강화',
-      date: '2025.06.16',
-      link: '/promote/prcenterPressrelease?posts_id=4056'
-    },
-    {
-      id: 5,
-      title: '의료 AI로 진화하는 세상… 메디AI컴퍼니 AI DAY 2025 개최',
-      date: '2025.06.12',
-      link: '/promote/prcenterPressrelease?posts_id=4054'
-    }
-  ];
+  // 보도자료와 언론 속 모습에서 최신 게시물 가져오기
+  const pressReleases = getPostsByCategory('press-releases', 3);
+  const mediaCoverage = getPostsByCategory('media-coverage', 2);
+  
+  // 두 카테고리를 합치고 날짜순으로 정렬
+  const allNews = [...pressReleases, ...mediaCoverage]
+    .sort((a, b) => new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime())
+    .slice(0, 5);
+
+  const newsItems = allNews.map((post, index) => ({
+    id: index + 1,
+    title: post.metadata.title,
+    date: post.metadata.date,
+    link: post.metadata.category === '보도자료' 
+      ? `/promote/prcenterPressrelease/${post.slug}`
+      : `/promote/prcenterMedia/${post.slug}`
+  }));
 
   return (
     <section className={styles.newsSection}>
@@ -61,7 +47,7 @@ export default function NewsSection() {
               확인해 보세요
             </h3>
             <a href="/promote/prcenterPressreleaselist" className={styles.arrowButton} title="보도자료 바로가기">
-              자세히보기 <i className="zmdi zmdi-chevron-right"></i>
+              자세히보기 <span className={styles.arrowRight}></span>
             </a>
           </div>
           
