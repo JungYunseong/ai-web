@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     domains: ["via.placeholder.com"],
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/ai-web' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/ai-web/' : '',
   // GitHub Pages에서 정적 파일 경로 문제 해결
   webpack: (config, { isServer }) => {
     if (!isServer) {
