@@ -24,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link rel="stylesheet" href="/pretendardvariable-dynamic-subset.min.css" />
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="./pretendardvariable-dynamic-subset.min.css" />
+        <link rel="stylesheet" href="./style.css" />
       </head>
       <body>
         {children}
