@@ -39,6 +39,37 @@ jobs:
           cp -r public/images out/
           cp -r public/videos out/
         
+      - name: Fix dynamic routing for GitHub Pages
+        run: |
+          # 동적 라우팅 페이지들을 올바른 위치로 복사
+          mkdir -p out/promote/prcenterNotice/notice-001
+          mkdir -p out/promote/prcenterNotice/notice-002
+          mkdir -p out/promote/prcenterPressrelease/press-001
+          mkdir -p out/promote/prcenterMedia/media-001
+          
+          # index.html 파일들을 각 폴더에 복사
+          if [ -f "out/promote/prcenterNotice/notice-001/index.html" ]; then
+            echo "Notice files already exist"
+          else
+            echo "Creating notice files..."
+            cp out/promote/prcenterNotice/notice-001/index.html out/promote/prcenterNotice/notice-001/ 2>/dev/null || echo "Notice-001 file not found"
+            cp out/promote/prcenterNotice/notice-002/index.html out/promote/prcenterNotice/notice-002/ 2>/dev/null || echo "Notice-002 file not found"
+          fi
+          
+          if [ -f "out/promote/prcenterPressrelease/press-001/index.html" ]; then
+            echo "Press release files already exist"
+          else
+            echo "Creating press release files..."
+            cp out/promote/prcenterPressrelease/press-001/index.html out/promote/prcenterPressrelease/press-001/ 2>/dev/null || echo "Press-001 file not found"
+          fi
+          
+          if [ -f "out/promote/prcenterMedia/media-001/index.html" ]; then
+            echo "Media files already exist"
+          else
+            echo "Creating media files..."
+            cp out/promote/prcenterMedia/media-001/index.html out/promote/prcenterMedia/media-001/ 2>/dev/null || echo "Media-001 file not found"
+          fi
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
